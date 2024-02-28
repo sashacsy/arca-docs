@@ -6,7 +6,26 @@ Troubleshooting documentation is currently scattered around https://arca.bcelnap
     This document will be an attempt to consolidate that information. It will be obsolete after the migration.
 
 ## Legacy FAQs
+
 ### Display
+
+<details>
+<summary>Large Images won't display in the viewer. How can I find out what's happening?</summary>
+<br>
+
+If images aren't displaying in the viewer, here is how to diagnose and solve the problem.
+
+<ol>
+<li>When looking at the object's page in your repository, right click in your browser window and look for the "Inspect" option (may be "inspect", "inspect element", "console", or similar). <img src="/arca-docs/assets/inspect.png"></li>
+<li>In the Inspect frame, find the "Console" tab. <img src="/arca-docs/assets/console.png"</li>
+<li>Look for an error message.
+<ul><li>If it shows a "500 Error", likely there is a problem with your JP2 datastream. Manage your object, find the Datastreams tab, and click "regenerate" in the JP2 datastream row.</li>
+  <li>If it shows a "403 Error", there may be a larger issue. Check your other Large Image objects.</li>
+  <ul><li>If other Large Image objects also fail to render, contact the Arca Office; the issue may be service-wide.</li>
+  <li>If only this item fails to render, there may be permissions issues. Check your XACML configuration or contact the Arca Office with details, including the PID of the object in question.</li></ul>
+</ul></ol>
+</details>
+
 <details>
 <summary>How can I change the repository name in my breadcrumbs?</summary>
 <br>
