@@ -64,6 +64,15 @@ Review your list of users at `/admin/people`:
 
   * If any users should no longer be in the system, cancel their accounts.
   * If any users have the wrong role, edit the user and change them.
-  
+
+### Cancelling a user account
+
+When cancelling an account, you will be asked what to do with content owned by them. *This applies only to Drupal content (e.g. pages)*; repository items remain in the repository after the user account is cancelled.
+
+To review the user's Drupal content:
+
+* In the Content menu (admin/content), you will see all the Drupal content in your site.
+* Look for the username you wish to cancel in the "AUTHOR" column. This is the owner of that content.
+* For any items owned by that user, edit the item, scroll down to "authoring information", and under "Authored by", choose a new user.
     
 [Contact the Arca Office](mailto:arcaoffice@bceln.ca) if you need any assistance with these tasks.
