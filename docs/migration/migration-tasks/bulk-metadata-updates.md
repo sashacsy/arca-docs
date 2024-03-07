@@ -16,16 +16,18 @@ For detailed instructions, you can [follow our video walkthrough](https://youtu.
 
 To bulk export MODS datastreams, you will first need either a list of PIDs, or a Solr query. The easiest way to find that information is to use Islandora Solr Facet Pages (see the [Metadata Corrections documentation](/arca-docs/migration/migration-tasks/metadata-corrections.md) for details).
 
-If you are using Islandora Solr Facet Pages:
+**If you are using Islandora Solr Facet Pages:**
 
 1. On the page for the metadata field in question, click into the value that needs to be changed. For example, on your [list of genre terms](https://arcabc.ca/browse/genre), you find a term that needs to be changed: "brochure" should be "[brochures](https://arcabc.ca/islandora/search/%2A%3A%2A?f%5B0%5D=mods_genre_ms%3A%22brochures%22)".
 2. In the URL bar for the facet page, you'll find the Solr query at the end: `https://arcabc.ca/islandora/search/%2A%3A%2A?f%5B0%5D=mods_genre_ms%3A%22brochure%22`
     The snippet we're looking for is `mods_genre_ms%3A%22brochure%22`.
 3. [Convert encoded characters to human-readable ones](https://www.url-encode-decode.com/). The above example becomes `mods_genre_ms:"brochure"`. 
 
-If you've found your objects with a search, record your PIDs manually or export a CSV.
+If you've found your objects with a search, you can extract the Solr query from the URL in the same way.
 
-To produce a search result CSV, you can configure Solr to provide one:
+Alternatively, you can record your PIDs manually or export a CSV.
+
+**To produce a search result CSV**, you can configure Solr to provide one:
 
 1. Go to `/admin/islandora/search/islandora_solr/settings`
 2. Under "Secondary display profiles", check "CSV"
