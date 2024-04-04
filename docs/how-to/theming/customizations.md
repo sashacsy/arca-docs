@@ -72,7 +72,7 @@ Instructions:
         * If incorporating CSS styling or other more advanced features, change the text format to "Full HTML".
         * Create your footer with the WYSIWYG editor, or click the `Source` button to write raw HTML.
         * The Arca Footer HTML as an example:
-        `
+```
 <style>
 table, th, td {
   border: none;
@@ -92,7 +92,7 @@ table, th, td {
         </tr>
     </tbody>
 </table>
-`
+```
 2. Place and activate your custom block:
     1. In the admin menu, go to `Structure -> Block Layout` (`/admin/structure/block`)
     2. In the Footer section, click `Place Block`.
