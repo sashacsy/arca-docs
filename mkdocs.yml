@@ -40,6 +40,8 @@ nav:
   - About:
     - About Arca: about/about-arca.md
     - Support: about/support.md
+  - How-To in Islandora 2:
+    - Theming Customizations: how-to/theming/customizations.md
   - Troubleshooting:
     - Troubleshooting: troubleshooting/troubleshooting.md
     - Islandora 7 troubleshooting: troubleshooting/troubleshooting-i7.md

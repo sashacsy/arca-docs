@@ -817,15 +817,16 @@
 <h2 id="export-mods-datastreams">Export MODS datastreams<a class="headerlink" href="#export-mods-datastreams" title="Permanent link">&para;</a></h2>
 <h3 id="identify-the-objects-that-need-changing">Identify the objects that need changing<a class="headerlink" href="#identify-the-objects-that-need-changing" title="Permanent link">&para;</a></h3>
 <p>To bulk export MODS datastreams, you will first need either a list of PIDs, or a Solr query. The easiest way to find that information is to use Islandora Solr Facet Pages (see the <a href="/arca-docs/migration/migration-tasks/metadata-corrections.md">Metadata Corrections documentation</a> for details).</p>
-<p>If you are using Islandora Solr Facet Pages:</p>
+<p><strong>If you are using Islandora Solr Facet Pages:</strong></p>
 <ol>
 <li>On the page for the metadata field in question, click into the value that needs to be changed. For example, on your <a href="https://arcabc.ca/browse/genre">list of genre terms</a>, you find a term that needs to be changed: "brochure" should be "<a href="https://arcabc.ca/islandora/search/%2A%3A%2A?f%5B0%5D=mods_genre_ms%3A%22brochures%22">brochures</a>".</li>
 <li>In the URL bar for the facet page, you'll find the Solr query at the end: <code>https://arcabc.ca/islandora/search/%2A%3A%2A?f%5B0%5D=mods_genre_ms%3A%22brochure%22</code>
     The snippet we're looking for is <code>mods_genre_ms%3A%22brochure%22</code>.</li>
 <li><a href="https://www.url-encode-decode.com/">Convert encoded characters to human-readable ones</a>. The above example becomes <code>mods_genre_ms:"brochure"</code>. </li>
 </ol>
-<p>If you've found your objects with a search, record your PIDs manually or export a CSV.</p>
-<p>To produce a search result CSV, you can configure Solr to provide one:</p>
+<p>If you've found your objects with a search, you can extract the Solr query from the URL in the same way.</p>
+<p>Alternatively, you can record your PIDs manually or export a CSV.</p>
+<p><strong>To produce a search result CSV</strong>, you can configure Solr to provide one:</p>
 <ol>
 <li>Go to <code>/admin/islandora/search/islandora_solr/settings</code></li>
 <li>Under "Secondary display profiles", check "CSV"</li>
