@@ -72,6 +72,7 @@ Instructions:
         * If incorporating CSS styling or other more advanced features, change the text format to "Full HTML".
         * Create your footer with the WYSIWYG editor, or click the `Source` button to write raw HTML.
         * The Arca Footer HTML as an example:
+        
 ```
 <style>
 table, th, td {
