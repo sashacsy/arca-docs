@@ -21,7 +21,7 @@ Check back here regularly for updates.
 |     - Collect and compile training materials                            |                  |               |                        |                                      |
 
 
-| *Planning Phase (March 2024 to April 2024)*              | *Start Date* | *End Date*    | *Partners* | *Status*  |
+| *Planning Phase (March 2024 to May 2024)*              | *Start Date* | *End Date*    | *Partners* | *Status*  |
 | -------------------------------------------------------- | ------------ | ------------- | -------- | ----------- |
 | Establish migration schedule                             | March 2024   | April 2024    | Members  |             |
 |     - Work out configuration tweaks for first migration  | March 2024   |               | Members  |             |
@@ -29,18 +29,19 @@ Check back here regularly for updates.
 | Metadata amelioration                                    | May 2023     | April 2024    | Members  | In Progress |
 | Initial meeting with DGI Project Manager                 | January 2024 | January 2024  | DGI      | Complete    |
 | Discoverygarden kickoff                                  | January 2024 |               | DGI      | In progress |
-| Vendor discovery phase                                   | January 2024 | February 2024 | DGI      |             |
+| Vendor discovery phase                                   | January 2024 | May 2024      | DGI      | In progress |
 | Aggregator site design established                       | March 2024   | April 2024    | DGI      |             |
 
 
 | *Infrastructure Phase (January 2024 to May 2024)* | *Start Date*   | *End Date* | *Partners*   | *Status*                                                      |
 | ----------------------------------------------- | ------------ | ------------- | ------------ | ------------------------------------------------------------- |
 | Demo machine provisioned                        | January 2024 |               | DGI          |                                                               |
-|     - Member orientation in demo machine        | January 2024 | February 2024 | Members      |                                                               |
-|     - Testing and exploration in demo machine   | January 2024 | April 2024    | Members      |                                                               |
-| Base images built and tested                    | January 2024 | April 2024    | DGI          |                                                               |
-| Virtual machines provisioned                    | May 2023     | July 2024     | SFU          | Agreement reached with SFU. Machines will be built as needed |
+|     - Member orientation in demo machine        | April 2024 | June 2024 | Members      |                                                               |
+|     - Testing and exploration in demo machine   | January 2024 | June 2024    | Members      |                                                               |
+| Base images built and tested                    | January 2024 | May 2024    | DGI          |                                                               |
+| Virtual machines provisioned                    | May 2023     | August 2024     | SFU          | Agreement reached with SFU. Machines will be built as needed |
 | First base image installed                      | April 2024   | May 2024      | DGI, Members |                                                               |
+| ARK machine built and configured					| April 2024 | May 2024 | DGI | In Progress |
 
 
 | *Migration Phase (May 2024 to June 2025)*                                                              | *Start Date* | *End Date*    | *Partners*   | *Status* |
@@ -61,7 +62,7 @@ Check back here regularly for updates.
 | --------------------------------------------------------------------- | -------------- | -------------- | ------------ | ------ |
 | Wrap-up and launch                                                    | July 2025      |                | DGI, Members |        |
 | News release                                                          | July 2025      |                |              |        |
-| BCELN-hosted Islandora Camp                                           | August 2025    |                |              |        |
+| BCELN-hosted Islandora Camp?                                           | August 2025    |                |              |        |
 | Other celebrations?                                                   |                |                |              |        |
 | Islandora Legacy sites decommissioned, full transition to Islandora 2 | July 2025      | August 2025    |              |        |
 | Collect feedback from members about migration process and results     | July 2025      | August 2025    |              |        |
