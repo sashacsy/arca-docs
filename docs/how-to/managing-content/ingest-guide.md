@@ -12,11 +12,18 @@ Video ingest walkthrough: [https://youtu.be/SSjbLJXc0u8](https://youtu.be/SSjbLJ
 
 ## Getting started
 
-1.	Log in to your repository.
-    * Once logged in, youl have access to the administrative toolbar, where you can manage the repository and its content.
-2.	In the admin toolbar, find the Content icon, Add Content, and choose “Repository Item”.
+Log in to your repository. Once logged in, youl have access to the administrative toolbar, where you can manage the repository and its content.
+
+## Creating Collections
+
+Before ingesting content, you will probably want collections to organize them. See the [Islandora Wiki](https://islandora.github.io/documentation/tutorials/how-to-create-collection/) for an explanation of how collection creation and management works.
+
+## Ingesting an Islandora Object
+
+1.	In the admin toolbar, find the Content icon, Add Content, and choose “Repository Item”.
     * In Modern Islandora, all repository content – from images to collections to compound objects – has the type “Repository Item”.
-3.	Fill out the metadata form as appropriate.
+2.	Fill out the metadata form as appropriate.
+
 
 ## Filling in the metadata form
 In modern Islandora, all objects are created using the same metadata form. The form fields are grouped by type and collapsed, so you can easily ignore the fields that are not relevant to your content.
@@ -136,7 +143,7 @@ In your repository, you might have chosen to simplify the ingest process by supp
 24.	Relationships:
     * If this item has relationships to other items, whether inside or outside of the repository, you would put that information here.
     * **The fields in this section all describe the item this object has a relationship with, not the item itself.**
-    * Fill in these fields if applicable; not strictly neessary or recommended if the related item is in your repository, to avoid duplicated and outdated metadata.
+    * Fill in these fields if applicable; not strictly necessary or recommended if the related item is in your repository, to avoid duplicated and outdated metadata.
 25.	Notes:
     * Multiple Note entries can be made via the "Add Note" button.
     * Notes may be given a Type to differentiate them. 
@@ -168,4 +175,4 @@ In your repository, you might have chosen to simplify the ingest process by supp
 29.	Add media
     * The “add media” toggle, if turned on, means that after you save this Repository Item, you will be sent to the Media page. That is where you will add a file that will become part of the object.
     * If you choose not to add media, you will create a metadata-only record, but you can choose to add media to the item later via the object’s Media tab. Adding media later is a bit more complex than doing it from ingest, so it is recommended to start with a file in mind.
-    * After Saving the item, you will be taken to the Media interface. Follow the [detailed instructions on adding media](/arca-docs/docs/how-to/managing-objects/media.md).
+    * After Saving the item, you will be taken to the Media interface. Follow the [detailed instructions on adding media](/arca-docs/docs/how-to/managing-content/media.md).
