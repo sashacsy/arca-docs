@@ -42,6 +42,8 @@ nav:
     - Support: about/support.md
   - How-To in Islandora 2:
     - Theming Customizations: how-to/theming/customizations.md
+    - Managing Objects:
+      - Ingest Guide: how-to/managing-objects/ingest-guide.md
   - Troubleshooting:
     - Troubleshooting: troubleshooting/troubleshooting.md
     - Islandora 7 troubleshooting: troubleshooting/troubleshooting-i7.md
