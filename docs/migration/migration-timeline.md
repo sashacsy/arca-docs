@@ -5,7 +5,7 @@ migration to Islandora 2. This is a living document that will evolve
 as the migration progresses; it should only be considered an 
 extremely rough estimate for the project milestones.
 
-Check back here regularly for updates.
+Check back here regularly for updates. **Last update: 2024-04-17**
 
 | *Pre-Planning Phase (2022 to February 2024)*                            | *Start Date*     | *End Date*    | *Partners*             | *Status*                             |
 | ----------------------------------------------------------------------- | ---------------- | ------------- | ---------------------- | ------------------------------------ |

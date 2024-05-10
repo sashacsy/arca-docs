@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://bceln.github.io/arca-docs/how-to/theming/customizations/">
+        <link rel="canonical" href="https://bceln.github.io/arca-docs/how-to/managing-content/media/">
       
       
-        <link rel="prev" href="../../../about/support/">
-      
-      
-        <link rel="next" href="../../managing-content/ingest-guide/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +18,7 @@
     
     
       
-        <title>Theming Customizations - Arca Documentation</title>
+        <title>Managing Islandora Media - Arca Documentation</title>
       
     
     
@@ -74,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#theming-customizations" class="md-skip">
+        <a href="#managing-islandora-media" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Theming Customizations
+              Managing Islandora Media
             
           </span>
         </div>
@@ -328,21 +324,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -356,7 +350,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             How-To in Islandora 2
@@ -367,19 +361,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../theming/customizations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -388,7 +373,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -438,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../managing-content/ingest-guide/" class="md-nav__link">
+      <a href="../ingest-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -780,7 +764,7 @@
                   
 
   
-    <a href="https://github.com/bceln/arca-docs/edit/main/docs/how-to/theming/customizations.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/bceln/arca-docs/edit/main/docs/how-to/managing-content/media.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -789,160 +773,15 @@
     
       
     
-    <a href="https://github.com/bceln/arca-docs/raw/main/docs/how-to/theming/customizations.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/bceln/arca-docs/raw/main/docs/how-to/managing-content/media.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
     </a>
   
 
 
-<h1 id="theming-customizations">Theming Customizations<a class="headerlink" href="#theming-customizations" title="Permanent link">&para;</a></h1>
-<p>The items outlined here are taken from the findings of the Theming Group, and submissions to the <a href="https://arca.bcelnapps.ca/migration-use-cases">Arca Migration Use Cases webform</a>. To submit more requests, please <a href="https://arca.bcelnapps.ca/migration-use-cases">use the form</a>.</p>
-<p>These are offered in no particular order; they'll be cleaned up and categorized eventually.</p>
-<h1 id="blocks-and-menus">Blocks and Menus<a class="headerlink" href="#blocks-and-menus" title="Permanent link">&para;</a></h1>
-<p>Blocks are chunks of content that might be produced by Menus, Views, or even manually, and can be placed in different regions of your site. They can be configured to appear on certain pages, or be hidden on certain pages.</p>
-<h2 id="disabling-or-enabling-blocks-on-any-page">Disabling (or enabling) blocks on any page<a class="headerlink" href="#disabling-or-enabling-blocks-on-any-page" title="Permanent link">&para;</a></h2>
-<p>What: Remove blocks like "Recent Items" to get a cleaner front page look, or add new blocks to any page.</p>
-<p>How: Use the Block Layout menu to add and remove blocks.</p>
-<p>Instructions:</p>
-<ol>
-<li>
-<p>To remove a block:</p>
-<ul>
-<li>Via the block layout menu:<ol>
-<li>In the admin menu, go to <code>Structure -&gt; Block Layout</code> (<code>/admin/structure/block</code>)</li>
-<li>Find the title of the block you want to remove, click the dropdown menu on the right, and click <code>Remove</code>.</li>
-</ol>
-</li>
-<li>From the block's context menu:<ol>
-<li>On the front page, find the block you want to remove.</li>
-<li>When you mouse over the block, in the corner, click the pencil icon.</li>
-<li>Click <code>Remove block</code>.</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>
-<p>To add (or re-add) a block:</p>
-<ol>
-<li>In the admin menu, go to <code>Structure -&gt; Block Layout</code> (<code>/admin/structure/block</code>)</li>
-<li>Find the region you want the block to appear in (e.g. <code>Content</code>)</li>
-<li>Next to the region's header, click <code>Place block</code>.</li>
-<li>Find the block you want to place (e.g. "Recent Items") and place it.</li>
-<li>Drag the block order to position it appropriately in relation to other blocks in that region.</li>
-<li>Click the <code>Configure</code> box</li>
-<li>Under the <code>Visibility</code> menu, go to <code>Pages</code>.</li>
-<li>To include this block on the a particular page (such as the front page):<ul>
-<li>In the text box, enter <code>&lt;front&gt;</code></li>
-<li>Select "Show for the listed pages"</li>
-</ul>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="additional-menu-blocks">Additional menu blocks<a class="headerlink" href="#additional-menu-blocks" title="Permanent link">&para;</a></h2>
-<p>What: Create a new menu block, such as a "helpful links" menu on the front page.</p>
-<p>How: Create a Menu, and place it in Block Layout.</p>
-<p>Instructions: </p>
-<ol>
-<li>Create a new menu:<ol>
-<li>In the admin menu, go to <code>Structure -&gt; Menus -&gt; Add menu</code> (<code>/admin/structure/menu/add</code>)</li>
-<li>Name your menu and add links with the <code>Add link</code> button.</li>
-</ol>
-</li>
-<li>Place the menu block:<ol>
-<li>In the admin menu, go to <code>Structure -&gt; Block Layout</code> (<code>/admin/structure/block</code>)</li>
-<li>Find the Region you want your block to appear in.</li>
-<li>Next to that region's header, click <code>Place block</code>.</li>
-<li>Find your menu block and add it.</li>
-<li>Position it in the appropriate order relative to other existing blocks.</li>
-<li>Configure it to appear on the pages you want, or hide on pages you don't want it to appear (see disabling or enabling blocks, above).</li>
-</ol>
-</li>
-</ol>
-<h2 id="institutional-footer">Institutional Footer<a class="headerlink" href="#institutional-footer" title="Permanent link">&para;</a></h2>
-<p>What: A custom block that rests at the bottom of every page, with institutional logo and links. (NOTE: The institutional footer must go above the general Arca footer.)</p>
-<p>How: Create a custom block.</p>
-<p>Instructions:</p>
-<ol>
-<li>Create a custom block:<ol>
-<li>In the admin menu, go to <code>Structure -&gt; Block Layout -&gt; Add custom block</code> (or, <code>/add/block</code>)</li>
-<li>In Block Description, describe your block: "Institutional footer"</li>
-<li>In Body, write the HTML for your custom block.<ul>
-<li>It may be possible to incorporate Drupal menus here, but the method has not been identified yet. For now, just use HTML.</li>
-<li>If incorporating CSS styling or other more advanced features, change the text format to "Full HTML".</li>
-<li>Create your footer with the WYSIWYG editor, or click the <code>Source</code> button to write raw HTML.</li>
-<li>The Arca Footer HTML as an example:</li>
-</ul>
-</li>
-</ol>
-</li>
-</ol>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;style&gt;
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>table, th, td {
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  border: none;
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  font-size: medium;
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  line-height:normal;
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>}
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>&lt;/style&gt;
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>&lt;table class=&quot;arca-footer&quot;&gt;
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    &lt;tbody&gt;
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        &lt;tr&gt;
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>            &lt;td&gt;
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>                This site is a member of the &lt;a href=&quot;https://bceln.ca/services/shared-services/arca-digital-repository&quot;&gt;Arca collaborative digital repository&lt;/a&gt;, a service managed by the &lt;a href=&quot;https://bceln.ca/&quot;&gt;BC Electronic Library Network&lt;/a&gt;, with support from the &lt;a href=&quot;https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/post-secondary-education-and-future-skills&quot;&gt;BC Ministry of Post-Secondary Education and Future Skills&lt;/a&gt;.
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>            &lt;/td&gt;
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>            &lt;td&gt;
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>                &lt;a href=&quot;https://arcabc.ca&quot;&gt;&lt;img class=&quot;arca-footer-logo&quot; src=&quot;/sites/default/files/inline-images/Arca_Logo_web_0.png&quot; data-entity-uuid=&quot;f5eb5d64-5dbc-427e-a347-2de9d75b9ff9&quot; data-entity-type=&quot;file&quot; width=&quot;83&quot; height=&quot;59&quot;&gt;&lt;/a&gt;
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>            &lt;/td&gt;
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        &lt;/tr&gt;
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    &lt;/tbody&gt;
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>&lt;/table&gt;
-</span></code></pre></div>
-2. Place and activate your custom block:
-    1. In the admin menu, go to <code>Structure -&gt; Block Layout</code> (<code>/admin/structure/block</code>)
-    2. In the Footer section, click <code>Place Block</code>.
-    3. Find the block you created in the list, and click Place Block.
-    4. Save and view your site.
-3. Edit your custom block:
-    1. If you need to make changes to your institutional footer, go to <code>Structure -&gt; Block layout -&gt; Custom block library</code> (<code>/admin/content/block</code>)
-    2. Find your block, and click Edit.
-    3. Save your changes.</p>
-<h1 id="views">Views<a class="headerlink" href="#views" title="Permanent link">&para;</a></h1>
-<p>Views are ways that content gets grouped and displayed. A View can display selected fields from selected content types, according to filters of your choice and relationships to other content. Views are very powerful.</p>
-<p>This section will focus on certain Arca-specific use cases; for more general information about using Views, a pleathora of <a href="https://drupalize.me/course/user-guide/views-chapter">courses and documentation can be found online</a>.</p>
-<h2 id="customizing-the-repo-content-counts-view">Customizing the Repo Content Counts view<a class="headerlink" href="#customizing-the-repo-content-counts-view" title="Permanent link">&para;</a></h2>
-<p>What: Changing what kind of content gets listed and counted in the summary on the front page.</p>
-<p>How: Modifying the Repo Content Counts view</p>
-<p>Instructions:</p>
-<ol>
-<li>Get the URI for the content model you want to add:<ol>
-<li>Identify the content model you want to add in the Islandora Models taxonomy: <code>/admin/structure/taxonomy/manage/islandora_models/overview</code></li>
-<li>Find the model you're interested in, and click it</li>
-<li>Copy the value under External URI.</li>
-</ol>
-</li>
-<li>Modify the view:<ol>
-<li>In a separate window, find the Repo Content Counts view at <code>/admin/structure/views</code>, or click the pencil icon when mousing over the block.</li>
-<li>The default view has several Attachments, which specify particular types of repository content: Digital Documents, Collections, and Publication Issues. To create another one filtered on a different model:<ol>
-<li>Click on one of the existing Attachments</li>
-<li>In the dropdown menu on the right, select <code>Duplicate attachment</code>.</li>
-<li>Your new attachment tab will appear with a <code>*</code> next to the title. Give it a more useful name, like "Attachment - image count".</li>
-<li>Change the Filter to use the new content model:<ol>
-<li>Under Filter Criteria, click the existing filter to edit it.</li>
-<li>Under the "Value" field, paste the URI you took from the taxonomy term.</li>
-</ol>
-</li>
-<li>Modify the Field display to show the correct words:<ol>
-<li>Under Fields, click <code>COUNT (Content:ID)</code> to edit it.</li>
-<li>Change the text to reflect the model you're using (e.g. the original said "Publication issue"; change to "Image")</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>Save and review.</li>
-</ol>
-</li>
-</ol>
+<h1 id="managing-islandora-media">Managing Islandora Media<a class="headerlink" href="#managing-islandora-media" title="Permanent link">&para;</a></h1>
+<p>This document is under construction. For a detailed explanation of how media works in Islandora, <a href="https://islandora.github.io/documentation/user-documentation/media/">see the Islandora Wiki</a>. (Note that we do not use Fedora, so ignore those parts.)</p>
 
 
 

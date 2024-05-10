@@ -16,7 +16,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bceln.github.io/arca-docs/how-to/managing-objects/ingest-guide/</loc>
+         <loc>https://bceln.github.io/arca-docs/how-to/managing-content/ingest-guide/</loc>
+         <lastmod>2024-04-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bceln.github.io/arca-docs/how-to/managing-content/media/</loc>
          <lastmod>2024-04-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
