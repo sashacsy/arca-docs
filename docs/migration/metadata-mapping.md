@@ -1,14 +1,11 @@
 # Metadata Mapping
 
-Metadata mapping is a work-in-progress. In 2022, discoverygarden provided 
-us with an exhaustive list of XPATHs present in the repository, which were 
-mapped by Arca Admins to a proposed new metadata profile (i.e. list of 
-fields).
+**2024-05-27:** Metadata mapping to modern Islandora is complete. The documents below describe the mapping of our existing XPaths and the fields we will be using in the new platform.
 
 - [XPATH mapping 
-doc](https://docs.google.com/document/d/1iZnNo8QZeC6AbdxZCCj9VtgK-YF1hCxDN6kozOe35ho/edit?usp=sharing)
-- [Proposed metadata 
-profile](https://docs.google.com/spreadsheets/d/1AHIoxWTOMA6dYMl7h45ykGlaQIqpBvR_i29mN8BrB_Q/edit?usp=sharing)
+doc](https://docs.google.com/spreadsheets/d/1WwUmVSkXmJuUgIV3LSBzhUyeXInQ1G2OozZH9xmbVxQ/edit?usp=sharing)
+- [New metadata 
+profile](https://docs.google.com/spreadsheets/d/1_ap8gOj9SAzrJ-Wyf5nf5oH-9WW1Gjd2GsxhlgZt1qM/edit?usp=sharing)
+- [Name taxonomy fields](https://docs.google.com/spreadsheets/d/1Z-GgykwnwcRHP3vkKCku7NvPlrImwcbSdyhEt9eSrUE/edit?usp=sharing)
 
-These were approved by Arca Admins in 2022. As the migration project 
-progresses, some tweaks may be made.
+The overall mapping and structure was approved by Arca Admins in 2022. Refinements based on more recently-added objects were made in consultation with Arca Admins through May 2024.
