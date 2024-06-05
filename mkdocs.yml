@@ -42,8 +42,11 @@ nav:
     - Support: about/support.md
   - How-To in Islandora 2:
     - Theming Customizations: how-to/theming/customizations.md
+    - Display Customizations:
+      - Custom URLs for repository items: how-to/display/pathauto.md
     - Managing Objects:
       - Ingest Guide: how-to/managing-content/ingest-guide.md
+      - Managing Media: how-to/managing-content/media.md
   - Troubleshooting:
     - Troubleshooting: troubleshooting/troubleshooting.md
     - Islandora 7 troubleshooting: troubleshooting/troubleshooting-i7.md
