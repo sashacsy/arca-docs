@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://bceln.github.io/arca-docs/how-to/managing-content/media/">
       
       
+        <link rel="prev" href="../ingest-guide/">
+      
+      
+        <link rel="next" href="../../../troubleshooting/troubleshooting/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Managing Islandora Media - Arca Documentation</title>
+        <title>Managing Media - Arca Documentation</title>
       
     
     
@@ -105,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Managing Islandora Media
+              Managing Media
             
           </span>
         </div>
@@ -324,19 +328,21 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -350,7 +356,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             How-To in Islandora 2
@@ -401,7 +407,7 @@
             
   
   <span class="md-ellipsis">
-    Managing Objects
+    Display Customizations
   </span>
   
 
@@ -410,6 +416,74 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Display Customizations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../display/pathauto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom URLs for repository items
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Managing Objects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Managing Objects
           </label>
@@ -431,6 +505,37 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Managing Media
+  </span>
+  
+
+      </a>
+      
     </li>
   
 
@@ -782,6 +887,14 @@
 
 <h1 id="managing-islandora-media">Managing Islandora Media<a class="headerlink" href="#managing-islandora-media" title="Permanent link">&para;</a></h1>
 <p>This document is under construction. For a detailed explanation of how media works in Islandora, <a href="https://islandora.github.io/documentation/user-documentation/media/">see the Islandora Wiki</a>. (Note that we do not use Fedora, so ignore those parts.)</p>
+<p>Special media types in Arca:</p>
+<ul>
+<li>oEmbed Remote Media: Takes a URL to a remotely hosted media object from any oEmbed-compatible source, and displays it as an embedded object in the repository. This for the most part is how re replicate the old Islandora Remote Media Solution Pack.<ul>
+<li>Works with the most common media sources, such as YouTube, Vimeo, Hulu, SoundCloud, and even Twitter, Bluesky, and Reddit posts.</li>
+<li>You can also configure the oEmbed Providers module to add additional custom sources, such as your Kaltura endpoint. (Documentation for this to come.)</li>
+</ul>
+</li>
+</ul>
 
 
 
