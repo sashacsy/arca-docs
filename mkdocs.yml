@@ -47,6 +47,7 @@ nav:
     - Managing Objects:
       - Ingest Guide: how-to/managing-content/ingest-guide.md
       - Managing Media: how-to/managing-content/media.md
+      - Remote and Embedded Media: how-to/managing-content/remote-embed.md
     - Processes:
       - Self-submission: how-to/processes/self-submission.md
   - Troubleshooting:
