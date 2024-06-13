@@ -99,10 +99,6 @@ You probably want certain roles to be able to submit directly to the repository 
 
 Under Content Moderation Bypass, select appropriate roles for the permission “Bypass transition restrictions”.
 
-NOTE: the default moderation state when creating content, even for those with the Bypass permission, is "Draft". If using these workflows, submitters wanting to publish directly must change this to "published" whenever they ingest content.
-
-![image](/arca-docs/assets/draft-published.png)
-
 #### View own unpublished content
 
 Roles subject to workflow should be able to view their own unpublished content.
@@ -121,3 +117,25 @@ Any new roles need to have basic permissions configured, including the ability t
 - Under Media: 
   - For each media type you want submitters to be able to ingest, check off the "Create new media" permission 
 - Create Media (general media creation permission)
+
+## Content Moderation Process
+
+With the modules configured, this section describes how to work within a content moderation structure.
+
+### Ingesting content
+
+#### Submitters
+
+Users with the Submitter role have permission to ingest Repository Item content and submit it to the Draft state. When they create content, it is not published until someone with approval permissions publishes it.
+
+#### Repository staff
+
+Roles assigned permission to bypass the moderation states may ingest content without restrictions. 
+
+However: the default moderation state when creating content, even for those with the Bypass permission, is "Draft". If using these workflows, submitters wanting to publish directly must change this to "published" whenever they ingest content.
+
+![image](/arca-docs/assets/draft-published.png)
+
+If the item was ingested to the "draft" state accidentally, it may be moved directly to "published" using the moderation block.
+
+![image](/arca-docs/assets/moderation_state.png)
