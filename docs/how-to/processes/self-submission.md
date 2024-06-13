@@ -101,7 +101,7 @@ Under Content Moderation Bypass, select appropriate roles for the permission “
 
 NOTE: the default moderation state when creating content, even for those with the Bypass permission, is "Draft". If using these workflows, submitters wanting to publish directly must change this to "published" whenever they ingest content.
 
-![image]("/arca-docs/assets/draft-published.png")
+![image](/arca-docs/assets/draft-published.png)
 
 #### View own unpublished content
 
