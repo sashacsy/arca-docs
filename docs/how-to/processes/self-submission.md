@@ -99,6 +99,10 @@ You probably want certain roles to be able to submit directly to the repository 
 
 Under Content Moderation Bypass, select appropriate roles for the permission “Bypass transition restrictions”.
 
+NOTE: the default moderation state when creating content, even for those with the Bypass permission, is "Draft". If using these workflows, submitters wanting to publish directly must change this to "published" whenever they ingest content.
+
+![image]("/arca-docs/assets/draft-published.png")
+
 #### View own unpublished content
 
 Roles subject to workflow should be able to view their own unpublished content.
