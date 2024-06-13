@@ -775,6 +775,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#content-moderation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Moderation Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Content Moderation Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ingesting-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ingesting content
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ingesting content">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submitters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submitters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repository-staff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository staff
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1231,6 +1279,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#content-moderation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Moderation Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Content Moderation Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ingesting-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ingesting content
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ingesting content">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submitters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submitters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repository-staff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository staff
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1358,8 +1454,6 @@
 <h4 id="bypassing-the-draft-state">Bypassing the Draft state<a class="headerlink" href="#bypassing-the-draft-state" title="Permanent link">&para;</a></h4>
 <p>You probably want certain roles to be able to submit directly to the repository without being moderated (e.g. Administrator, Site Administrator, Repository Administrator, Ingester). Content Moderation Bypass allows this.</p>
 <p>Under Content Moderation Bypass, select appropriate roles for the permission “Bypass transition restrictions”.</p>
-<p>NOTE: the default moderation state when creating content, even for those with the Bypass permission, is "Draft". If using these workflows, submitters wanting to publish directly must change this to "published" whenever they ingest content.</p>
-<p><img alt="image" src="/arca-docs/assets/draft-published.png" /></p>
 <h4 id="view-own-unpublished-content">View own unpublished content<a class="headerlink" href="#view-own-unpublished-content" title="Permanent link">&para;</a></h4>
 <p>Roles subject to workflow should be able to view their own unpublished content.</p>
 <ul>
@@ -1376,6 +1470,17 @@
 <li>For each media type you want submitters to be able to ingest, check off the "Create new media" permission </li>
 <li>Create Media (general media creation permission)</li>
 </ul>
+<h2 id="content-moderation-process">Content Moderation Process<a class="headerlink" href="#content-moderation-process" title="Permanent link">&para;</a></h2>
+<p>With the modules configured, this section describes how to work within a content moderation structure.</p>
+<h3 id="ingesting-content">Ingesting content<a class="headerlink" href="#ingesting-content" title="Permanent link">&para;</a></h3>
+<h4 id="submitters">Submitters<a class="headerlink" href="#submitters" title="Permanent link">&para;</a></h4>
+<p>Users with the Submitter role have permission to ingest Repository Item content and submit it to the Draft state. When they create content, it is not published until someone with approval permissions publishes it.</p>
+<h4 id="repository-staff">Repository staff<a class="headerlink" href="#repository-staff" title="Permanent link">&para;</a></h4>
+<p>Roles assigned permission to bypass the moderation states may ingest content without restrictions. </p>
+<p>However: the default moderation state when creating content, even for those with the Bypass permission, is "Draft". If using these workflows, submitters wanting to publish directly must change this to "published" whenever they ingest content.</p>
+<p><img alt="image" src="/arca-docs/assets/draft-published.png" /></p>
+<p>If the item was ingested to the "draft" state accidentally, it may be moved directly to "published" using the moderation block.</p>
+<p><img alt="image" src="/arca-docs/assets/moderation_state.png" /></p>
 
 
 
