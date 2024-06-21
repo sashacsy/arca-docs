@@ -112,7 +112,7 @@ This cleanup task must be done *before* the migration, because the creation of t
 
 ## How do I make corrections?
 
-The best approach to batch metadata changes is using the module Islandora Datastreams I/O, and a text editor like BBEdit or Notepad++. This video walks you through the process: https://youtu.be/hjBRml74_eY
+The best approach to batch metadata changes is using the module Islandora Datastreams I/O, and a text editor like BBEdit or Notepad++. This video walks you through the process: [https://youtu.be/hjBRml74_eY](https://youtu.be/hjBRml74_eY).
 
 The modules that showed you the field values will also link you out to search results showing all of the objects with a given value. From those results, you can collect a list of PIDs or copy the Solr search to use with Datastreams I/O to export the MODS for editing.
 

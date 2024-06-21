@@ -41,6 +41,16 @@ nav:
   - About:
     - About Arca: about/about-arca.md
     - Support: about/support.md
+  - How-To in Islandora 2:
+    - Theming Customizations: how-to/theming/customizations.md
+    - Display Customizations:
+      - Custom URLs for repository items: how-to/display/pathauto.md
+    - Managing Objects:
+      - Ingest Guide: how-to/managing-content/ingest-guide.md
+      - Managing Media: how-to/managing-content/media.md
+      - Remote and Embedded Media: how-to/managing-content/remote-embed.md
+    - Processes:
+      - Self-submission: how-to/processes/self-submission.md
   - Troubleshooting:
     - Troubleshooting: troubleshooting/troubleshooting.md
     - Islandora 7 troubleshooting: troubleshooting/troubleshooting-i7.md
@@ -50,3 +60,4 @@ nav:
     - Migration Tasks:
       - Prepare Your Site: migration/migration-tasks/migration-preparation.md
       - Metadata Corrections: migration/migration-tasks/metadata-corrections.md
+      - Bulk Metadata Updates: migration/migration-tasks/bulk-metadata-updates.md
