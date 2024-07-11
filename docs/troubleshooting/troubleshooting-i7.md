@@ -6,12 +6,31 @@ Troubleshooting documentation is currently scattered around https://arca.bcelnap
     This document will be an attempt to consolidate that information. It will be obsolete after the migration.
 
 ## Legacy FAQs
+
 ### Display
+
+<details>
+<summary>Large Images won't display in the viewer. How can I find out what's happening?</summary>
+<br>
+
+If images aren't displaying in the viewer, here is how to diagnose and solve the problem.
+
+<ol>
+<li>When looking at the object's page in your repository, right click in your browser window and look for the "Inspect" option (may be "inspect", "inspect element", "console", or similar). <img src="/arca-docs/assets/inspect.png"></li>
+<li>In the Inspect frame, find the "Console" tab. <img src="/arca-docs/assets/console.png"></li>
+<li>Look for an error message.
+<ul><li>If it shows a "500 Error", likely there is a problem with your JP2 datastream. Manage your object, find the Datastreams tab, and click "regenerate" in the JP2 datastream row.</li>
+  <li>If it shows a "403 Error", there may be a larger issue. Check your other Large Image objects.</li>
+  <ul><li>If other Large Image objects also fail to render, contact the Arca Office; the issue may be service-wide.</li>
+  <li>If only this item fails to render, there may be permissions issues. Check your XACML configuration or contact the Arca Office with details, including the PID of the object in question.</li></ul>
+</ul></ol>
+</details>
+
 <details>
 <summary>How can I change the repository name in my breadcrumbs?</summary>
 <br>
 
-To batch export datastreams for newspaper issues, use the Islandora Datastreams I/O (information in [this Arca Minute](https://youtu.be/hjBRml74_eY)). Select the Solr Query option and enter the following text: `RELS_EXT_isMemberOf_uri_mt:"PID"` (replacing `"PID"` with the PID for the newspaper collection). This will export all of the child objects for that newspaper. For example, to make batch metadata edits, select the MODS datastream.
+To batch export datastreams for newspaper issues, use the Islandora Datastreams I/O (information in [this Arca Minute](https://youtu.be/hjBRml74_eY)). Select the Solr Query option and enter the following text: `RELS_EXT_isMemberOf_uri_mt:"PID"` (replacing `"PID"` with the PID for the newspaper collection). This will export all of the child objects for that newspaper. For example, to make batch metadata edits, select the MODS datastream.
   
 </details>
 <details>
@@ -38,7 +57,7 @@ If you're making changes to you Citation or Thesis objects' metadata display pro
   
 Go to Islandora -> Solution Pack Configuration -> Scholar. Scroll down to find the option "Use Standard Metadata Display". Make sure it is checked.  
   
-Scholar defaults to its own metadata display, [COinS](https://en.wikipedia.org/wiki/COinS). This display is not configurable, and so is probably not the best choice for objects in Arca.
+Scholar defaults to its own metadata display, [COinS](https://en.wikipedia.org/wiki/COinS). This display is not configurable, and so is probably not the best choice for objects in Arca.
 </details>
 <details>
 <summary>One of my display fields shows multiple values instead of just one. How do I fix it?</summary>
@@ -46,7 +65,7 @@ Scholar defaults to its own metadata display, [COinS](https://en.wikipedia.org/
 
 When viewing an object, one or more of the metadata display fields shows several values in it, from several different elements that were added separately to the ingest form. How can I display one specific value?  
   
-Your metadata display profile (or Solr search result field, or wherever you're using a Solr field) is probalby using the Dublin Core Solr field (`dc.description`, `dc.identifier`, etc.) rather than the more granular MODS Solr field. Dublin Core is not as precise as MODS, and many DC elements combine different MODS elements into one.  
+Your metadata display profile (or Solr search result field, or wherever you're using a Solr field) is probalby using the Dublin Core Solr field (`dc.description`, `dc.identifier`, etc.) rather than the more granular MODS Solr field. Dublin Core is not as precise as MODS, and many DC elements combine different MODS elements into one.  
   
 For example, dc.description will combine MODS abstract, and all MODS note elements. If you want to display just one of these, choose the MODS field that contains the specific piece of metadata you require.
 </details>
@@ -56,9 +75,9 @@ For example, dc.description will combine MODS abstract, and all MODS note elemen
 
 No!  
   
-Your ingest form is probably fine. Solr generates many fields based on the metadata you ingest via the form, and your object's content model metadata display profile is only configured to display a certain selection of those. You can configure the fields used in your Solr Metadata Display in admin/islandora/search/islandora_solr/metadata.  
+Your ingest form is probably fine. Solr generates many fields based on the metadata you ingest via the form, and your object's content model metadata display profile is only configured to display a certain selection of those. You can configure the fields used in your Solr Metadata Display in admin/islandora/search/islandora_solr/metadata.  
   
-For detailed assistance with this, including ways to find out which fields you should be using, review the [Metadata Display Arca Hour](http://ac-connect.bccampus.ca/p34d7sm0zb7/).
+For detailed assistance with this, including ways to find out which fields you should be using, review the [Metadata Display Arca Hour](http://ac-connect.bccampus.ca/p34d7sm0zb7/).
 </details>
 
 ### Enhancements
