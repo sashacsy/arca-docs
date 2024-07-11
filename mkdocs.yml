@@ -45,10 +45,12 @@ nav:
     - Theming Customizations: how-to/theming/customizations.md
     - Display Customizations:
       - Custom URLs for repository items: how-to/display/pathauto.md
+      - Displaying usage data: how-to/display/usage.md
     - Managing Objects:
       - Ingest Guide: how-to/managing-content/ingest-guide.md
       - Managing Media: how-to/managing-content/media.md
       - Remote and Embedded Media: how-to/managing-content/remote-embed.md
+      - 3D Objects: how-to/managing-content/3d-objects.md
     - Processes:
       - Self-submission: how-to/processes/self-submission.md
   - Troubleshooting:
