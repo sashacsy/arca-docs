@@ -31,6 +31,8 @@ To create a new pattern:
         - Using this option with the above example, your path would instead look like `yoursite.arcabc.ca/13/my-image`.
 - Give it a label so you remember what it means, and save.
 
+**Note that complex hierarchical paths are not possible**. Pathauto tokens are only available for (1) metadata fields and other information directly from the node in question, and (2) the parent item's name and node number [no other parent metadata].
+
 ## Setting custom URLs manually
 
 When creating or editing any Drupal object, including Repository Items, you have the option to manually set the URL Alias.
