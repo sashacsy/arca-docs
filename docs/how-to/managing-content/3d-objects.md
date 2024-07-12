@@ -1,7 +1,7 @@
 # Creating and managing 3D objects in Arca
 
 ## Ingesting a 3D object
-1. Follow the instructions in the [Ingest Guide](https://bceln.github.io/arca-docs/how-to/managing-content/ingest-guide/) to create a new node with your object metadata, as per usual. Select *3D object* for the content type.
+1. Follow the instructions in the [Ingest Guide](/arca-docs/how-to/managing-content/ingest-guide/) to create a new node with your object metadata, as per usual. Select *3D object* for the content type.
 2. When adding media, ensure *Original File* is selected for *Media Use*. 
 3. Skip the Threejs Settings tab and move on to the file upload section. GLB is highly recommended as the file format to ensure the smoothest experience on all browsers.
 4. Save and preview your object in the viewer. 
