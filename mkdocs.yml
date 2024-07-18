@@ -46,6 +46,7 @@ nav:
     - Display Customizations:
       - Custom URLs for repository items: how-to/display/pathauto.md
       - Displaying usage data: how-to/display/usage.md
+      - Collection Display: how-to/display/collection-display.md
     - Managing Objects:
       - Ingest Guide: how-to/managing-content/ingest-guide.md
       - Managing Media: how-to/managing-content/media.md
