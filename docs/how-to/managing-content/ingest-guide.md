@@ -30,6 +30,9 @@ In modern Islandora, all objects are created using the same metadata form. The f
 
 In your repository, you might have chosen to simplify the ingest process by suppressing the visibility of some of these fields. They still exist in your Repository Item content type, but they are not visible to you when you fill out the form. 
 
+!!! bug "New taxonomy terms and parentheses"
+    When creating a new taxonomy term from the node metadata form, please note that the inclusion of parentheses in the term may result in an SQL error. This is the case for any term/entity reference fields, including Genre, Subject, and Name. See [Troubleshooting](/arca-docs/troubleshooting/troubleshooting/#taxonomies-and-term-references) for more detail and solutions.
+
 1.	Title 
     * This field is required, and it will act as the label for your object. 
 2.	Content Type

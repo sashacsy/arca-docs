@@ -4,11 +4,11 @@ The items outlined here are taken from the findings of the Theming Group, and su
 
 These are offered in no particular order; they'll be cleaned up and categorized eventually.
 
-# Blocks and Menus
+## Blocks and Menus
 
 Blocks are chunks of content that might be produced by Menus, Views, or even manually, and can be placed in different regions of your site. They can be configured to appear on certain pages, or be hidden on certain pages.
 
-## Disabling (or enabling) blocks on any page
+### Disabling (or enabling) blocks on any page
 
 What: Remove blocks like "Recent Items" to get a cleaner front page look, or add new blocks to any page.
 
@@ -28,6 +28,7 @@ Instructions:
 2. To add (or re-add) a block:
     1. In the admin menu, go to `Structure -> Block Layout` (`/admin/structure/block`)
     2. Find the region you want the block to appear in (e.g. `Content`)
+        * To preview the names and locations of each region, click  `Demonstrate block regions ([Theme Name])` near the top of the `Block Layout` page.
     3. Next to the region's header, click `Place block`.
     4. Find the block you want to place (e.g. "Recent Items") and place it.
     5. Drag the block order to position it appropriately in relation to other blocks in that region.
@@ -37,7 +38,7 @@ Instructions:
         * In the text box, enter `<front>`
         * Select "Show for the listed pages"
 
-## Additional menu blocks
+### Additional menu blocks
 
 What: Create a new menu block, such as a "helpful links" menu on the front page.
 
@@ -56,7 +57,7 @@ Instructions:
     5. Position it in the appropriate order relative to other existing blocks.
     6. Configure it to appear on the pages you want, or hide on pages you don't want it to appear (see disabling or enabling blocks, above).
 
-## Institutional Footer
+### Institutional Footer
 
 What: A custom block that rests at the bottom of every page, with institutional logo and links. (NOTE: The institutional footer must go above the general Arca footer.)
 
@@ -94,6 +95,7 @@ table, th, td {
     </tbody>
 </table>
 ```
+
 2. Place and activate your custom block:
     1. In the admin menu, go to `Structure -> Block Layout` (`/admin/structure/block`)
     2. In the Footer section, click `Place Block`.
@@ -103,14 +105,24 @@ table, th, td {
     1. If you need to make changes to your institutional footer, go to `Structure -> Block layout -> Custom block library` (`/admin/content/block`)
     2. Find your block, and click Edit.
     3. Save your changes.
-    
-# Views
+
+## Basic Pages
+### Creating a new page
+Drupal has documentation on creating basic pages available [here](https://www.drupal.org/docs/user_guide/en/content-create.html).
+
+To add a link to your new page to the navigation menu:
+    * Unfold `Menu Settings` on the righthand side of the Basic Page editing menu.
+    * Toggle on "Provide a menu link" and select a title for the link.
+    * Select the name of the menu in your header/navigation block.
+    * Save your page.
+
+## Views
 
 Views are ways that content gets grouped and displayed. A View can display selected fields from selected content types, according to filters of your choice and relationships to other content. Views are very powerful.
 
 This section will focus on certain Arca-specific use cases; for more general information about using Views, a pleathora of [courses and documentation can be found online](https://drupalize.me/course/user-guide/views-chapter).
 
-## Customizing the Repo Content Counts view
+### Customizing the Repo Content Counts view
 
 What: Changing what kind of content gets listed and counted in the summary on the front page.
 
