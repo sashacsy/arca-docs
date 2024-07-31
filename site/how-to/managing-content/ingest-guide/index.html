@@ -449,6 +449,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../display/usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Displaying usage data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../display/collection-display/" class="md-nav__link">
         
   
@@ -640,6 +661,27 @@
   
   <span class="md-ellipsis">
     Remote and Embedded Media
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3d-objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3D Objects
   </span>
   
 
@@ -1124,6 +1166,10 @@
 <h2 id="filling-in-the-metadata-form">Filling in the metadata form<a class="headerlink" href="#filling-in-the-metadata-form" title="Permanent link">&para;</a></h2>
 <p>In modern Islandora, all objects are created using the same metadata form. The form fields are grouped by type and collapsed, so you can easily ignore the fields that are not relevant to your content.</p>
 <p>In your repository, you might have chosen to simplify the ingest process by suppressing the visibility of some of these fields. They still exist in your Repository Item content type, but they are not visible to you when you fill out the form. </p>
+<div class="admonition bug">
+<p class="admonition-title">New taxonomy terms and parentheses</p>
+<p>When creating a new taxonomy term from the node metadata form, please note that the inclusion of parentheses in the term may result in an SQL error. This is the case for any term/entity reference fields, including Genre, Subject, and Name. See <a href="/arca-docs/troubleshooting/troubleshooting/#taxonomies-and-term-references">Troubleshooting</a> for more detail and solutions.</p>
+</div>
 <ol>
 <li>Title <ul>
 <li>This field is required, and it will act as the label for your object. </li>

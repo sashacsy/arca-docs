@@ -26,6 +26,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bceln.github.io/arca-docs/how-to/display/usage/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bceln.github.io/arca-docs/how-to/managing-content/3d-objects/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bceln.github.io/arca-docs/how-to/managing-content/ingest-guide/</loc>
          <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
