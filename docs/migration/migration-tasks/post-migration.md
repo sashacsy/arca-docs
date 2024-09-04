@@ -49,6 +49,12 @@ You will also want to review permissions for each role to make sure that they ar
 
 If you want a mediated process for self-submission, follow the [self-submission setup instructions](/arca-docs/how-to/processes/self-submission/).
 
+## Configure Pathauto
+
+If you want to set up custom URLs for your objects, you will need to [configure the Pathauto module](/arca-docs/how-to/display/pathauto/).
+
+This configuration happens after objects are migrated. Once you have configured it in the way you want it, we will run a script to apply the new paths to all migrated objects.
+
 ## Theme customizations
 
 Customize your theming as you see fit. You can modify colours, logos, etc. via the Appearance menu at `/admin/appearance/settings/dgi_i8_base`.
