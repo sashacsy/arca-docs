@@ -37,6 +37,20 @@ Process:
   
 When viewing your object, the embedded media should display normally.
 
+## Add TRANSCRIPT datastreams back to video and audio content
+
+TRANSCRIPT datastreams, which would have provided subtitles/closed captioning on your video objects, will not be migrated automatically. They need to be re-added after the migration is complete.
+
+Process:
+
+- Before migration, the Arca Office will provide you with a zip file containing all the TRANSCRIPT datastreams for your objects.
+- Ensure that your TRANSCRIPT files are in the VTT format. Convert if necessary.
+- After migration, search the PIDs from the filenames to find the corresponding objects in the new repository.
+- For each object:
+  - Click the Media tab
+  - Find the video or audio media, and click Edit
+  - Under the "Track" section, upload your transcript file.
+
 ## Create and review users, roles, and permissions
 
 Before migration, you should already have reviewed and pruned your users list so that only users you want to migrate will appear in your new repository.
