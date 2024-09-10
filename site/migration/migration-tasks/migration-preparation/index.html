@@ -987,6 +987,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#review-embargoed-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review Embargoed objects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#remove-deleted-objects" class="md-nav__link">
     <span class="md-ellipsis">
       Remove "deleted" objects
@@ -1061,6 +1070,27 @@
   
   <span class="md-ellipsis">
     Bulk Metadata Updates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pre-migration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pre-Migration Tasks
   </span>
   
 
@@ -1163,6 +1193,15 @@
   <a href="#review-xacml-policies" class="md-nav__link">
     <span class="md-ellipsis">
       Review XACML policies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-embargoed-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review Embargoed objects
     </span>
   </a>
   
@@ -1285,6 +1324,12 @@
 </li>
 <li>If you have objects with <em>Management</em> restrictions, remove those restrictions - Management restrictions are not useful in Islandora, and may cause problems.</li>
 <li>For each object with Viewing restrictions, make sure that these are still required, and that the appropriate roles have access; if the restrictions are no longer required, remove them.</li>
+</ul>
+<h2 id="review-embargoed-objects">Review Embargoed objects<a class="headerlink" href="#review-embargoed-objects" title="Permanent link">&para;</a></h2>
+<p>Review your Scholar Embargoes and IP Embargoes to ensure that they are still valid.</p>
+<ul>
+<li>Scholar Embargoes(<code>/admin/islandora/tools/embargo/list</code>)</li>
+<li>IP Embargoes (<code>admin/islandora/tools/ip_embargo/manage</code>)</li>
 </ul>
 <h2 id="remove-deleted-objects">Remove "deleted" objects<a class="headerlink" href="#remove-deleted-objects" title="Permanent link">&para;</a></h2>
 <p>Some objects may have the "deleted" property set, but have not yet been removed from the repository. Identify, review, and remove all "deleted" objects.</p>

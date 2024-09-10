@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://bceln.github.io/arca-docs/migration/migration-tasks/post-migration/">
       
       
-        <link rel="prev" href="../bulk-metadata-updates/">
+        <link rel="prev" href="../pre-migration/">
       
       
       
@@ -963,6 +963,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../pre-migration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pre-Migration Tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1030,6 +1051,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#add-transcript-datastreams-back-to-video-and-audio-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add TRANSCRIPT datastreams back to video and audio content
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#create-and-review-users-roles-and-permissions" class="md-nav__link">
     <span class="md-ellipsis">
       Create and review users, roles, and permissions
@@ -1042,6 +1072,15 @@
   <a href="#set-up-mediated-submission" class="md-nav__link">
     <span class="md-ellipsis">
       Set up mediated submission
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-pathauto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Pathauto
     </span>
   </a>
   
@@ -1125,6 +1164,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#add-transcript-datastreams-back-to-video-and-audio-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add TRANSCRIPT datastreams back to video and audio content
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#create-and-review-users-roles-and-permissions" class="md-nav__link">
     <span class="md-ellipsis">
       Create and review users, roles, and permissions
@@ -1137,6 +1185,15 @@
   <a href="#set-up-mediated-submission" class="md-nav__link">
     <span class="md-ellipsis">
       Set up mediated submission
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-pathauto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Pathauto
     </span>
   </a>
   
@@ -1211,12 +1268,27 @@
 <li>Under <code>Media Use</code>, select "Service File"</li>
 </ul>
 <p>When viewing your object, the embedded media should display normally.</p>
+<h2 id="add-transcript-datastreams-back-to-video-and-audio-content">Add TRANSCRIPT datastreams back to video and audio content<a class="headerlink" href="#add-transcript-datastreams-back-to-video-and-audio-content" title="Permanent link">&para;</a></h2>
+<p>TRANSCRIPT datastreams, which would have provided subtitles/closed captioning on your video objects, will not be migrated automatically. They need to be re-added after the migration is complete.</p>
+<p>Process:</p>
+<ul>
+<li>Before migration, the Arca Office will provide you with a zip file containing all the TRANSCRIPT datastreams for your objects.</li>
+<li>Ensure that your TRANSCRIPT files are in the VTT format. Convert if necessary.</li>
+<li>After migration, search the PIDs from the filenames to find the corresponding objects in the new repository.</li>
+<li>For each object:</li>
+<li>Click the Media tab</li>
+<li>Find the video or audio media, and click Edit</li>
+<li>Under the "Track" section, upload your transcript file.</li>
+</ul>
 <h2 id="create-and-review-users-roles-and-permissions">Create and review users, roles, and permissions<a class="headerlink" href="#create-and-review-users-roles-and-permissions" title="Permanent link">&para;</a></h2>
 <p>Before migration, you should already have reviewed and pruned your users list so that only users you want to migrate will appear in your new repository.</p>
 <p>Users should be migrated automatically, but you should review them to make sure that (a) all appropriate users are present, (b) no unwanted users have been migrated, and (c) each user has the appropriate Role.</p>
 <p>You will also want to review permissions for each role to make sure that they are set appropriately.</p>
 <h2 id="set-up-mediated-submission">Set up mediated submission<a class="headerlink" href="#set-up-mediated-submission" title="Permanent link">&para;</a></h2>
 <p>If you want a mediated process for self-submission, follow the <a href="/arca-docs/how-to/processes/self-submission/">self-submission setup instructions</a>.</p>
+<h2 id="configure-pathauto">Configure Pathauto<a class="headerlink" href="#configure-pathauto" title="Permanent link">&para;</a></h2>
+<p>If you want to set up custom URLs for your objects, you will need to <a href="/arca-docs/how-to/display/pathauto/">configure the Pathauto module</a>.</p>
+<p>This configuration happens after objects are migrated. Once you have configured it in the way you want it, we will run a script to apply the new paths to all migrated objects.</p>
 <h2 id="theme-customizations">Theme customizations<a class="headerlink" href="#theme-customizations" title="Permanent link">&para;</a></h2>
 <p>Customize your theming as you see fit. You can modify colours, logos, etc. via the Appearance menu at <code>/admin/appearance/settings/dgi_i8_base</code>.</p>
 <p>You can take more advanced theming steps (block placement, etc.) following the <a href="/arca-docs/how-to/theming/customizations/">Theming Customizations guide</a>.</p>
