@@ -50,6 +50,13 @@ Review your XACML-restricted objects to confirm that only intended objects are r
   * If you have objects with *Management* restrictions, remove those restrictions - Management restrictions are not useful in Islandora, and may cause problems.
   * For each object with Viewing restrictions, make sure that these are still required, and that the appropriate roles have access; if the restrictions are no longer required, remove them.
 
+## Review Embargoed objects
+
+Review your Scholar Embargoes and IP Embargoes to ensure that they are still valid.
+
+  * Scholar Embargoes(`/admin/islandora/tools/embargo/list`)
+  * IP Embargoes (`admin/islandora/tools/ip_embargo/manage`)
+
 ## Remove "deleted" objects
 
 Some objects may have the "deleted" property set, but have not yet been removed from the repository. Identify, review, and remove all "deleted" objects.
