@@ -23,9 +23,9 @@ Check back here regularly for updates. **Last update: 2024-07-31**
 
 | *Planning Phase (March 2024 to May 2024)*              | *Start Date* | *End Date*    | *Partners* | *Status*  |
 | -------------------------------------------------------- | ------------ | ------------- | -------- | ----------- |
-| Establish migration schedule                             | July 2024   | August 2024    | Members  |      In Progress       |
-|     - Work out configuration tweaks for first migration  | March 2024   |      May 2024         | Members  |             |
-|     - In-depth metadata amelioration for first migration | March 2024   | May 2024    | Members  |             |
+| Establish migration schedule                             | September 2024   | October 2024    | Members  |      In Progress       |
+|     - Work out configuration tweaks for first migration  | March 2024   |      May 2024         | Members  | Complete |
+|     - In-depth metadata amelioration for first migration | March 2024   | June 2024    | Members  | Complete |
 | Metadata amelioration                                    | May 2023     | May 2024    | Members  | Complete |
 | Initial meeting with DGI Project Manager                 | January 2024 | January 2024  | DGI      | Complete    |
 | Discoverygarden kickoff                                  | January 2024 |               | DGI      | Complete |
@@ -36,19 +36,19 @@ Check back here regularly for updates. **Last update: 2024-07-31**
 | *Infrastructure Phase (January 2024 to May 2024)* | *Start Date*   | *End Date* | *Partners*   | *Status*                                                      |
 | ----------------------------------------------- | ------------ | ------------- | ------------ | ------------------------------------------------------------- |
 | Demo machine provisioned                        | January 2024 |               | DGI          |         Complete                                             |
-|     - Member orientation in demo machine        | April 2024 | June 2024 | Members      |                                                               |
 |     - Testing and exploration in demo machine   | January 2024 | September 2024    | Members      |           Ongoing                                                    |
 | Staging environment built | May 2024 | July 2024 | DGI | Copmlete |
-| Base images built and tested                    | January 2024 | August 2024    | DGI          |                                                               |
+| Base images built and tested                    | January 2024 | August 2024    | DGI          | Complete |
 | Virtual machines provisioned                    | May 2023     | August 2024     | SFU          | Agreement reached with SFU. Machines will be built as needed |
-| First base image installed                      | April 2024   | May 2024      | DGI, Members |                                                               |
+| First base image installed                      | April 2024   | September 2024      | DGI, Members | Complete |
 | ARK machine built and configured					| April 2024 | May 2024 | DGI | In Progress |
 
 
 | *Migration Phase (May 2024 to June 2025)*                                                              | *Start Date* | *End Date*    | *Partners*   | *Status* |
 | ------------------------------------------------------------------------------------------------------ | ------------ | ------------- | ------------ | ------ |
 | Members [prepare their sites](/arca-docs/migration/migration-tasks/migration-preparation/)             | January 2024	|               | Members      |        |
-| First site migration                                                                                   | May 2024     | August 2024     | DGI, Members |    Imminent    |
+| Initial Test Migration | |September 2024 | |October 2024 | In Progress |
+| First site migration                                                                                   | September 2024     | October 2024     | DGI, Members |    Imminent    |
 | Site-by-site installation, migration and configurations begun                                          | August 2024    | December 2024 | DGI, Members |        |
 |     - Identify custom configurations for each site                                                     |              |               | Members      |        |
 |     - In-depth metadata amelioration for each site as their turn comes up                              |              |               | Members      |        |
