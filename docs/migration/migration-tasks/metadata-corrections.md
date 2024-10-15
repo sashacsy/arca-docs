@@ -91,7 +91,10 @@ When your metadata has been corrected, please be sure to apply those standards t
         * Invalid entry: `40°00'N, 111°57'W`
     * Using Islandora Solr Facet Pages, create a facet page on the Solr field `mods_subject_cartographics_coordinates_ms` to find all your coordinates.
     * Edit any coordinate values to remove the degrees and letters, and convert to valid decimal format.
+        * You can use this handy tool to convert from degrees and minutes to decimal format: [Degrees Minutes Seconds to Decimal Degrees converter](https://www.fcc.gov/media/radio/dms-decimal).
     * **If this field contains any values other than numbers, decimals, and negative signs, the migration will fail.**
+
+
 
 These are the most critical metadata elements to correct, but best practice is to review all of your more common metadata fields to ensure consistency and accuracy before we migrate your data.
 
