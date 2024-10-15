@@ -86,11 +86,11 @@ When your metadata has been corrected, please be sure to apply those standards t
           ```
     * For named subjects, follow the same standards as you apply to names.
 * [Coordinates](https://arcabc.ca/browse/coordinates)
-    * For successful migration, Coordinates values **cannot have symbols or letters in them**. They may only have numbers, negatives, and commas.
+    * For successful migration, Coordinates values **must be valid decimal numbers**. They **cannot have symbols or letters in them**. They may only have numbers, negatives, and commas.
         * Valid entry: `19.421940, -155.269213`
         * Invalid entry: `40°00'N, 111°57'W`
     * Using Islandora Solr Facet Pages, create a facet page on the Solr field `mods_subject_cartographics_coordinates_ms` to find all your coordinates.
-    * Edit any coordinate values to remove the degrees and letters.
+    * Edit any coordinate values to remove the degrees and letters, and convert to valid decimal format.
     * **If this field contains any values other than numbers, decimals, and negative signs, the migration will fail.**
 
 These are the most critical metadata elements to correct, but best practice is to review all of your more common metadata fields to ensure consistency and accuracy before we migrate your data.
