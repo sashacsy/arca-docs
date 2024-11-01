@@ -2,7 +2,7 @@
 
 ## Local Admin Tasks
 
-* Review and complete all steps from [Migration Preparation](/arca-docs/docs/migration/migration-tasks/migration-preparation/)
+* Review and complete all steps from [Migration Preparation](/arca-docs/migration/migration-tasks/migration-preparation/)
 
 
 ## Arca Office Tasks
