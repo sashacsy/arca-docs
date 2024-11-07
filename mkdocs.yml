@@ -52,6 +52,8 @@ nav:
       - Managing Media: how-to/managing-content/media.md
       - Remote and Embedded Media: how-to/managing-content/remote-embed.md
       - 3D Objects: how-to/managing-content/3d-objects.md
+    - Access Controls:
+      - Embargoes: how-to/access-control/embargo.md
     - Processes:
       - Self-submission: how-to/processes/self-submission.md
   - Troubleshooting:
