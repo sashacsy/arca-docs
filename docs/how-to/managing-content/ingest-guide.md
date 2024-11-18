@@ -68,12 +68,12 @@ Our ingest form is organized into Paragraphs - organized groups of metadata fiel
     7. Peer Review Status
         * Select this if your item is an academic paper that has been peer reviewed.
 2. Persons and Affiliations
-* All the contributors to your object are added in this section. Separate fields are created for Persons and Organizations.
-    * Names are no longer simple text fields: they are term references, pointing to specific entities in the Person and Corporate Body taxonomies. This allows the same entity to be referenced by any number of repository items, and makes it easier to control forms of name for individuals.
-    * Relationship Type is their Role – author, creator, publisher, reviewer, etc. These relator terms come from the [MARC Relator list](https://www.loc.gov/marc/relators/relaterm.html).
-    * There are two ways to add new Persons and Organizations:
-        1. Enter a new name in this field. It will automatically populate the taxonomy, and that new entity will be available for future ingests. You can edit the term later to flesh it out with more detail.
-        2. Create the new Person or Corporate Body taxonomy term first. This will allow you to add more information about the person, such as affiliations, description, etc., before you start relating content to them.
+    * All the contributors to your object are added in this section. Separate fields are created for Persons and Organizations.
+        * Names are no longer simple text fields: they are term references, pointing to specific entities in the Person and Corporate Body taxonomies. This allows the same entity to be referenced by any number of repository items, and makes it easier to control forms of name for individuals.
+        * Relationship Type is their Role – author, creator, publisher, reviewer, etc. These relator terms come from the [MARC Relator list](https://www.loc.gov/marc/relators/relaterm.html).
+        * There are two ways to add new Persons and Organizations:
+            1. Enter a new name in this field. It will automatically populate the taxonomy, and that new entity will be available for future ingests. You can edit the term later to flesh it out with more detail.
+            2. Create the new Person or Corporate Body taxonomy term first. This will allow you to add more information about the person, such as affiliations, description, etc., before you start relating content to them.
 3.	ETDs
     * This section is for information about theses specifically, and is part of what gets sent to Theses canada. Fill in as appropriate. Degree names and levels reference taxonomies.
 4.	Institution
