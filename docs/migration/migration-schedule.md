@@ -8,4 +8,4 @@ The document will be available at this same link as it gets updated.
 
 If you have any questions or concerns about your position on the schedule, or changes to request, please contact the Arca office.
 
-Be sure to [complete all preparatory tasks](/arca-docs/migration/migration-preparation) as your time draws near. Ensure that your staff are available during this time.
+Be sure to [complete all preparatory tasks](/arca-docs/migration/migration-tasks/migration-preparation) as your time draws near. Ensure that your staff are available during this time.
