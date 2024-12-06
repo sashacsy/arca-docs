@@ -2,6 +2,10 @@
 
 The Arca Office is working with Discoverygarden to create a theme, a base configuration, infrastructure, and migrate content, but there will be numerous post-migration tasks for local admins once your site is up, content is migrated, and your account has been created.
 
+## Create an About page
+
+The Arca Office will create a stub About page for you to customize, and add it to the header menu. You can edit this page to add details such as contact information and context for your site.
+
 ## Apply access controls
 
 Because of the complexity of XACML policies and embargoes, we are unable to automatically migrate access restrictions on your objects. Instead, these will have to be applied manually after the data is migrated, but before your new site becomes publicly accessible.
