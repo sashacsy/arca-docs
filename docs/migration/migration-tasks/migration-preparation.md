@@ -16,6 +16,9 @@ Eliminate or migrate all Orphaned Objects:
 
   * Orphaned objects are objects that are missing at least one of their assigned "parent" objects (newspapers, collections, etc.). Typically they become orphaned when the parent item is deleted.
   * Find a list of all your orphaned objects at `Reports -> Orphaned Islandora Objects`.
+  * Before you start, go to your Paged Content Module settings at `admin/islandora/solution_pack_config/paged_content`, and *un-check "Hide Page Objects From Search Results"*
+      * If this box remains checked, any orphaned Page objects will not show up in your list, and will end up being migrated as orphans.
+      * The box can be checked again when you are finished dealing with your orphans.
   * Look at each object in the list, and determine whether it should be kept or deleted.
       * To keep an object, `Manage` it and `Migrate` to a new parent.
       * Objects may be deleted individually, or in bulk using the checkboxes.
