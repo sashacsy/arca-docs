@@ -1175,6 +1175,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#identify-your-scholars-and-create-a-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identify your Scholars and create a View
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identify your Scholars and create a View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mark-your-scholars" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mark your Scholars:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-your-scholars-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your Scholars view:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#apply-access-controls" class="md-nav__link">
     <span class="md-ellipsis">
       Apply access controls
@@ -1297,6 +1330,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#identify-your-scholars-and-create-a-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identify your Scholars and create a View
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identify your Scholars and create a View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mark-your-scholars" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mark your Scholars:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-your-scholars-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create your Scholars view:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#apply-access-controls" class="md-nav__link">
     <span class="md-ellipsis">
       Apply access controls
@@ -1394,6 +1460,78 @@
 <p>The Arca Office is working with Discoverygarden to create a theme, a base configuration, infrastructure, and migrate content, but there will be numerous post-migration tasks for local admins once your site is up, content is migrated, and your account has been created.</p>
 <h2 id="create-an-about-page">Create an About page<a class="headerlink" href="#create-an-about-page" title="Permanent link">&para;</a></h2>
 <p>The Arca Office will create a stub About page for you to customize, and add it to the header menu. You can edit this page to add details such as contact information and context for your site.</p>
+<h2 id="identify-your-scholars-and-create-a-view">Identify your Scholars and create a View<a class="headerlink" href="#identify-your-scholars-and-create-a-view" title="Permanent link">&para;</a></h2>
+<p>If you had a Scholars collection in your previous repository, you will need to find those persons in your new site, and edit them to mark them as Scholars.</p>
+<h3 id="mark-your-scholars">Mark your Scholars:<a class="headerlink" href="#mark-your-scholars" title="Permanent link">&para;</a></h3>
+<p>Scholars are entities in the Person taxonomy that you have identified specially as pertinent to your institution. There is a special metadata field that allows you to mark them as such, so they can be included in your views of your scholars.</p>
+<ol>
+<li>Open the Person taxonomy at <code>Structure -&gt; Taxonomy -&gt; Person</code>, or the path <code>/admin/structure/taxonomy/manage/person/overview</code></li>
+<li>Find the Person you want to mark as a Scholar, and click Edit</li>
+<li>On the Edit screen, find the "Include in Scholars list" toggle and turn it on.</li>
+<li>Save</li>
+</ol>
+<h3 id="create-your-scholars-view">Create your Scholars view:<a class="headerlink" href="#create-your-scholars-view" title="Permanent link">&para;</a></h3>
+<p>Since Scholars are not Repository Items, you need to configure a special View to display them. These instructions provide a very basic view; you may need additional CSS work to style it appropriately.</p>
+<ol>
+<li>Create a new view at <code>Structure -&gt; Views -&gt; Add View</code></li>
+<li>Set up your view:<ul>
+<li>View name: Your choice; "Scholars" for this example</li>
+<li>View settings: <ul>
+<li>Show: <code>Taxonomy Terms</code></li>
+<li>Of type: <code>Person</code></li>
+</ul>
+</li>
+<li>Page settings: <code>Create a Pag</code>e<ul>
+<li>Set the title and path you prefer. If your path is <code>scholars</code>, the URL to the page will be <code>yoursite.arcabc.ca/scholars</code>.</li>
+<li>Page display settings: <code>Unformatted list</code> of <code>fields</code></li>
+</ul>
+</li>
+<li>Items to display: However many you want to appear per page.</li>
+<li>Create a menu link and RSS feed if you want to.</li>
+<li>Save and edit</li>
+</ul>
+</li>
+<li>
+<p>Configure your view:</p>
+<ul>
+<li>Format: Defines how the results will display, and what elements you can include in the display.<ul>
+<li>Format: Your choice; <code>Grid</code>, <code>Bootstrap Grid</code>, <code>Responsive Grid</code>, etc.<ul>
+<li><code>Responsive Grid</code> recommended</li>
+</ul>
+</li>
+<li>Show: <code>Fields</code></li>
+</ul>
+</li>
+<li>Fields: Defines which fields from the Person metadata are displayed in this view.<ul>
+<li><code>Taxonomy term: Name</code></li>
+<li><code>Photograph</code><ul>
+<li>Formatter: <code>Thumbnail</code></li>
+<li>Image style: Your choice; <code>Medium (220x220)</code> or <code>Thumbnail (100x100)</code> recommended.</li>
+</ul>
+</li>
+<li>Any other fields you want to display in this view</li>
+</ul>
+</li>
+<li>
+<p>Filter Criteria: Filters the list of results to the specific criteria you set.</p>
+<ul>
+<li>(Leave the existing filters as-is)</li>
+<li>Add: <code>Include in Scholars List</code><ul>
+<li>Operator: <code>Is equal to</code> &gt; <code>True</code></li>
+</ul>
+</li>
+<li>You may also choose to include other filters on other metadata, such as affiliation, title, etc.</li>
+</ul>
+</li>
+<li>
+<p>Sort Criteria:</p>
+<ul>
+<li>Choose the field you want to sort by.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
 <h2 id="apply-access-controls">Apply access controls<a class="headerlink" href="#apply-access-controls" title="Permanent link">&para;</a></h2>
 <p>Because of the complexity of XACML policies and embargoes, we are unable to automatically migrate access restrictions on your objects. Instead, these will have to be applied manually after the data is migrated, but before your new site becomes publicly accessible.</p>
 <p>Access restrictions in the new platform will primarily be based on the <a href="https://github.com/discoverygarden/embargo">Embargo module</a>. Some sites with special requirements might also use Groups. Training on Embargo, IP Embargo, and Groups will be provided.</p>
