@@ -13,7 +13,11 @@ To add or remove fields:
 3. The metadata fields are arranged in collapsible groups. To change the group a field is in, simply drag it out of one group and into the next.
 4. To remove a field from the display, drag it into the Disabled section.
 5. To add a field that isn't already present in the display, drag it from the Disabled section into the group of your choice.
-
+6. To make a field group collapsed or expanded by default:
+    - Find the group (at the top level of a hierarchy; e.g. "Access and Rights" or "Persons and Affiliations"); you will see "Default state open" or "Default state closed"
+    -  Click the gear icon in that row to open the field group configuration
+    - Find the `Display element open by default` toggle, and set as desired.
+    
 
 ## Contextually changing metadata labels
 
