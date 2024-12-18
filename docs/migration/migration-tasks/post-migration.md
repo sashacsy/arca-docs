@@ -6,6 +6,56 @@ The Arca Office is working with Discoverygarden to create a theme, a base config
 
 The Arca Office will create a stub About page for you to customize, and add it to the header menu. You can edit this page to add details such as contact information and context for your site.
 
+## Identify your Scholars and create a View
+
+If you had a Scholars collection in your previous repository, you will need to find those persons in your new site, and edit them to mark them as Scholars.
+
+### Mark your Scholars:
+
+Scholars are entities in the Person taxonomy that you have identified specially as pertinent to your institution. There is a special metadata field that allows you to mark them as such, so they can be included in your views of your scholars.
+
+1. Open the Person taxonomy at `Structure -> Taxonomy -> Person`, or the path `/admin/structure/taxonomy/manage/person/overview`
+2. Find the Person you want to mark as a Scholar, and click Edit
+3. On the Edit screen, find the "Include in Scholars list" toggle and turn it on.
+4. Save
+
+### Create your Scholars view:
+
+Since Scholars are not Repository Items, you need to configure a special View to display them. These instructions provide a very basic view; you may need additional CSS work to style it appropriately.
+
+1. Create a new view at `Structure -> Views -> Add View`
+2. Set up your view:
+    - View name: Your choice; "Scholars" for this example
+    - View settings: 
+        - Show: `Taxonomy Terms`
+        - Of type: `Person`
+    - Page settings: `Create a Pag`e
+        - Set the title and path you prefer. If your path is `scholars`, the URL to the page will be `yoursite.arcabc.ca/scholars`.
+        - Page display settings: `Unformatted list` of `fields`
+    - Items to display: However many you want to appear per page.
+    - Create a menu link and RSS feed if you want to.
+    - Save and edit
+3. Configure your view:
+    - Format: Defines how the results will display, and what elements you can include in the display.
+        - Format: Your choice; `Grid`, `Bootstrap Grid`, `Responsive Grid`, etc.
+            - `Responsive Grid` recommended
+        - Show: `Fields`
+    - Fields: Defines which fields from the Person metadata are displayed in this view.
+        - `Taxonomy term: Name`
+        - `Photograph`
+            - Formatter: `Thumbnail`
+            - Image style: Your choice; `Medium (220x220)` or `Thumbnail (100x100)` recommended.
+        - Any other fields you want to display in this view
+    - Filter Criteria: Filters the list of results to the specific criteria you set.
+         - (Leave the existing filters as-is)
+         - Add: `Include in Scholars List`
+             - Operator: `Is equal to` > `True`
+         - You may also choose to include other filters on other metadata, such as affiliation, title, etc.
+             
+    - Sort Criteria:
+         - Choose the field you want to sort by.
+
+
 ## Apply access controls
 
 Because of the complexity of XACML policies and embargoes, we are unable to automatically migrate access restrictions on your objects. Instead, these will have to be applied manually after the data is migrated, but before your new site becomes publicly accessible.
