@@ -2,6 +2,19 @@
 
 This page documents miscellaneous customizations and hacks for the display of repository items, based on requests from membership.
 
+## Adding or Removing Fields from Metadata Display
+
+When viewing a Repository Item, metadata shows up below the object viewer. The metadata displayed is a selection of the metadata fields attached to the item, and is not complete.
+
+To add or remove fields:
+
+1. Manage the Display of the Repository Item content type: `Structure -> Content types -> Repository Item -> Manage Display`
+2. Click the `Bottom Metadata` section.
+3. The metadata fields are arranged in collapsible groups. To change the group a field is in, simply drag it out of one group and into the next.
+4. To remove a field from the display, drag it into the Disabled section.
+5. To add a field that isn't already present in the display, drag it from the Disabled section into the group of your choice.
+
+
 ## Contextually changing metadata labels
 
 Use case: You want to present different labels for your metadata display depending on the type (model) of the object.
