@@ -47,6 +47,7 @@ nav:
       - Custom URLs for repository items: how-to/display/pathauto.md
       - Displaying usage data: how-to/display/usage.md
       - Collection Display: how-to/display/collection-display.md
+      - Metadata Display: how-to/display/metadata-display-customizations.md
       - Comments: how-to/display/comments.md
     - Metadata:
       - Taxonomies: how-to/metadata/taxonomies.md
