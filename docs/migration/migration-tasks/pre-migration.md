@@ -1,4 +1,4 @@
-# Pre-migration Checklist
+# Pre-Migration Checklist
 
 ## Local Admin Tasks
 
@@ -14,7 +14,7 @@
         * TRANSCRIPT
         * LICENSE
         * LICENSES
-        * PERIMSSIONS
+        * PERMISSIONS
         * APPROVAL
     * With Islandora Datastreams I/O, Export and Zip the special datastreams and send to local admin
 * Review site for Remote Media objects

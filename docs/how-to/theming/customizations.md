@@ -4,6 +4,40 @@ The items outlined here are taken from the findings of the Theming Group, and su
 
 These are offered in no particular order; they'll be cleaned up and categorized eventually.
 
+## Appearance Customization
+To adjust the basic look and feel of your site, hover over the paintbrush icon in the admin toolbar on the lefthand side of your site.
+
+Navigate to `Appearance -> Settings -> DG Digital Collections` to see a range of options for updating the colours, logo, etc. for your site.
+
+### Logo and Favicon
+Your logo is the image that will appear in the top left corner or to the left of the header on all of your site's pages. Your favicon is the shortcut icon that will be displayed in the address bar and/or bookmarks for your site on most browsers.
+
+Instructions for changing either of these images:
+
+1. Scroll down to the section with the header **Override Global Settings**.
+2. Select the `Logo image` tab from the options to the left and ensure `Use the logo supplied by the theme` is toggled off. Upload your new logo by clicking `Choose file`. Once you've selected your file, make sure to save your changes by scrolling to the bottom of the settings page and clicking `Save configuration`.
+3. Repeat this process in the `Favicon` tab to change your site's favicon.
+
+### Site Colours
+The **Colour scheme** section of the Appearance settings allows you to select primary and secondary colours for your site. You can update these colours by entering the new hex codes directly into the boxes, or by clicking on the box for the colour you'd like to change and then making a selection on the colour wheel.
+
+To see descriptions of which parts of the site correspond to each colour, hover over each hex code box. The Preview view underneath the hex code boxes also allows you to see your colour changes live.
+
+!!! warning
+    Make sure to save your configuration by clicking the button at the bottom of the Settings page once you're finished changing any hex codes.
+
+### Frontpage Image
+
+The settings for changing the frontpage background image in i2 are much more nested than in legacy Islandora. Unlike the logo or favicon, the frontpage image needs to be edited from the Block settings and not the Appearance settings.
+
+Instructions:
+
+1. Go to `Structure -> Views -> Frontpage (Content)`. Immediately under the header **Displays**, you will see several buttons. Go to the one labelled `Front page Block`.
+    * You can also reach these settings by appending `/admin/structure/views/view/frontpage/edit/block_1` to your base repository URL.
+2. Scroll down to the Preview section and hover over the default image there. Click on the pencil icon that appears and select `Edit`.
+3. You will be brought to the Edit page for *Front page search content*. Scroll down to *Display Block Images* and remove the existing media with the button on the right. Add your new file by clicking `Choose Files`. Add a title, which will appear in a tool tip when a user hovers their mouse over the background image, and some alternative text. Click save in the top right corner when you're done.
+4. Go to your homepage to confirm that your image has been successfully uploaded.
+
 ## Blocks and Menus
 
 Blocks are chunks of content that might be produced by Menus, Views, or even manually, and can be placed in different regions of your site. They can be configured to appear on certain pages, or be hidden on certain pages.
