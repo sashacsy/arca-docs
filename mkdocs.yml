@@ -45,6 +45,7 @@ nav:
     - Theming Customizations: how-to/theming/customizations.md
     - Display Customizations:
       - Custom URLs for repository items: how-to/display/pathauto.md
+      - Download link permissions: how-to/display/download-links.md
       - Displaying usage data: how-to/display/usage.md
       - Collection Display: how-to/display/collection-display.md
       - Metadata Display: how-to/display/metadata-display-customizations.md
