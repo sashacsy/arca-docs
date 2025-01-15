@@ -17,6 +17,8 @@ To add or remove fields:
     - Find the group (at the top level of a hierarchy; e.g. "Access and Rights" or "Persons and Affiliations"); you will see "Default state open" or "Default state closed"
     -  Click the gear icon in that row to open the field group configuration
     - Find the `Display element open by default` toggle, and set as desired.
+    - Click the Update button in that section.
+    - At the bottom of the page, click Save.
     
 
 ## Contextually changing metadata labels
