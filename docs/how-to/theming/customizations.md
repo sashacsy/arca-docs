@@ -145,9 +145,11 @@ table, th, td {
 Drupal has documentation on creating basic pages available [here](https://www.drupal.org/docs/user_guide/en/content-create.html).
 
 To add a link to your new page to the navigation menu:
+
     * Unfold `Menu Settings` on the righthand side of the Basic Page editing menu.
     * Toggle on "Provide a menu link" and select a title for the link.
-    * Select the name of the menu in your header/navigation block.
+    * Select `<DGI Header Menu>` from the dropdown list for Parent link.
+    * Give your page link a weight to indicate where you would like it to appear in the menu. Links with higher weights appear later in the menu.
     * Save your page.
 
 ## Views
