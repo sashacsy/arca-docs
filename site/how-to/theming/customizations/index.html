@@ -1726,39 +1726,49 @@
 <h2 id="basic-pages">Basic Pages<a class="headerlink" href="#basic-pages" title="Permanent link">&para;</a></h2>
 <h3 id="creating-a-new-page">Creating a new page<a class="headerlink" href="#creating-a-new-page" title="Permanent link">&para;</a></h3>
 <p>Drupal has documentation on creating basic pages available <a href="https://www.drupal.org/docs/user_guide/en/content-create.html">here</a>.</p>
-<p>To add a link to your new page to the navigation menu:
-    * Unfold <code>Menu Settings</code> on the righthand side of the Basic Page editing menu.
-    * Toggle on "Provide a menu link" and select a title for the link.
-    * Select the name of the menu in your header/navigation block.
-    * Save your page.</p>
+<p>To add a link to your new page to the navigation menu:</p>
+<div class="language-text highlight"><pre><span></span><code>* Unfold `Menu Settings` on the righthand side of the Basic Page editing menu.
+* Toggle on &quot;Provide a menu link&quot; and select a title for the link.
+* Select `&lt;DGI Header Menu&gt;` from the dropdown list for Parent link.
+* Give your page link a weight to indicate where you would like it to appear in the menu. Links with higher weights appear later in the menu.
+* Save your page.
+</code></pre></div>
 <h2 id="views">Views<a class="headerlink" href="#views" title="Permanent link">&para;</a></h2>
 <p>Views are ways that content gets grouped and displayed. A View can display selected fields from selected content types, according to filters of your choice and relationships to other content. Views are very powerful.</p>
 <p>This section will focus on certain Arca-specific use cases; for more general information about using Views, a pleathora of <a href="https://drupalize.me/course/user-guide/views-chapter">courses and documentation can be found online</a>.</p>
 <h3 id="customizing-the-repo-content-counts-view">Customizing the Repo Content Counts view<a class="headerlink" href="#customizing-the-repo-content-counts-view" title="Permanent link">&para;</a></h3>
 <p>What: Changing what kind of content gets listed and counted in the summary on the front page.</p>
 <p>How: Modifying the Repo Content Counts view</p>
-<p>Instructions:</p>
+<p>The Repo Content Counts view produces the block on the front page saying how many collections, digital documents, etc. exist in your repository. It is built to only count specific kinds of content, but you can add entries to show even more content types, or remove them from the list.</p>
+<p>To add a new content model to this group:</p>
 <ol>
-<li>Get the URI for the content model you want to add:<ol>
+<li>Get the <code>External URI</code> for the content model you want to add:<ol>
 <li>Identify the content model you want to add in the Islandora Models taxonomy: <code>/admin/structure/taxonomy/manage/islandora_models/overview</code></li>
-<li>Find the model you're interested in, and click it</li>
-<li>Copy the value under External URI.</li>
+<li>Find the model you're interested in (e.g. 3D Object), and click it</li>
+<li>Copy the value under <code>External URI</code>.</li>
 </ol>
 </li>
 <li>Modify the view:<ol>
-<li>In a separate window, find the Repo Content Counts view at <code>/admin/structure/views</code>, or click the pencil icon when mousing over the block.</li>
-<li>The default view has several Attachments, which specify particular types of repository content: Digital Documents, Collections, and Publication Issues. To create another one filtered on a different model:<ol>
+<li>In a separate window, find the Repo Content Counts view:<ul>
+<li>Go to <code>/admin/structure/views</code>, find the view, and click Edit, or </li>
+<li>Mouse over the count block on the front page, and click the pencil icon that appears.</li>
+</ul>
+</li>
+<li>The Attachments produce counts for particular types of repository content: Digital Documents, Collections, Publication Issues, Images, Videos, and Newspapers. To create another one filtered on a different model:<ol>
 <li>Click on one of the existing Attachments</li>
 <li>In the dropdown menu on the right, select <code>Duplicate attachment</code>.</li>
-<li>Your new attachment tab will appear with a <code>*</code> next to the title. Give it a more useful name, like "Attachment - image count".</li>
+<li>Your new attachment tab will appear with a <code>*</code> next to the title. Give it a descriptive <code>Display Name</code>, like "Attachment - 3D objects".</li>
 <li>Change the Filter to use the new content model:<ol>
-<li>Under Filter Criteria, click the existing filter to edit it.</li>
-<li>Under the "Value" field, paste the URI you took from the taxonomy term.</li>
+<li>Under Filter Criteria, click the existing External URI filter to edit it.</li>
+<li>Under the "Value" field, paste the URI you copied from the taxonomy term.</li>
 </ol>
 </li>
 <li>Modify the Field display to show the correct words:<ol>
 <li>Under Fields, click <code>COUNT (Content:ID)</code> to edit it.</li>
-<li>Change the text to reflect the model you're using (e.g. the original said "Publication issue"; change to "Image")</li>
+<li>Change the text to reflect the model you're using (e.g. the original said "Publication issue"; change to "3D Object").<ul>
+<li>Note there is both a Singlar field and a Plural field; you will want to edit both.</li>
+</ul>
+</li>
 </ol>
 </li>
 </ol>
@@ -1766,6 +1776,16 @@
 <li>Save and review.</li>
 </ol>
 </li>
+</ol>
+<p>To remove one of the counted content models:</p>
+<ol>
+<li>Edit the view as above.</li>
+<li>Click on the Attachment for the content model that you want to exclude from the count.</li>
+<li>Below the list of different displays/attachments, click the dropdown where it says "Duplicate attachment", and find the "Disable attachment" option. Click it.<ul>
+<li>Disabling will exclude the information from the view, without deleting the configuration, so it can be enabled later should your needs change.</li>
+</ul>
+</li>
+<li>Save your view.</li>
 </ol>
 
 

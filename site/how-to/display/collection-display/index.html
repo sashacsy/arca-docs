@@ -533,18 +533,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#changing-the-display-fields-for-collections" class="md-nav__link">
+  <a href="#adjusting-the-collection-header-description-field-length" class="md-nav__link">
     <span class="md-ellipsis">
-      Changing the display fields for collections
+      Adjusting the Collection Header Description field length
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#adjusting-the-collection-header-description-field-length" class="md-nav__link">
+  <a href="#enabling-collection-metadata-block" class="md-nav__link">
     <span class="md-ellipsis">
-      Adjusting the Collection Header Description field length
+      Enabling collection metadata block
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#folding-the-collection-metadata-block-by-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      Folding the collection metadata block by default
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-the-displayed-fields-for-collection-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing the displayed fields for collection metadata
     </span>
   </a>
   
@@ -1299,18 +1317,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#changing-the-display-fields-for-collections" class="md-nav__link">
+  <a href="#adjusting-the-collection-header-description-field-length" class="md-nav__link">
     <span class="md-ellipsis">
-      Changing the display fields for collections
+      Adjusting the Collection Header Description field length
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#adjusting-the-collection-header-description-field-length" class="md-nav__link">
+  <a href="#enabling-collection-metadata-block" class="md-nav__link">
     <span class="md-ellipsis">
-      Adjusting the Collection Header Description field length
+      Enabling collection metadata block
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#folding-the-collection-metadata-block-by-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      Folding the collection metadata block by default
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-the-displayed-fields-for-collection-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing the displayed fields for collection metadata
     </span>
   </a>
   
@@ -1348,11 +1384,34 @@
 
 
 <h1 id="collection-metadata-display">Collection Metadata Display<a class="headerlink" href="#collection-metadata-display" title="Permanent link">&para;</a></h1>
-<h2 id="changing-the-display-fields-for-collections">Changing the display fields for collections<a class="headerlink" href="#changing-the-display-fields-for-collections" title="Permanent link">&para;</a></h2>
-<p>Discoverygarden have provided a <a href="https://scribehow.com/shared/Guide_to_Managing_Display_of_Collection_Metadata_in_DGI_Starter__yW06MhIQRb-uf6w5F_qceA">guide to changing metadata display fields</a>.</p>
-<p>This guide is primarily focused on enabling or disabling the Description field, but you can use the same approach for other fields as well.</p>
 <h2 id="adjusting-the-collection-header-description-field-length">Adjusting the Collection Header Description field length<a class="headerlink" href="#adjusting-the-collection-header-description-field-length" title="Permanent link">&para;</a></h2>
-<p>The Collection Header provides a description and image at the top of the Collection page. These instructions describe <a href="https://scribehow.com/shared/Adjusting_content_description_trim_length_in_DGI_starter_site__JyYDWZAKROaRPhvuad8M-A">how to adjust the description length</a>.</p>
+<p>The Collection Header provides a description and image at the top of the Collection page. Long descriptions are truncated by default. These instructions from discoverygarden describe <a href="https://scribehow.com/shared/Adjusting_content_description_trim_length_in_DGI_starter_site__JyYDWZAKROaRPhvuad8M-A">how to adjust the description length</a>.</p>
+<h2 id="enabling-collection-metadata-block">Enabling collection metadata block<a class="headerlink" href="#enabling-collection-metadata-block" title="Permanent link">&para;</a></h2>
+<p>Collection-level metadata beyond the Title and the Description included in the Collection Header is not enabled to display by default.</p>
+<p>To enable the Collection Metadata block:</p>
+<ul>
+<li>Go to <strong>Structure &gt; Block Layout</strong>.</li>
+<li>Scroll down to the <strong>Viewer</strong> section. There should be one block listed there titled <em>Repository Item: Collection Metadata</em>.</li>
+<li>Click the <code>Enable</code> button on the far right.</li>
+</ul>
+<h2 id="folding-the-collection-metadata-block-by-default">Folding the collection metadata block by default<a class="headerlink" href="#folding-the-collection-metadata-block-by-default" title="Permanent link">&para;</a></h2>
+<p>Once enabled, your collection metadata block will display unfolded by default (i.e. all metadata will be immediately visible under the Collection Header).</p>
+<p>To keep this metadata block folded by default:</p>
+<ol>
+<li>Head to <strong>Structure &gt; Content Types &gt; Repository Item &gt; Manage display</strong>. </li>
+<li>Click <strong>Repository Item: Collection Metadata</strong></li>
+<li>Scroll down to the table with the columns <em>Field</em>, <em>Label</em>, and <em>Format</em>.</li>
+<li>Click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 0a8 8 0 0 1 .701.031C9.444.095 9.99.645 10.16 1.29l.288 1.107c.018.066.079.158.212.224q.347.171.668.386c.123.082.233.09.299.071l1.103-.303c.644-.176 1.392.021 1.82.63q.406.578.704 1.218c.315.675.111 1.422-.364 1.891l-.814.806c-.049.048-.098.147-.088.294q.024.386 0 .772c-.01.147.038.246.088.294l.814.806c.475.469.679 1.216.364 1.891a8 8 0 0 1-.704 1.217c-.428.61-1.176.807-1.82.63l-1.102-.302c-.067-.019-.177-.011-.3.071a6 6 0 0 1-.668.386c-.133.066-.194.158-.211.224l-.29 1.106c-.168.646-.715 1.196-1.458 1.26a8 8 0 0 1-1.402 0c-.743-.064-1.289-.614-1.458-1.26l-.289-1.106c-.018-.066-.079-.158-.212-.224a6 6 0 0 1-.668-.386c-.123-.082-.233-.09-.299-.071l-1.103.303c-.644.176-1.392-.021-1.82-.63a8 8 0 0 1-.704-1.218c-.315-.675-.111-1.422.363-1.891l.815-.806c.05-.048.098-.147.088-.294a6 6 0 0 1 0-.772c.01-.147-.038-.246-.088-.294l-.815-.806C.635 6.045.431 5.298.746 4.623a8 8 0 0 1 .704-1.217c.428-.61 1.176-.807 1.82-.63l1.102.302c.067.019.177.011.3-.071q.321-.215.668-.386c.133-.066.194-.158.211-.224l.29-1.106C6.009.645 6.556.095 7.299.03Q7.646 0 8 0m-.571 1.525c-.036.003-.108.036-.137.146l-.289 1.105c-.147.561-.549.967-.998 1.189q-.26.13-.5.29c-.417.278-.97.423-1.529.27l-1.103-.303c-.109-.03-.175.016-.195.045q-.33.47-.573.99c-.014.031-.021.11.059.19l.815.806c.411.406.562.957.53 1.456a5 5 0 0 0 0 .582c.032.499-.119 1.05-.53 1.456l-.815.806c-.081.08-.073.159-.059.19q.243.52.573.989c.02.03.085.076.195.046l1.102-.303c.56-.153 1.113-.008 1.53.27q.242.16.501.29c.447.222.85.629.997 1.189l.289 1.105c.029.109.101.143.137.146a6.6 6.6 0 0 0 1.142 0c.036-.003.108-.036.137-.146l.289-1.105c.147-.561.549-.967.998-1.189q.26-.13.5-.29c.417-.278.97-.423 1.529-.27l1.103.303c.109.029.175-.016.195-.045q.33-.47.573-.99c.014-.031.021-.11-.059-.19l-.815-.806c-.411-.406-.562-.957-.53-1.456a5 5 0 0 0 0-.582c-.032-.499.119-1.05.53-1.456l.815-.806c.081-.08.073-.159.059-.19a6.5 6.5 0 0 0-.573-.989c-.02-.03-.085-.076-.195-.046l-1.102.303c-.56.153-1.113.008-1.53-.27a4.4 4.4 0 0 0-.501-.29c-.447-.222-.85-.629-.997-1.189l-.289-1.105c-.029-.11-.101-.143-.137-.146a6.6 6.6 0 0 0-1.142 0M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0M9.5 8a1.5 1.5 0 1 0-3.001.001A1.5 1.5 0 0 0 9.5 8"/></svg></span> gear icon on the far right of the item in the first row, simply titled <strong>Metadata</strong>. </li>
+<li>The row will expand to display more options. Toggle OFF the option to <code>Display element open by default</code>.</li>
+<li>Click <strong>Update</strong> on the section to keep this configuration AND click <strong>Save</strong> at the bottom of the page.</li>
+</ol>
+<h2 id="changing-the-displayed-fields-for-collection-metadata">Changing the displayed fields for collection metadata<a class="headerlink" href="#changing-the-displayed-fields-for-collection-metadata" title="Permanent link">&para;</a></h2>
+<p>To configure which fields are displayed within the collection metadata block, follow steps 1–3 in the section above, then:</p>
+<ul>
+<li>Find the field that you would like to hide. </li>
+<li>On the left of each field's row, you will see an icon with four arrows <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 11h5l-1.5-1.5 1.42-1.42L21.84 12l-3.92 3.92-1.42-1.42L18 13h-5v5l1.5-1.5 1.42 1.42L12 21.84l-3.92-3.92L9.5 16.5 11 18v-5H6l1.5 1.5-1.42 1.42L2.16 12l3.92-3.92L7.5 9.5 6 11h5V6L9.5 7.5 8.08 6.08 12 2.16l3.92 3.92L14.5 7.5 13 6z"/></svg></span>. Click the icon and drag the row down to the <strong>Disabled</strong> section near the bottom of the table.</li>
+<li>Click <strong>Save</strong> at the bottom of the page.</li>
+</ul>
 
 
 

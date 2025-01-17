@@ -1410,8 +1410,12 @@
 </div>
 <p>Our ingest form is organized into Paragraphs - organized groups of metadata fields. These Paragraphs are collapsed; you will need to click into each of their titles to access the next group of fields.</p>
 <ol>
-<li>Summary:<ol>
-<li>Title <ul>
+<li>
+<p>Summary:</p>
+<ol>
+<li>
+<p>Title </p>
+<ul>
 <li>This field is required, and it will act as the label for your object.</li>
 <li>Additional/Alternative titles: Add these if there are other forms of title you wish to add.<ul>
 <li>Title Type:<ul>
@@ -1426,8 +1430,14 @@
 </ul>
 </li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Titles and URL Aliases</p>
+<p>Unless you have an alternate URL alias pattern in place, URL aliases for repository items are set to generate automatically from item titles by default. If you revise an item's title at any point after creation and you don't toggle <code>Generate automatic URL alias</code> off under <strong>URL alias</strong> settings on the object, the URL alias will change with the title.</p>
+</div>
 </li>
-<li>Content Type<ul>
+<li>
+<p>Content Type</p>
+<ul>
 <li>The Islandora Model. Determines how Islandora will handle your object, including the viewers it assigns to display your content, derivatives it creates, etc. </li>
 </ul>
 </li>
@@ -1465,9 +1475,7 @@
 <li>Select this if your item is an academic paper that has been peer reviewed.</li>
 </ul>
 </li>
-</ol>
-</li>
-<li>Persons and Affiliations<ul>
+<li>Persons and Affiliations</li>
 <li>All the contributors to your object are added in this section. Separate fields are created for Persons and Organizations.<ul>
 <li>Names are no longer simple text fields: they are term references, pointing to specific entities in the Person and Corporate Body taxonomies. This allows the same entity to be referenced by any number of repository items, and makes it easier to control forms of name for individuals.</li>
 <li>Relationship Type is their Role – author, creator, publisher, reviewer, etc. These relator terms come from the <a href="https://www.loc.gov/marc/relators/relaterm.html">MARC Relator list</a>.</li>
@@ -1478,18 +1486,12 @@
 </li>
 </ul>
 </li>
-</ul>
-</li>
-<li>ETDs<ul>
+<li>ETDs</li>
 <li>This section is for information about theses specifically, and is part of what gets sent to Theses canada. Fill in as appropriate. Degree names and levels reference taxonomies.</li>
-</ul>
-</li>
-<li>Institution<ul>
+<li>Institution</li>
 <li>Institutional and departmental affiliation information. These fields reference their own taxonomies. </li>
 <li>These sections are for academic publications – theses, journal articles, etc.</li>
-</ul>
-</li>
-<li>Abstract/Description<ol>
+<li>Abstract/Description</li>
 <li>Abstract<ul>
 <li>Used specifically for academic papers and theses -- items with a formal Abstract. Put the entire contents of the abstract here.</li>
 </ul>
@@ -1512,9 +1514,7 @@
 <li>You can add more than one language if it’s a multilingual item with the “Add another item” box.6. Identifiers</li>
 </ul>
 </li>
-</ol>
-</li>
-<li>Identifiers<ul>
+<li>Identifiers</li>
 <li>There are many different kinds of identifiers. The Local Identifier is an uncontrolled textbox in which you can put whatever type of identifier you use locally. If you have other more standardized identifiers, you can use the other boxes – PURL, DOI, Handle, etc.</li>
 <li>ARK IDs: <ul>
 <li>Arca will (eventually) create ARK IDs for your objects automatically; only enter an ARK ID here if the object already has one.</li>
@@ -1525,9 +1525,7 @@
 </ul>
 </li>
 <li>Other identifiers could at some future point be used with APIs that display other data such as altmetrics and citations.  </li>
-</ul>
-</li>
-<li>Subjects and Classifications<ul>
+<li>Subjects and Classifications</li>
 <li>Keywords: <ul>
 <li>Any uncontrolled terms you want to add.</li>
 <li>These can be entered all at once separated by commas, or entered one at a time, using “add another” button</li>
@@ -1540,22 +1538,14 @@
 </ul>
 </li>
 <li>LCC classification, DDC, and others – enter if applicable</li>
-</ul>
-</li>
-<li>Conference/Event<ul>
+<li>Conference/Event</li>
 <li>References an event taxonomy. Enter if applicable to the object.</li>
-</ul>
-</li>
-<li>Series<ul>
+<li>Series</li>
 <li>If the item is part of a series, enter its number and the series title as appropriate.</li>
-</ul>
-</li>
-<li>Publication/Container Information<ul>
+<li>Publication/Container Information</li>
 <li>If this item is part of a larger publication (newspaper, journal, book, etc.) the parent item’s information goes here.</li>
 <li>Note that all metadata in this section applies to the <em>container item</em>, and not the repository item you are currently ingesting.</li>
-</ul>
-</li>
-<li>Origin Information<ul>
+<li>Origin Information</li>
 <li>Multiple entries are possible in this field via the "Add Origin Information" button. Each fieldset under Origin Information describes a particular "origin" for the item.</li>
 <li>Event type: <ul>
 <li>This is describes the stages of creation of the item – publication, distribution, etc.  Record if relevant.</li>
@@ -1590,9 +1580,7 @@
 <li>Particularly applicable to Book and Serial/Newspaper type items; fill as appropriate.    </li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Physical Description<ul>
+<li>Physical Description</li>
 <li>Extent:<ul>
 <li>Size, duration, or other relevant information about the item’s extent. </li>
 </ul>
@@ -1617,33 +1605,25 @@
 <li>Anything not covered above.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Relationships:<ul>
+<li>Relationships:</li>
 <li>If this item has relationships to other items, whether inside or outside of the repository, you would put that information here.</li>
 <li>The URL field can point at an external entity, but it can <em>also</em> point to another item in your repository. If that item exists in your repository, it is recommended to link it here.</li>
 <li><strong>The other fields in this section all describe the item this object has a relationship with, not the item itself.</strong><ul>
 <li>Fill in these fields only if applicable. These fields are <em>not necessary, nor recommended, if the related item is also in your repository</em>, to avoid duplicated and outdated metadata.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Notes<ul>
+<li>Notes</li>
 <li>Multiple Note entries can be made via the "Add Note" button.</li>
 <li>Notes may be given a Type to differentiate them.</li>
 <li>Administrative Notes:<ul>
 <li>Only shown to repository staff; hidden from anonymous users. </li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Location<ul>
+<li>Location</li>
 <li>All fields relate to where the item is found, either physically or electronically.</li>
 <li>Item Identifier: specifically for identifying this object physically within the context of its canonical location.</li>
 <li>URL: If the object also exists at an external URL, you may include that here.</li>
-</ul>
-</li>
-<li>Access and Rights<ul>
+<li>Access and Rights</li>
 <li>A set of fields describing the access conditions, restrictions, and reproduction rights for your object.</li>
 <li>Access Conditions: <ul>
 <li>A controlled list of brief terms to indicate the kind of access available to this item. </li>
@@ -1666,22 +1646,18 @@
 <li>Applies a <a href="https://creativecommons.org/share-your-work/">Creative Commons License</a>. Autocompletes from typing.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Record Information<ul>
+<li>Record Information</li>
 <li>If you need to provide information about the creation of the record itself, you can add it here.</li>
 <li>Note that the date fields <strong>do not need your input</strong>. That information is captured automatically when you create and edit items.</li>
 <li>Record origin and information note: <ul>
 <li>If you need to capture the provenance and process of record creation.</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Add media<ul>
+<li>Add media</li>
 <li>The “add media” toggle, if turned on, means that after you save this Repository Item, you will be sent to the Media page. That is where you will add a file that will become part of the object.</li>
 <li>If you choose not to add media, you will create a metadata-only record, but you can choose to add media to the item later via the object’s Media tab. Adding media later is a bit more complex than doing it from ingest, so it is recommended to start with a file in mind.</li>
 <li>After Saving the item, you will be taken to the Media interface. Follow the <a href="/arca-docs/docs/how-to/managing-content/media.md">detailed instructions on adding media</a>.</li>
-</ul>
+</ol>
 </li>
 </ol>
 
