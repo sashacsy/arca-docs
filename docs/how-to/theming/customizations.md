@@ -164,22 +164,35 @@ What: Changing what kind of content gets listed and counted in the summary on th
 
 How: Modifying the Repo Content Counts view
 
-Instructions:
+The Repo Content Counts view produces the block on the front page saying how many collections, digital documents, etc. exist in your repository. It is built to only count specific kinds of content, but you can add entries to show even more content types, or remove them from the list.
 
-1. Get the URI for the content model you want to add:
+To add a new content model to this group:
+
+1. Get the `External URI` for the content model you want to add:
     1. Identify the content model you want to add in the Islandora Models taxonomy: `/admin/structure/taxonomy/manage/islandora_models/overview`
-    2. Find the model you're interested in, and click it
-    3. Copy the value under External URI.
+    2. Find the model you're interested in (e.g. 3D Object), and click it
+    3. Copy the value under `External URI`.
 2. Modify the view:
-    1. In a separate window, find the Repo Content Counts view at `/admin/structure/views`, or click the pencil icon when mousing over the block.
-    2. The default view has several Attachments, which specify particular types of repository content: Digital Documents, Collections, and Publication Issues. To create another one filtered on a different model:
+    1. In a separate window, find the Repo Content Counts view:
+        - Go to `/admin/structure/views`, find the view, and click Edit, or 
+        - Mouse over the count block on the front page, and click the pencil icon that appears.
+    2. The Attachments produce counts for particular types of repository content: Digital Documents, Collections, Publication Issues, Images, Videos, and Newspapers. To create another one filtered on a different model:
         1. Click on one of the existing Attachments
         2. In the dropdown menu on the right, select `Duplicate attachment`.
-        3. Your new attachment tab will appear with a `*` next to the title. Give it a more useful name, like "Attachment - image count".
+        3. Your new attachment tab will appear with a `*` next to the title. Give it a descriptive `Display Name`, like "Attachment - 3D objects".
         4. Change the Filter to use the new content model:
-            1. Under Filter Criteria, click the existing filter to edit it.
-            2. Under the "Value" field, paste the URI you took from the taxonomy term.
+            1. Under Filter Criteria, click the existing External URI filter to edit it.
+            2. Under the "Value" field, paste the URI you copied from the taxonomy term.
         5. Modify the Field display to show the correct words:
             1. Under Fields, click `COUNT (Content:ID)` to edit it.
-            2. Change the text to reflect the model you're using (e.g. the original said "Publication issue"; change to "Image")
+            2. Change the text to reflect the model you're using (e.g. the original said "Publication issue"; change to "3D Object").
+                - Note there is both a Singlar field and a Plural field; you will want to edit both.
     3. Save and review.
+
+To remove one of the counted content models:
+
+1. Edit the view as above.
+2. Click on the Attachment for the content model that you want to exclude from the count.
+3. Below the list of different displays/attachments, click the dropdown where it says "Duplicate attachment", and find the "Disable attachment" option. Click it.
+    - Disabling will exclude the information from the view, without deleting the configuration, so it can be enabled later should your needs change.
+4. Save your view.
