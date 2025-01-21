@@ -93,9 +93,15 @@ When your metadata has been corrected, please be sure to apply those standards t
     * Edit any coordinate values to remove the degrees and letters, and convert to valid decimal format.
         * You can use this handy tool to convert from degrees and minutes to decimal format: [Degrees Minutes Seconds to Decimal Degrees converter](https://www.fcc.gov/media/radio/dms-decimal).
     * **If this field contains any values other than numbers, decimals, and negative signs, the migration will fail.**
-
-
-
+* [Scholar URLs](https://arcabc.ca/browse/scholar_url)
+    * For scholar profiles to migrate successfully, the MADS `<url>` field must be (1) a complete, valid URL, including `http://` or `https://`, and (2) contain nothing but the URL.
+    * Eliminate all extra characters, HTML, second entries within the same field, etc.
+* [Access Conditions](https://arcabc.ca/browse/accesscondition):
+    * For the Rights Statement and Creative Commons fields, these must be in the correct format and valid URLs. This means:
+        * No HTML; valid URL only.
+        * Must map to an actual Rights Statement or License. For example, `https://rightsstatements.org/page/CNE/1.0/?language=en` is not valid; this value should be `http://rightsstatements.org/vocab/CNE/1.0/` (found under "URI for this statement" on that page).
+    * HTML tags are not supported in this field in the new environment. If your Access Condition fields use HTML tags, you may wish to clean these up before migration.
+    
 These are the most critical metadata elements to correct, but best practice is to review all of your more common metadata fields to ensure consistency and accuracy before we migrate your data.
 
 ## Why must we do this?
