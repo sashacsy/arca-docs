@@ -1547,6 +1547,20 @@
 <li><strong>If this field contains any values other than numbers, decimals, and negative signs, the migration will fail.</strong></li>
 </ul>
 </li>
+<li><a href="https://arcabc.ca/browse/scholar_url">Scholar URLs</a><ul>
+<li>For scholar profiles to migrate successfully, the MADS <code>&lt;url&gt;</code> field must be (1) a complete, valid URL, including <code>http://</code> or <code>https://</code>, and (2) contain nothing but the URL.</li>
+<li>Eliminate all extra characters, HTML, second entries within the same field, etc.</li>
+</ul>
+</li>
+<li><a href="https://arcabc.ca/browse/accesscondition">Access Conditions</a>:<ul>
+<li>For the Rights Statement and Creative Commons fields, these must be in the correct format and valid URLs. This means:<ul>
+<li>No HTML; valid URL only.</li>
+<li>Must map to an actual Rights Statement or License. For example, <code>https://rightsstatements.org/page/CNE/1.0/?language=en</code> is not valid; this value should be <code>http://rightsstatements.org/vocab/CNE/1.0/</code> (found under "URI for this statement" on that page).</li>
+</ul>
+</li>
+<li>HTML tags are not supported in this field in the new environment. If your Access Condition fields use HTML tags, you may wish to clean these up before migration.</li>
+</ul>
+</li>
 </ul>
 <p>These are the most critical metadata elements to correct, but best practice is to review all of your more common metadata fields to ensure consistency and accuracy before we migrate your data.</p>
 <h2 id="why-must-we-do-this">Why must we do this?<a class="headerlink" href="#why-must-we-do-this" title="Permanent link">&para;</a></h2>
