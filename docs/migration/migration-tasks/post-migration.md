@@ -3,7 +3,7 @@
 ## Local Admin Tasks
 The Arca Office is working with Discoverygarden to create a theme, a base configuration, infrastructure, and migrate content, but there will be numerous post-migration tasks for local admins once your site is up, content is migrated, and your account has been created.
 
-### Create an About page
+### Revise About page
 The Arca Office will create a stub About page for you to customize, and add it to the header menu. You can edit this page to add details such as contact information and context for your site.
 
 ### Identify your Scholars and create a View
@@ -130,5 +130,17 @@ You can take more advanced theming steps (block placement, etc.) following the [
 
 ## Arca Office Tasks
 
+### User Accounts
+Create user accounts for primary migration contacts with the roles of site administrator and repository administrator. 
+
+### About Page
+Create stub About page with boilerplate text about Arca.
+
+### Communicate Migration Completion
+Communicate the completion of the migration to the local admin and direct them to begin Post-Migration Tasks above.
+
+### Cleanup
+Perform backend migration cleanup.
+
 ### Matomo Configuration
-Configure analytics for each migrated site.
+Configure analytics for each migrated site once ready to port over to new URL.
