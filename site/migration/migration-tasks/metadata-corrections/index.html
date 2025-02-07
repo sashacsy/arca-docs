@@ -1409,7 +1409,7 @@
 <p>When your metadata has been corrected, please be sure to apply those standards to any objects you ingest going forward, so that correction work does not need to be done again.</p>
 <h2 id="key-metadata-fields-and-how-to-handle-them">Key metadata fields and how to handle them<a class="headerlink" href="#key-metadata-fields-and-how-to-handle-them" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://arcabc.ca/browse/date">Dates</a>:<ul>
+<li><a href="https://arcabc.ca/browse/date">Dates</a> (mods_originInfo_dateIssued_ms, mods_originInfo_dateCreated_ms, mods_originInfo_dateOther_ms):<ul>
 <li>Must be formatted to the <a href="https://www.w3.org/TR/NOTE-datetime">W3C Standard</a>. This means:<ul>
 <li>Numerical format only (no text)</li>
 <li>YYYY-MM-DD, or YYYY-MM if only year and month are known, or YYYY if only the year is known.</li>
@@ -1467,7 +1467,7 @@
 </li>
 </ul>
 </li>
-<li><a href="https://arcabc.ca/browse/genre">Genres</a>:<ul>
+<li><a href="https://arcabc.ca/browse/genre">Genres</a> (mods_genre_ms):<ul>
 <li>Terms must be from either the <a href="https://www.loc.gov/standards/valuelist/marcgt.html">MARC Genre Terms list</a>, or the <a href="https://www.getty.edu/research/tools/vocabularies/aat/">Art &amp; Architecture Thesaurus</a>.<ul>
 <li>Include the authority used in your MODS, e.g. <code>&lt;genre authority="marcgt"&gt;book&lt;/genre&gt;</code>, or <code>&lt;genre authority="aat"&gt;comic operas&lt;/genre&gt;</code>.</li>
 <li>Follow the exact format the authority uses for the term: <strong>all lowercase, no punctuation</strong>; AAT is generally plural, MARCGT singular. </li>
@@ -1481,7 +1481,7 @@
 <li>There should be <em>only one value per <code>&lt;genre&gt;</code> element</em>. If your object has more than one genre, use multiple genre elements -- i.e. <code>&lt;genre authority="marcgt"&gt;thesis&lt;/genre&gt;  &lt;genre authority="aat"&gt;photography&lt;/genre&gt;</code></li>
 </ul>
 </li>
-<li>Names (<a href="https://arcabc.ca/browse/names_personal">personal</a> and <a href="https://arcabc.ca/browse/names_corporate">corporate</a>): <ul>
+<li>Names (<a href="https://arcabc.ca/browse/names_personal">personal</a> (mods_name_personal_namePart_ms) and <a href="https://arcabc.ca/browse/names_corporate">corporate</a> (mods_name_corporate_namePart_ms)): <ul>
 <li>Names must be consistent and deduplicated.<ul>
 <li>For example: if "Weigel, Brandon"; "B. Weigel", and "Brandon John Weigel" appear in your repository, and they are all the same person, those values <em>must be identical</em> across all your metadata. Choose one form of the name that is used in all of your objects.</li>
 </ul>
@@ -1493,7 +1493,7 @@
 <li>Ensure that the form of name you choose is the one you wish to apply for all instances of that name going forward, as each name will become an entity in your repository.</li>
 </ul>
 </li>
-<li><a href="https://arcabc.ca/browse/roles">Role terms</a>:<ul>
+<li><a href="https://arcabc.ca/browse/roles">Role terms</a> (mods_name_personal_role_roleTerm_text_ms and mods_name_corporate_role_roleTerm_text_ms):<ul>
 <li>All role terms should match the <a href="https://www.loc.gov/marc/relators/relaterm.html">MARC Relator Term List</a>.<ul>
 <li>Ensure consistency in spelling, format, and case.</li>
 </ul>
@@ -1514,7 +1514,7 @@
 </li>
 </ul>
 </li>
-<li><a href="https://arcabc.ca/browse/typeofresource">Type of Resource</a><ul>
+<li><a href="https://arcabc.ca/browse/typeofresource">Type of Resource</a> (mods_typeOfResource_ms)<ul>
 <li>Values in the MODS element <code>&lt;typeOfResource&gt;</code> may <strong>only</strong> come from the following list:<ul>
 <li>cartographic</li>
 <li>manuscript</li>
@@ -1533,7 +1533,7 @@
 </li>
 </ul>
 </li>
-<li>Subjects - includes <a href="https://arcabc.ca/browse/subject">topical</a>, <a href="https://arcabc.ca/browse/geographic">geographic</a>, temporal, and named subjects):<ul>
+<li>Subjects - includes <a href="https://arcabc.ca/browse/subject">topical</a> (mods_subject_topic_ms), <a href="https://arcabc.ca/browse/geographic">geographic</a> (mods_subject_geographic_ms), temporal (mods_subject_temporal_ms), and named subjects):<ul>
 <li>Subject terms are not controlled throughout Arca, but should be consistent within your own repository.</li>
 <li>Review your subjects to make sure they are deduplicated, consistent, and broad enough to group like objects together.</li>
 <li>Multiple subjects must be in separate elements. <ul>
@@ -1553,7 +1553,7 @@
 <li>For named subjects, follow the same standards as you apply to names.</li>
 </ul>
 </li>
-<li><a href="https://arcabc.ca/browse/coordinates">Coordinates</a><ul>
+<li><a href="https://arcabc.ca/browse/coordinates">Coordinates</a> (mods_subject_cartographics_coordinates_ms)<ul>
 <li>For successful migration, Coordinates values <strong>must be valid decimal numbers</strong>. They <strong>cannot have symbols or letters in them</strong>. They may only have numbers, negatives, and commas.<ul>
 <li>Valid entry: <code>19.421940, -155.269213</code></li>
 <li>Invalid entry: <code>40°00'N, 111°57'W</code></li>
@@ -1567,12 +1567,12 @@
 <li><strong>If this field contains any values other than numbers, decimals, and negative signs, the migration will fail.</strong></li>
 </ul>
 </li>
-<li><a href="https://arcabc.ca/browse/scholar_url">Scholar URLs</a><ul>
+<li><a href="https://arcabc.ca/browse/scholar_url">Scholar URLs</a> (MADS_url_ms):<ul>
 <li>For scholar profiles to migrate successfully, the MADS <code>&lt;url&gt;</code> field must be (1) a complete, valid URL, including <code>http://</code> or <code>https://</code>, and (2) contain nothing but the URL.</li>
 <li>Eliminate all extra characters, HTML, second entries within the same field, etc.</li>
 </ul>
 </li>
-<li><a href="https://arcabc.ca/browse/accesscondition">Access Conditions</a>:<ul>
+<li><a href="https://arcabc.ca/browse/accesscondition">Access Conditions</a> (mods_accessCondition_use_and_reproduction_ms):<ul>
 <li>For the Rights Statement and Creative Commons fields, these must be in the correct format and valid URLs. This means:<ul>
 <li>No HTML; valid URL only.</li>
 <li>Must map to an actual Rights Statement or License. For example, <code>https://rightsstatements.org/page/CNE/1.0/?language=en</code> is not valid; this value should be <code>http://rightsstatements.org/vocab/CNE/1.0/</code> (found under "URI for this statement" on that page).</li>
