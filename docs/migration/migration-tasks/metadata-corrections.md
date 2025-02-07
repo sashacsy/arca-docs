@@ -8,7 +8,7 @@ When your metadata has been corrected, please be sure to apply those standards t
 
 ## Key metadata fields and how to handle them
 
-* [Dates](https://arcabc.ca/browse/date):
+* [Dates](https://arcabc.ca/browse/date) (mods_originInfo_dateIssued_ms, mods_originInfo_dateCreated_ms, mods_originInfo_dateOther_ms):
     * Must be formatted to the [W3C Standard](https://www.w3.org/TR/NOTE-datetime). This means:
         * Numerical format only (no text)
         * YYYY-MM-DD, or YYYY-MM if only year and month are known, or YYYY if only the year is known.
@@ -24,7 +24,7 @@ When your metadata has been corrected, please be sure to apply those standards t
             | 19XX            | Sometime in the 1900s (decade and year uncertain) |
             | 19X3            | Decade uncertain, year known                      |
             | XXXX-12-XX      | Some day in December, unknown year                |
-* [Genres](https://arcabc.ca/browse/genre):
+* [Genres](https://arcabc.ca/browse/genre) (mods_genre_ms):
     * Terms must be from either the [MARC Genre Terms list](https://www.loc.gov/standards/valuelist/marcgt.html), or the [Art & Architecture Thesaurus](https://www.getty.edu/research/tools/vocabularies/aat/).
         * Include the authority used in your MODS, e.g. `<genre authority="marcgt">book</genre>`, or `<genre authority="aat">comic operas</genre>`.
         * Follow the exact format the authority uses for the term: **all lowercase, no punctuation**; AAT is generally plural, MARCGT singular. 
@@ -32,13 +32,13 @@ When your metadata has been corrected, please be sure to apply those standards t
         * Check the standard vocabularies for a synonym first.
         * Format your term to match existing usage (i.e. lowercase, no punctuation).
     * There should be *only one value per `<genre>` element*. If your object has more than one genre, use multiple genre elements -- i.e. `<genre authority="marcgt">thesis</genre>  <genre authority="aat">photography</genre>`
-* Names ([personal](https://arcabc.ca/browse/names_personal) and [corporate](https://arcabc.ca/browse/names_corporate)): 
+* Names ([personal](https://arcabc.ca/browse/names_personal) (mods_name_personal_namePart_ms) and [corporate](https://arcabc.ca/browse/names_corporate) (mods_name_corporate_namePart_ms)): 
     * Names must be consistent and deduplicated.
         * For example: if "Weigel, Brandon"; "B. Weigel", and "Brandon John Weigel" appear in your repository, and they are all the same person, those values *must be identical* across all your metadata. Choose one form of the name that is used in all of your objects.
     * Ensure that corporate vs personal names are properly tagged.
         * i.e. if "ABC Company" shows up under `<name type="personal">`, that should be corrected to `<name type="corporate">`.
     * Ensure that the form of name you choose is the one you wish to apply for all instances of that name going forward, as each name will become an entity in your repository.
-*  [Role terms](https://arcabc.ca/browse/roles):
+*  [Role terms](https://arcabc.ca/browse/roles) (mods_name_personal_role_roleTerm_text_ms and mods_name_corporate_role_roleTerm_text_ms):
     * All role terms should match the [MARC Relator Term List](https://www.loc.gov/marc/relators/relaterm.html).
         * Ensure consistency in spelling, format, and case.
     * If your name has more than one role associated with them, use multiple `<role>` element sets. i.e.
@@ -53,7 +53,7 @@ When your metadata has been corrected, please be sure to apply those standards t
           </name>```  
     * If there is no MARC Relator term that fits your person's role, you may use a local term with `authority="local"` noted.
         * Be consistent with your local terms: i.e. consistent case, consistent spelling, etc.
-*  [Type of Resource](https://arcabc.ca/browse/typeofresource)
+*  [Type of Resource](https://arcabc.ca/browse/typeofresource) (mods_typeOfResource_ms)
     * Values in the MODS element `<typeOfResource>` may **only** come from the following list:
         * cartographic
         * manuscript
@@ -68,7 +68,7 @@ When your metadata has been corrected, please be sure to apply those standards t
         * still image
         * text
         * three dimensional object
-* Subjects - includes [topical](https://arcabc.ca/browse/subject), [geographic](https://arcabc.ca/browse/geographic), temporal, and named subjects):
+* Subjects - includes [topical](https://arcabc.ca/browse/subject) (mods_subject_topic_ms), [geographic](https://arcabc.ca/browse/geographic) (mods_subject_geographic_ms), temporal (mods_subject_temporal_ms), and named subjects):
     * Subject terms are not controlled throughout Arca, but should be consistent within your own repository.
     * Review your subjects to make sure they are deduplicated, consistent, and broad enough to group like objects together.
     * Multiple subjects must be in separate elements. 
@@ -85,7 +85,7 @@ When your metadata has been corrected, please be sure to apply those standards t
           </subject>
           ```
     * For named subjects, follow the same standards as you apply to names.
-* [Coordinates](https://arcabc.ca/browse/coordinates)
+* [Coordinates](https://arcabc.ca/browse/coordinates) (mods_subject_cartographics_coordinates_ms)
     * For successful migration, Coordinates values **must be valid decimal numbers**. They **cannot have symbols or letters in them**. They may only have numbers, negatives, and commas.
         * Valid entry: `19.421940, -155.269213`
         * Invalid entry: `40°00'N, 111°57'W`
@@ -93,10 +93,10 @@ When your metadata has been corrected, please be sure to apply those standards t
     * Edit any coordinate values to remove the degrees and letters, and convert to valid decimal format.
         * You can use this handy tool to convert from degrees and minutes to decimal format: [Degrees Minutes Seconds to Decimal Degrees converter](https://www.fcc.gov/media/radio/dms-decimal).
     * **If this field contains any values other than numbers, decimals, and negative signs, the migration will fail.**
-* [Scholar URLs](https://arcabc.ca/browse/scholar_url)
+* [Scholar URLs](https://arcabc.ca/browse/scholar_url) (MADS_url_ms):
     * For scholar profiles to migrate successfully, the MADS `<url>` field must be (1) a complete, valid URL, including `http://` or `https://`, and (2) contain nothing but the URL.
     * Eliminate all extra characters, HTML, second entries within the same field, etc.
-* [Access Conditions](https://arcabc.ca/browse/accesscondition):
+* [Access Conditions](https://arcabc.ca/browse/accesscondition) (mods_accessCondition_use_and_reproduction_ms):
     * For the Rights Statement and Creative Commons fields, these must be in the correct format and valid URLs. This means:
         * No HTML; valid URL only.
         * Must map to an actual Rights Statement or License. For example, `https://rightsstatements.org/page/CNE/1.0/?language=en` is not valid; this value should be `http://rightsstatements.org/vocab/CNE/1.0/` (found under "URI for this statement" on that page).
