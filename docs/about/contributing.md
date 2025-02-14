@@ -24,16 +24,16 @@ Anyone can contribute to Arca Docs. Doing so requires a [Github account](https:/
 1.  Navigate to the repository: <https://github.com/bceln/arca-docs>
 2.  In the page header, click the Fork button to create your own copy of the repository. 
 
-    ![image](/arca-docs/assets/fork-button.png)
+    ![Screenshot showing the Fork button in Github](/arca-docs/assets/fork-button.png)
 
 3.  To make changes such as adding a new page, start by creating a new branch:
     -   Click the branch menu button (it should say "main")
 
-       ![image](/arca-docs/assets/branch-menu.png)
+       ![Screenshot showing the Branches menu in Github](/arca-docs/assets/branch-menu.png)
 
     -   Pick a name that's descriptive of your changes, and type it into the search bar.
 
-        ![image](/arca-docs/assets/branch-switch.png)
+        ![Screenshot showing how to create a new branch in Github](/arca-docs/assets/branch-switch.png)
 
     -   Click the "Create branch [branch-name] option
     
@@ -46,7 +46,7 @@ Anyone can contribute to Arca Docs. Doing so requires a [Github account](https:/
     -   Create your page:
         -   Directories are grouped by topic, and they mirror the path you'll find the pages in the URL. So, navigate to the folder your new page is going to live in.
         -   Click the Add File button, and "Create new file".\
-            ![image](/arca-docs/assets/add-file.png)
+            ![Screenshot showing the "Create new file" button](/arca-docs/assets/add-file.png)
 
         -   Write the file using Markdown, and save it with an appropriate title reflective of its content. The file extension should be `.md`.
     -   Add your new page to the site navigation structure:
@@ -54,11 +54,11 @@ Anyone can contribute to Arca Docs. Doing so requires a [Github account](https:/
         -   Under the `nav:` heading, find the menu header you want your new page to appear under.
         -   Follow the conventions of the other pages under that menu, paying attention to formatting and indentation. Format should be `- Page Title: path/to/page.md`.
 
-          ![image](/arca-docs/assets/yaml-list.png)
+          ![Screenshot showing a section of the mkdocs.yml file](/arca-docs/assets/yaml-list.png)
 
         -   Commit your changes to the current branch.
 8.  Submit your changes for review with a Pull Request:
-    -   Once you've made changes to your branch click back to the root of the repository. You will see a header with a "Compare and pull request" button. Click it. ![image](/arca-docs/assets/recent-push.png)
+    -   Once you've made changes to your branch click back to the root of the repository. You will see a header with a "Compare and pull request" button. Click it. ![Screenshot showing the "Compare and pull request" button](/arca-docs/assets/recent-push.png)
 
     -   All of the files you have edited will be included in your pull request. Give it a title and a description that explains what changes you have made and why.
     -   Submit the pull request and alert the Arca Office that you have done so.
@@ -76,7 +76,7 @@ This method requires some knowledge of Git and comfort working in the command li
 2.  Fork the git repository (see steps 1 and 2 under "Proper method").
 3.  In your fork, get a cloning link: click the "Code" button and copy the link that is generated.
 
-    ![image](/arca-docs/assets/clone-box.png)
+    ![Screenshot showing the button to click to get a cloning link](/arca-docs/assets/clone-box.png)
     
 4.  Open the Terminal on your computer, navigate to the directory you want to host your copy of the repository, and clone it: `git clone (link)`.
 5.  You now have a local copy of the git repository. You can edit files using text editors (I recommend BBedit) or in the terminal.
