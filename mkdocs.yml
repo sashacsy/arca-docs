@@ -45,6 +45,7 @@ nav:
   - About:
     - About Arca: about/about-arca.md
     - Support: about/support.md
+    - Contribute to Arca Docs: about/contributing.md
   - Training: training/training.md
   - How-To in Islandora 2:
     - Theming Customizations: how-to/theming/customizations.md
