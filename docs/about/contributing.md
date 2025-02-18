@@ -2,6 +2,7 @@
 
 Anyone can contribute to Arca Docs. Doing so requires a [Github account](https://github.com).
 
+The pages on Arca Docs are written in Markdown, a simple text processing language that is easy to learn. [If not familiar with Markdown, follow this tutorial](https://www.markdowntutorial.com/).
 
 ## Simple method (for small edits)
 
