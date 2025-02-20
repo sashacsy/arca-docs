@@ -35,6 +35,12 @@ Basic training sessions are held periodically, particularly when new members joi
 
 If a live session is not available, members can work along with a recorded session. It is the same as a normal Basic Training session, but without a live instructor.
 
+### Recordings
+
+[February 20, 2025: First Basic Training session. View on YouTube.](https://www.youtube.com/watch?v=Ot9J0ANez0A)
+
+This will eventually be replaced by a more polished set of videos.
+
 ## Specialized modules
 
 Training modules for specific features of the system will be compiled here. These will include:
