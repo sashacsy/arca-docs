@@ -7,13 +7,19 @@ While specific Drupal Roles may also be given permission to bypass *all* embargo
 ## Setting embargoes
 
 1. Access the Embargo menu:
+
     a. From the object you want to embargo:
-        * Navigate to or Edit the object you want to embargo, and click the Embargoes tab
-        * Click "Add Embargo"
+    
+    - Navigate to or Edit the object you want to embargo, and click the Embargoes tab
+    - Click "Add Embargo"
+
     b. From the Content menu: 
-        * Click the Embargoes tab, click Add Embargo
-        * In the `Embargoed Node field`, begin typing the name of the item you want to embargo. It will auto-complete for you. 
+    
+    * Click the Embargoes tab, click Add Embargo
+    * In the `Embargoed Node field`, begin typing the name of the item you want to embargo. It will auto-complete for you. 
+
 2. Set up your embargo:
+
     * Embargo Type: 
         * "File" restricts access to the Media (eg the PDF or the video), while leaving the Node (object page with metadata) visible. The item will appear in collection listings and search results to all users, but only authorized users may access the media.
         * "Node" restricts access to the entire Repository Item - unauthorized users will not even see that the item exists.
@@ -28,7 +34,8 @@ While specific Drupal Roles may also be given permission to bypass *all* embargo
         * Exemption by Role does not exist currently, but it is being worked on.
     * Additional Emails:
         * Email addresses that will be automatically contacted when the embargo is changed/lifted.
-3. Save
+
+3. Save.
 
 Your object should now be restricted from unauthorized users.
 
