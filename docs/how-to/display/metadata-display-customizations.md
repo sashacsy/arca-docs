@@ -26,10 +26,11 @@ To add or remove fields:
 Use case: You want to present different labels for your metadata display depending on the type (model) of the object.
 
 Components:
+
   - Blocks
   - Context
 
-**THIS HAS NOT YET BEEN TESTED**
+!!! warning "**THIS HAS NOT YET BEEN TESTED**"
 
 1. Create a custom Block using Javascript to change the label.
 

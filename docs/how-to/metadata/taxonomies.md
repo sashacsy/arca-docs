@@ -16,7 +16,7 @@ Notes: Static and controlled; should not be added to.
 
 ### COAR Resource Type:
 
-Not in use; Library of Congress Resource Types are used instead.
+Not in use; [Library of Congress Resource Types](#library-of-congress-resource-types) are used instead.
 
 ### COAR Version Types
 
@@ -123,6 +123,7 @@ Referenced by: Genre
 Purpose: Required field for organizing and classifying content.
 
 Authorities: Authority may be specified, selecting from:
+
     * Getty AAT
     * Library of Congress Thesaurus for Graphic Terms
     * Library of Congress Genre/Form Terms

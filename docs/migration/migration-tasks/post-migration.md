@@ -139,6 +139,9 @@ Create stub About page with boilerplate text about Arca.
 ### Communicate Migration Completion
 Communicate the completion of the migration to the local admin and direct them to begin Post-Migration Tasks above.
 
+### Migration Stubs
+Remove "parent" references to migration stubs for all top-level collections.
+
 ### Cleanup
 Perform backend migration cleanup.
 
