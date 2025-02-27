@@ -463,6 +463,24 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#front-page-elements-and-header-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Front Page Elements and Header Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breadcrumb-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breadcrumb Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#logo-and-favicon" class="md-nav__link">
     <span class="md-ellipsis">
       Logo and Favicon
@@ -481,9 +499,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#frontpage-image" class="md-nav__link">
+  <a href="#front-page-image" class="md-nav__link">
     <span class="md-ellipsis">
-      Frontpage Image
+      Front page Image
     </span>
   </a>
   
@@ -1462,6 +1480,24 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#front-page-elements-and-header-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Front Page Elements and Header Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breadcrumb-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breadcrumb Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#logo-and-favicon" class="md-nav__link">
     <span class="md-ellipsis">
       Logo and Favicon
@@ -1480,9 +1516,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#frontpage-image" class="md-nav__link">
+  <a href="#front-page-image" class="md-nav__link">
     <span class="md-ellipsis">
-      Frontpage Image
+      Front page Image
     </span>
   </a>
   
@@ -1620,6 +1656,25 @@
 <h2 id="appearance-customization">Appearance Customization<a class="headerlink" href="#appearance-customization" title="Permanent link">&para;</a></h2>
 <p>To adjust the basic look and feel of your site, hover over the paintbrush icon in the admin toolbar on the lefthand side of your site.</p>
 <p>Navigate to <code>Appearance -&gt; Settings -&gt; DG Digital Collections</code> to see a range of options for updating the colours, logo, etc. for your site.</p>
+<h3 id="front-page-elements-and-header-options">Front Page Elements and Header Options<a class="headerlink" href="#front-page-elements-and-header-options" title="Permanent link">&para;</a></h3>
+<p>At the top of the appearance menu is a subsection of options titled <strong>Bootstrap Settings</strong>. </p>
+<p>Open up the <code>Front Page</code> foldout to reveal a series of sliders and options for adjusting the appearance of your front page. Options include:</p>
+<ul>
+<li>Changing the orientation of your front page search box and title text</li>
+<li>Sliders to adjust the opacity and gradient of the overlay on your front page image</li>
+<li>Toggle to change the opacity of the area behind the main link menu on the front page (off by default to allow more of your front page image to be visible)</li>
+<li>Toggle to hide the default <em>Recent Items</em> block on your front page</li>
+<li>Toggle to hide the default <em>Repository Item Counts</em> banner on your front page</li>
+</ul>
+<div class="admonition bug">
+<p class="admonition-title">Bug</p>
+<p>Note that there's currently a bug with the 3rd slider "Front page image opacity". If the slider is set to 100% opacity, your front page image will disappear. Set at 99% or below.</p>
+</div>
+<p>Open up the <code>Header Logo</code> foldout to see additional options for your header. These include options for using a different logo on your front page than any other page on your site, as well as a different logo for mobile versions of your site.</p>
+<h3 id="breadcrumb-options">Breadcrumb Options<a class="headerlink" href="#breadcrumb-options" title="Permanent link">&para;</a></h3>
+<p>Still under the <strong>Bootstrap Settings</strong> section, click on the <code>Components</code> tab to the left. Open up the <code>Breadcrumbs</code> foldout. </p>
+<p>Breadcrumbs are the link trails that indicate to a user where in a hierarchical site's structure their current page is. You can opt to turn these off entirely with the first dropdown in these settings, though it's generally recommended to keep breadcrumbs on for accessibility reasons.</p>
+<p>Here you will also find options for hiding your site's "Home" page (i.e., front page) or a user's active page from the breadcrumbs.</p>
 <h3 id="logo-and-favicon">Logo and Favicon<a class="headerlink" href="#logo-and-favicon" title="Permanent link">&para;</a></h3>
 <p>Your logo is the image that will appear in the top left corner or to the left of the header on all of your site's pages. Your favicon is the shortcut icon that will be displayed in the address bar and/or bookmarks for your site on most browsers.</p>
 <p>Instructions for changing either of these images:</p>
@@ -1635,8 +1690,8 @@
 <p class="admonition-title">Warning</p>
 <p>Make sure to save your configuration by clicking the button at the bottom of the Settings page once you're finished changing any hex codes.</p>
 </div>
-<h3 id="frontpage-image">Frontpage Image<a class="headerlink" href="#frontpage-image" title="Permanent link">&para;</a></h3>
-<p>The settings for changing the frontpage background image in i2 are much more nested than in legacy Islandora. Unlike the logo or favicon, the frontpage image needs to be edited from the Block settings and not the Appearance settings.</p>
+<h3 id="front-page-image">Front page Image<a class="headerlink" href="#front-page-image" title="Permanent link">&para;</a></h3>
+<p>The settings for changing the front page background image in i2 are much more nested than in legacy Islandora. Unlike the logo or favicon, the front page image needs to be edited from the Block settings and not the Appearance settings.</p>
 <p>Instructions:</p>
 <ol>
 <li>Go to <code>Structure -&gt; Views -&gt; Frontpage (Content)</code>. Immediately under the header <strong>Displays</strong>, you will see several buttons. Go to the one labelled <code>Front page Block</code>.<ul>
@@ -1644,7 +1699,7 @@
 </ul>
 </li>
 <li>Scroll down to the Preview section and hover over the default image there. Click on the pencil icon that appears and select <code>Edit</code>.</li>
-<li>You will be brought to the Edit page for <em>Front page search content</em>. Scroll down to <em>Display Block Images</em> and remove the existing media with the button on the right. Add your new file by clicking <code>Choose Files</code>. Add a title, which will appear in a tool tip when a user hovers their mouse over the background image, and some alternative text. Click save in the top right corner when you're done.</li>
+<li>You will be brought to the Edit page for <em>Front page search content</em>. Scroll down to <em>Display Block Images</em> and remove the existing image with the button on the right. Add your new file by clicking <code>Choose Files</code>. Add a title, which will appear in a tool tip when a user hovers their mouse over the background image, and some alternative text. Click save in the top right corner when you're done.</li>
 <li>Go to your homepage to confirm that your image has been successfully uploaded.</li>
 </ol>
 <h2 id="blocks-and-menus">Blocks and Menus<a class="headerlink" href="#blocks-and-menus" title="Permanent link">&para;</a></h2>

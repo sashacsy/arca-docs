@@ -130,6 +130,10 @@ You can take more advanced theming steps (block placement, etc.) following the [
 
 ## Arca Office Tasks
 
+### Pathauto paths
+
+Define paths for URL aliases, in consultation with Arca Admins.
+
 ### User Accounts
 Create user accounts for primary migration contacts with the roles of site administrator and repository administrator. 
 
