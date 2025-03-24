@@ -37,9 +37,22 @@ If a live session is not available, members can work along with a recorded sessi
 
 ### Recordings
 
-[February 20, 2025: First Basic Training session. View on YouTube.](https://www.youtube.com/watch?v=Ot9J0ANez0A)
+Arca Basic Training modules:
 
-This will eventually be replaced by a more polished set of videos.
+- [Public-facing website tour](https://youtu.be/OTRXGJQEMMk)
+- Drupal Basics:
+    - [Admin Menu tour](https://youtu.be/QbBDpJN3a94)
+    - [Users, Roles, and Permissions](https://youtu.be/lSUcgEsnSZc)
+    - [Content Types overview](https://youtu.be/EpeAmHpP2Ck)
+    - [Creating and Organizing Basic Pages](https://youtu.be/-N_KxcIgwsY)
+    - [Menus and Block Placement](https://youtu.be/0dvWoUhFDBk)
+ - Repository Content:
+    - [Comprehensive Ingest Guide](https://youtu.be/jFrYVx_IH8E)
+        - Goes through the complete ingest process.
+    - [Managing Repository Items](https://youtu.be/dPgrLeKhUBU)
+        - Covers edits, revisions, media management, and embargoes.
+- [Managing and Customizing the Theme](https://youtu.be/UWNz2CbVZmk)
+        - Covers colours, logos, front page blocks, etc.
 
 ## Specialized modules
 
