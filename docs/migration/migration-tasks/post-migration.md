@@ -29,9 +29,9 @@ Since Scholars are not Repository Items, you need to configure a special View to
     - View settings: 
         - Show: `Taxonomy Terms`
         - Of type: `Person`
-    - Page settings: `Create a Pag`e
+    - Page settings: `Create a Page`
         - Set the title and path you prefer. If your path is `scholars`, the URL to the page will be `yoursite.arcabc.ca/scholars`.
-        - Page display settings: `Unformatted list` of `fields`
+        - Page display settings: `Grid` or `Unformatted list` of `fields`
     - Items to display: However many you want to appear per page.
     - Create a menu link and RSS feed if you want to.
     - Save and edit
