@@ -32,6 +32,10 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.details
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra_css:
   - stylesheets/extra.css
@@ -41,12 +45,17 @@ nav:
   - About:
     - About Arca: about/about-arca.md
     - Support: about/support.md
+    - Contribute to Arca Docs: about/contributing.md
+  - Training: training/training.md
   - How-To in Islandora 2:
     - Theming Customizations: how-to/theming/customizations.md
     - Display Customizations:
       - Custom URLs for repository items: how-to/display/pathauto.md
+      - Download link permissions: how-to/display/download-links.md
       - Displaying usage data: how-to/display/usage.md
       - Collection Display: how-to/display/collection-display.md
+      - Metadata Display: how-to/display/metadata-display-customizations.md
+      - Comments: how-to/display/comments.md
     - Metadata:
       - Taxonomies: how-to/metadata/taxonomies.md
     - Managing Objects:
@@ -70,4 +79,4 @@ nav:
       - Metadata Corrections: migration/migration-tasks/metadata-corrections.md
       - Bulk Metadata Updates: migration/migration-tasks/bulk-metadata-updates.md
       - Pre-Migration Tasks: migration/migration-tasks/pre-migration.md
-      - Post-migration tasks: migration/migration-tasks/post-migration.md
+      - Post-Migration tasks: migration/migration-tasks/post-migration.md

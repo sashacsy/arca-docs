@@ -36,17 +36,23 @@ In your repository, you might have chosen to simplify the ingest process by supp
 
 Our ingest form is organized into Paragraphs - organized groups of metadata fields. These Paragraphs are collapsed; you will need to click into each of their titles to access the next group of fields.
 
-1. Summary:
-    1.	Title 
-        * This field is required, and it will act as the label for your object.
-        * Additional/Alternative titles: Add these if there are other forms of title you wish to add.
-            * Title Type:
-                * Indicates different kinds of title (alternate, translated, abbreviated, etc.)
-            * Part Name/Number:
-                * Information about the item’s place in a series.
-            * Multiple Titles can be added (“Add Title” button repeats the field set).
-    2.	Content Type
-        * The Islandora Model. Determines how Islandora will handle your object, including the viewers it assigns to display your content, derivatives it creates, etc. 
+### Summary
+####	Title 
+
+* This field is required, and it will act as the label for your object.
+* Additional/Alternative titles: Add these if there are other forms of title you wish to add.
+    * Title Type:
+        * Indicates different kinds of title (alternate, translated, abbreviated, etc.)
+    * Part Name/Number:
+        * Information about the item’s place in a series.
+    * Multiple Titles can be added (“Add Title” button repeats the field set).
+
+    !!! warning "Titles and URL Aliases"
+        Unless you have an alternate URL alias pattern in place, URL aliases for repository items are set to generate automatically from item titles by default. If you revise an item's title at any point after creation and you don't toggle `Generate automatic URL alias` off under **URL alias** settings on the object, the URL alias will change with the title.
+
+#### Content Type
+
+* The Islandora Model. Determines how Islandora will handle your object, including the viewers it assigns to display your content, derivatives it creates, etc. 
     3.  Collections(s)
         * References existing “container” type items in the repository – collections, newspapers, compound objects, etc.
         * Autocompletes: Begin typing, and results will appear. Select the correct parent from the list.

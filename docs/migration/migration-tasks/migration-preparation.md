@@ -68,6 +68,16 @@ Some objects may have the "deleted" property set, but have not yet been removed 
   * Select all content models, to see all "deleted" objects
   * Review the objects, and either restore or purge them. No "deleted" objects should remain in the repository.
 
+## Review Compound Objects
+
+For the purposes of the migration, the children of Compound Objects may only have *one parent*. If you have any items that are linked to more than one parent, you will need to unlink them for the migration.
+
+To unlink an object from its parent:
+
+  * Manage the object
+  * Click the "Compound" tab
+  * In the "Unlink from parent" section, check off the items that you wish to unlink, and save.
+
 ## Review Users list
 
 Review your list of users at `/admin/people`:

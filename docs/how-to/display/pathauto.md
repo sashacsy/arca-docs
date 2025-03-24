@@ -1,6 +1,6 @@
 # Configuring URLs in Islandora
 
-It is possible to set up custom URLs for each object individually, or according to patterns. In Arca, we use the (Pathauto module)[https://www.drupal.org/documentation/modules/pathauto]. 
+It is possible to set up custom URLs for each object individually, or according to patterns. In Arca, we use the [Pathauto module](https://www.drupal.org/documentation/modules/pathauto).
 
 Pathauto works for all kinds of Drupal content, see the module documentation for details. This page describes its usage specifically in the Arca and Islandora context.
 

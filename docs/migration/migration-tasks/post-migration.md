@@ -1,16 +1,15 @@
 # Post-Migration Tasks
 
+## Local Admin Tasks
 The Arca Office is working with Discoverygarden to create a theme, a base configuration, infrastructure, and migrate content, but there will be numerous post-migration tasks for local admins once your site is up, content is migrated, and your account has been created.
 
-## Create an About page
-
+### Revise About page
 The Arca Office will create a stub About page for you to customize, and add it to the header menu. You can edit this page to add details such as contact information and context for your site.
 
-## Identify your Scholars and create a View
-
+### Identify your Scholars and create a View
 If you had a Scholars collection in your previous repository, you will need to find those persons in your new site, and edit them to mark them as Scholars.
 
-### Mark your Scholars:
+#### Mark your Scholars:
 
 Scholars are entities in the Person taxonomy that you have identified specially as pertinent to your institution. There is a special metadata field that allows you to mark them as such, so they can be included in your views of your scholars.
 
@@ -19,7 +18,7 @@ Scholars are entities in the Person taxonomy that you have identified specially 
 3. On the Edit screen, find the "Include in Scholars list" toggle and turn it on.
 4. Save
 
-### Create your Scholars view:
+#### Create your Scholars view:
 
 Since Scholars are not Repository Items, you need to configure a special View to display them. These instructions provide a very basic view; you may need additional CSS work to style it appropriately.
 
@@ -56,7 +55,7 @@ Since Scholars are not Repository Items, you need to configure a special View to
          - Choose the field you want to sort by.
 
 
-## Apply access controls
+### Apply access controls
 
 Because of the complexity of XACML policies and embargoes, we are unable to automatically migrate access restrictions on your objects. Instead, these will have to be applied manually after the data is migrated, but before your new site becomes publicly accessible.
 
@@ -69,7 +68,7 @@ Process:
 - In your new site, with the list provided to you by the Arca Office, you will apply the appropriate restrictions to your objects.
   - The Arca Office will be available to support you as required with this process.
 
-## Add Embed Code to migrated Remote Media objects
+### Add Embed Code to migrated Remote Media objects
 
 If your repository contains objects with the Islandora Remote Media content model, you may need to do some extra post-migration work in order to complete these objects.
 
@@ -91,7 +90,7 @@ Process:
   
 When viewing your object, the embedded media should display normally.
 
-## Add TRANSCRIPT datastreams back to video and audio content
+### Add TRANSCRIPT datastreams back to video and audio content
 
 TRANSCRIPT datastreams, which would have provided subtitles/closed captioning on your video objects, will not be migrated automatically. They need to be re-added after the migration is complete.
 
@@ -105,7 +104,7 @@ Process:
   - Find the video or audio media, and click Edit
   - Under the "Track" section, upload your transcript file.
 
-## Create and review users, roles, and permissions
+### Create and review users, roles, and permissions
 
 Before migration, you should already have reviewed and pruned your users list so that only users you want to migrate will appear in your new repository.
 
@@ -113,18 +112,42 @@ Users should be migrated automatically, but you should review them to make sure 
 
 You will also want to review permissions for each role to make sure that they are set appropriately.
 
-## Set up mediated submission
+### Set up mediated submission
 
 If you want a mediated process for self-submission, follow the [self-submission setup instructions](/arca-docs/how-to/processes/self-submission/).
 
-## Configure Pathauto
+### Configure Pathauto
 
 If you want to set up custom URLs for your objects, you will need to [configure the Pathauto module](/arca-docs/how-to/display/pathauto/).
 
 This configuration happens after objects are migrated. Once you have configured it in the way you want it, we will run a script to apply the new paths to all migrated objects.
 
-## Theme customizations
+### Theme customizations
 
 Customize your theming as you see fit. You can modify colours, logos, etc. via the Appearance menu at `/admin/appearance/settings/dgi_i8_base`.
 
 You can take more advanced theming steps (block placement, etc.) following the [Theming Customizations guide](/arca-docs/how-to/theming/customizations/).
+
+## Arca Office Tasks
+
+### Pathauto paths
+
+Define paths for URL aliases, in consultation with Arca Admins.
+
+### User Accounts
+Create user accounts for primary migration contacts with the roles of site administrator and repository administrator. 
+
+### About Page
+Create stub About page with boilerplate text about Arca.
+
+### Communicate Migration Completion
+Communicate the completion of the migration to the local admin and direct them to begin Post-Migration Tasks above.
+
+### Migration Stubs
+Remove "parent" references to migration stubs for all top-level collections.
+
+### Cleanup
+Perform backend migration cleanup.
+
+### Matomo Configuration
+Configure analytics for each migrated site once ready to port over to new URL.
