@@ -1718,25 +1718,33 @@
 <li>Configure Workflow at <code>/admin/config/workflow/workflows</code></li>
 <li>Use the <code>+Add workflow</code> button to create a new workflow</li>
 <li>Label it something understandable like "Start as draft", and choose the workflow type <code>Content moderation</code></li>
-<li>Configure States:</li>
+<li>Configure States:<ul>
 <li>These are the different states a submission can be in, the ultimate state being Published.</li>
 <li>The default states, Draft and Published, should suffice, but you can add more intermediate states like "Under review".</li>
 <li>If adding a new state, set it to "Default revision", and make sure they are in order.</li>
-<li>Configure Transitions:</li>
+</ul>
+</li>
+<li>Configure Transitions:<ul>
 <li>Transitions describe how content moves from one state to another. Transitions are executed by authorized users.</li>
 <li>The default states should suffice if only using the Draft and Published states, but you should create more transitions if you've added more states.</li>
 <li>"From" describes the initial state of the object before the transition is applied; "To" describes the state the object will be in after the transition.</li>
-<li>This workflow applies to:</li>
+</ul>
+</li>
+<li>This workflow applies to:<ul>
 <li>Under Content Types, select <code>Repository Item</code>.</li>
 <li>If you want to also subject Media submissions to review, select all applicable Media Types as well.</li>
-<li>Set Default Moderation State:</li>
+</ul>
+</li>
+<li>Set Default Moderation State:<ul>
 <li>When a Repository Item is submitted, it will automatically get the state you select here. Leave it at "Draft".</li>
+</ul>
+</li>
 </ol>
 <h3 id="content-moderation-notifications-configuration">Content Moderation Notifications configuration<a class="headerlink" href="#content-moderation-notifications-configuration" title="Permanent link">&para;</a></h3>
 <p>You can set up Notifications to send an email to the appropriate people when a submission undergoes a transition. For example, you might notify Reviewers when a new draft is submitted. Or you might notify the submitter when their submission is published, or if revisions are requested.</p>
 <ol>
 <li>Configure Content Moderation Notifications at <code>/admin/config/workflow/notifications/</code></li>
-<li>Create notifications for the kids of activities that you want people notified about. For example, a notification called "Notify Reviewer":</li>
+<li>Create notifications for the kids of activities that you want people notified about. For example, a notification called "Notify Reviewer":<ul>
 <li>Label: Notify Reviewer</li>
 <li>Workflow: Start As Draft (or whatever your workflow is named)</li>
 <li>Transitions: Create New draft<ul>
@@ -1764,14 +1772,18 @@
 <li>You can also use tokens (see the Browse Available Tokens link) to insert variables like the author name (<code>[node:author]</code>), the submission title (<code>[node:title]</code>), etc.</li>
 </ul>
 </li>
+</ul>
+</li>
 </ol>
 <h3 id="content-moderation-dashboard">Content Moderation Dashboard<a class="headerlink" href="#content-moderation-dashboard" title="Permanent link">&para;</a></h3>
 <p><em>Optional</em>, and doesn't quite work easily out of the box. Provides a dashboard for each user displaying their submissions. This module is very barebones and requires you to create your own views, but has a lot of potential.</p>
 <ol>
 <li>Configure it at <code>/admin/config/people/moderation_dashboard</code></li>
 <li>Redirect on login: If selected, all users will be directed to their <code>moderation-dashboard</code> page when they log in, at <code>/user/[user ID number]/moderation-dashboard</code>.</li>
-<li>Pull chart.js from CDN:</li>
+<li>Pull chart.js from CDN:<ul>
 <li>Turn this on at least initially, so that you can download the chart.js file. Otherwise, viewing the dashboard will just result in an error.</li>
+</ul>
+</li>
 </ol>
 <p>You will need to then configure the views that appear on the moderation dashboard. This has not yet been explored.</p>
 <h2 id="roles-and-permissions">Roles and Permissions<a class="headerlink" href="#roles-and-permissions" title="Permanent link">&para;</a></h2>
@@ -1789,9 +1801,11 @@
 <ul>
 <li>“Use the Create New Draft transition":</li>
 <li>All roles that can create Repository Items, including Submitter</li>
-<li>“Use Publish transition”: </li>
+<li>“Use Publish transition”: <ul>
 <li>All roles that are allowed to move things from Draft to Published.</li>
 <li>These should be reviewers, repository administrators, etc.</li>
+</ul>
+</li>
 </ul>
 <h4 id="bypassing-the-draft-state">Bypassing the Draft state<a class="headerlink" href="#bypassing-the-draft-state" title="Permanent link">&para;</a></h4>
 <p>You probably want certain roles to be able to submit directly to the repository without being moderated (e.g. Administrator, Site Administrator, Repository Administrator, Ingester). Content Moderation Bypass allows this.</p>
@@ -1805,11 +1819,15 @@
 <h4 id="allow-submitters-to-create-content">Allow Submitters to create content<a class="headerlink" href="#allow-submitters-to-create-content" title="Permanent link">&para;</a></h4>
 <p>Any new roles need to have basic permissions configured, including the ability to add new items to the repository.</p>
 <ul>
-<li>Under Node:  </li>
+<li>Under Node:  <ul>
 <li>Repository Item: Create new content </li>
 <li>Repository Item: Edit own content (if you want to allow this) </li>
-<li>Under Media: </li>
+</ul>
+</li>
+<li>Under Media: <ul>
 <li>For each media type you want submitters to be able to ingest, check off the "Create new media" permission </li>
+</ul>
+</li>
 <li>Create Media (general media creation permission)</li>
 </ul>
 <h2 id="content-moderation-process">Content Moderation Process<a class="headerlink" href="#content-moderation-process" title="Permanent link">&para;</a></h2>
