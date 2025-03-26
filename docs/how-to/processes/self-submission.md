@@ -22,18 +22,18 @@ Each of the above modules must be configured to create the self-submission proce
 2. Use the `+Add workflow` button to create a new workflow
 3. Label it something understandable like "Start as draft", and choose the workflow type `Content moderation`
 4. Configure States:
-  - These are the different states a submission can be in, the ultimate state being Published.
-  - The default states, Draft and Published, should suffice, but you can add more intermediate states like "Under review".
-  - If adding a new state, set it to "Default revision", and make sure they are in order.
+    - These are the different states a submission can be in, the ultimate state being Published.
+    - The default states, Draft and Published, should suffice, but you can add more intermediate states like "Under review".
+    - If adding a new state, set it to "Default revision", and make sure they are in order.
 5. Configure Transitions:
-  - Transitions describe how content moves from one state to another. Transitions are executed by authorized users.
-  - The default states should suffice if only using the Draft and Published states, but you should create more transitions if you've added more states.
-  - "From" describes the initial state of the object before the transition is applied; "To" describes the state the object will be in after the transition.
+    - Transitions describe how content moves from one state to another. Transitions are executed by authorized users.
+    - The default states should suffice if only using the Draft and Published states, but you should create more transitions if you've added more states.
+    - "From" describes the initial state of the object before the transition is applied; "To" describes the state the object will be in after the transition.
 6. This workflow applies to:
-  - Under Content Types, select `Repository Item`.
-  - If you want to also subject Media submissions to review, select all applicable Media Types as well.
+    - Under Content Types, select `Repository Item`.
+    - If you want to also subject Media submissions to review, select all applicable Media Types as well.
 7. Set Default Moderation State:
-  - When a Repository Item is submitted, it will automatically get the state you select here. Leave it at "Draft".
+    - When a Repository Item is submitted, it will automatically get the state you select here. Leave it at "Draft".
   
 ### Content Moderation Notifications configuration
 
@@ -41,21 +41,21 @@ You can set up Notifications to send an email to the appropriate people when a s
 
 1. Configure Content Moderation Notifications at `/admin/config/workflow/notifications/`
 2. Create notifications for the kids of activities that you want people notified about. For example, a notification called "Notify Reviewer":
-  - Label: Notify Reviewer
-  - Workflow: Start As Draft (or whatever your workflow is named)
-  - Transitions: Create New draft
-    - Notifies the recipient when a new draft is created -- i.e. when a new submission is made
-  - Roles:
-    - If you check off a role, it means that *all users with this role* will be notified. If you want all potential reviewers to see this submission, then you should have a Reviewer role, and select it.
-  - Email the author?:
-    - Appropriate for transitions like "Revisions requested" or "Published", to notify the author that they have work to do or that their submission was accepted.
-  - Disable the site email address:
-    - By default, the module will send a message to the website owner's email address. Best to disable this.
-  - Adhoc email addresses: 
-    - If you have specific users you want to receive the message, add them here.
-  - Email subject and Body:
-    - Write your email here. 
-    - You can also use tokens (see the Browse Available Tokens link) to insert variables like the author name (`[node:author]`), the submission title (`[node:title]`), etc.
+    - Label: Notify Reviewer
+    - Workflow: Start As Draft (or whatever your workflow is named)
+    - Transitions: Create New draft
+        - Notifies the recipient when a new draft is created -- i.e. when a new submission is made
+    - Roles:
+        - If you check off a role, it means that *all users with this role* will be notified. If you want all potential reviewers to see this submission, then you should have a Reviewer role, and select it.
+    - Email the author?:
+        - Appropriate for transitions like "Revisions requested" or "Published", to notify the author that they have work to do or that their submission was accepted.
+    - Disable the site email address:
+        - By default, the module will send a message to the website owner's email address. Best to disable this.
+    - Adhoc email addresses: 
+        - If you have specific users you want to receive the message, add them here.
+    - Email subject and Body:
+        - Write your email here. 
+        - You can also use tokens (see the Browse Available Tokens link) to insert variables like the author name (`[node:author]`), the submission title (`[node:title]`), etc.
     
 ### Content Moderation Dashboard
 
@@ -64,7 +64,7 @@ You can set up Notifications to send an email to the appropriate people when a s
 1. Configure it at `/admin/config/people/moderation_dashboard`
 2. Redirect on login: If selected, all users will be directed to their `moderation-dashboard` page when they log in, at `/user/[user ID number]/moderation-dashboard`.
 3. Pull chart.js from CDN:
-  - Turn this on at least initially, so that you can download the chart.js file. Otherwise, viewing the dashboard will just result in an error.
+    - Turn this on at least initially, so that you can download the chart.js file. Otherwise, viewing the dashboard will just result in an error.
 
 You will need to then configure the views that appear on the moderation dashboard. This has not yet been explored.
 
@@ -90,8 +90,8 @@ Under Content Moderation, set the following permissions:
 - “Use the Create New Draft transition":
   - All roles that can create Repository Items, including Submitter
 - “Use Publish transition”: 
-  - All roles that are allowed to move things from Draft to Published.
-  - These should be reviewers, repository administrators, etc.
+    - All roles that are allowed to move things from Draft to Published.
+    - These should be reviewers, repository administrators, etc.
 
 #### Bypassing the Draft state
 
@@ -112,10 +112,10 @@ Roles subject to workflow should be able to view their own unpublished content.
 Any new roles need to have basic permissions configured, including the ability to add new items to the repository.
 
 - Under Node:  
-  - Repository Item: Create new content 
-  - Repository Item: Edit own content (if you want to allow this) 
+    - Repository Item: Create new content 
+    - Repository Item: Edit own content (if you want to allow this) 
 - Under Media: 
-  - For each media type you want submitters to be able to ingest, check off the "Create new media" permission 
+    - For each media type you want submitters to be able to ingest, check off the "Create new media" permission 
 - Create Media (general media creation permission)
 
 ## Content Moderation Process
