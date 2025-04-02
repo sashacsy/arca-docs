@@ -2,6 +2,13 @@
 
 This guide describes how to set up Islandora to accept content submissions from users and hold them in a moderation queue for editing and approval.
 
+There are two possible approaches:
+
+1. Using the Content Moderation workflows, submitters will create Repository Item nodes themselves, which get put into Draft state. Repository staff then review, edit, and Publish those drafts. Or,
+2. Using the Webform module, submitters send in their thesis and some basic metadata. Repository staff will use the form to create the Repository Item on the submitter's behalf.
+
+# Content Moderation method
+
 ## Modules
 
 Enable the following modules:
@@ -139,3 +146,43 @@ However: the default moderation state when creating content, even for those with
 If the item was ingested to the "draft" state accidentally, it may be moved directly to "published" using the moderation block.
 
 ![image](/arca-docs/assets/moderation_state.png)
+
+# Webform method
+
+## Modules
+
+- Webform
+    - Base Webform module
+- Webform Attachment
+    - Allows submitters to attach files, eg PDFs
+- Webform Node
+    - Optional; allows a Webform to be created as a page with your form embedded in it.
+- Webform Submission Import/Export
+    - Optional; allows you to export (and import) submissions for your records.
+- Webform UI
+	- Provides a user interface for you to manage webforms.
+
+## Creating a webform
+
+1. Go to `Structure -> Webforms`, and click "Add a webform"
+2. Give it a title (e.g. "Thesis submission") and descriptions, and a status (open or closed). Save.
+    - "Open" means it will accept submissions; "closed" means it will not.
+3. Add elements (fields) to your form:
+    - In the Webforms section, next to your form, click Build
+    - To add a new element, click Add Element and select the type.
+        - Choose the type of field relevant to its purpose; eg. for user email, use the Email field.
+        - Give your element a title and description, and save
+    - Be sure to include at minimum elements for:
+        - Title
+        - Author
+        - Date
+        - Abstract
+        - Submission file (attachment)
+        - Submitter contact information
+    - Also include any other fields that the repository staff will need to fully populate the metadata.
+4. Add emails and handlers to send notifications:
+    - Click the `Emails/Handlers` tab
+    - Add Email
+    - Fill out the details -- the recipient email address, subject, etc.
+    - Save
+5. Create either a page with a link to your form, or create a menu link to your form.        
