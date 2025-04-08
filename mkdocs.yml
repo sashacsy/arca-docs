@@ -67,6 +67,8 @@ nav:
       - Embargoes: how-to/access-control/embargo.md
     - Processes:
       - Self-submission: how-to/processes/self-submission.md
+    - Usage Statistics:
+      - Collecting statistics: how-to/statistics/statistics.md
   - Troubleshooting:
     - Troubleshooting: troubleshooting/troubleshooting.md
     - Islandora 7 troubleshooting: troubleshooting/troubleshooting-i7.md
