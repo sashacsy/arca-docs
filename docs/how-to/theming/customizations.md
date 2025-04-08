@@ -52,11 +52,11 @@ To see descriptions of which parts of the site correspond to each colour, hover 
 ### Front page Image
 The settings for changing the front page background image in i2 are much more nested than in legacy Islandora. Unlike the logo or favicon, the front page image needs to be edited from the Block settings and not the Appearance settings.
 
-Instructions:
+**Instructions:**
 
 1. Go to `Structure -> Views -> Frontpage (Content)`. Immediately under the header **Displays**, you will see several buttons. Go to the one labelled `Front page Block`.
     * You can also reach these settings by appending `/admin/structure/views/view/frontpage/edit/block_1` to your base repository URL.
-2. Scroll down to the Preview section and hover over the default image there. Click on the pencil icon that appears and select `Edit`.
+2. Scroll down to the Preview section and hover over the default image there. Click on the :material-pencil-circle-outline: pencil icon that appears and select `Edit`.
 3. You will be brought to the Edit page for *Front page search content*. Scroll down to *Display Block Images* and remove the existing image with the button on the right. Add your new file by clicking `Choose Files`. Add a title, which will appear in a tool tip when a user hovers their mouse over the background image, and some alternative text. Click save in the top right corner when you're done.
 4. Go to your homepage to confirm that your image has been successfully uploaded.
 
@@ -66,41 +66,42 @@ Blocks are chunks of content that might be produced by Menus, Views, or even man
 
 ### Disabling (or enabling) blocks on any page
 
-What: Remove blocks like "Recent Items" to get a cleaner front page look, or add new blocks to any page.
+**What:** Hide or add new blocks to any page.
 
-How: Use the Block Layout menu to add and remove blocks.
+**How:** Use the Block Layout menu to enable or hide blocks.
 
-Instructions:
+**Instructions:**
 
-1. To remove a block:
-    * Via the block layout menu:
-        1. In the admin menu, go to `Structure -> Block Layout` (`/admin/structure/block`)
-        2. Find the title of the block you want to remove, click the dropdown menu on the right, and click `Remove`.
-    * From the block's context menu:
-        1. On the front page, find the block you want to remove.
-        2. When you mouse over the block, in the corner, click the pencil icon.
-        3. Click `Remove block`.
-        
-2. To add (or re-add) a block:
-    1. In the admin menu, go to `Structure -> Block Layout` (`/admin/structure/block`)
-    2. Find the region you want the block to appear in (e.g. `Content`)
-        * To preview the names and locations of each region, click  `Demonstrate block regions ([Theme Name])` near the top of the `Block Layout` page.
-    3. Next to the region's header, click `Place block`.
-    4. Find the block you want to place (e.g. "Recent Items") and place it.
-    5. Drag the block order to position it appropriately in relation to other blocks in that region.
-    6. Click the `Configure` box
-    7. Under the `Visibility` menu, go to `Pages`.
-    8. To include this block on the a particular page (such as the front page):
-        * In the text box, enter `<front>`
-        * Select "Show for the listed pages"
+To remove a block:
+
+- In the admin menu, go to `Structure -> Block Layout` (`/admin/structure/block`)
+- Find the title of the block you want to remove, click the dropdown menu on the right, and click `Disable`.
+
+    !!! warning 
+        **DO NOT** click Remove on a block while in Block Layout or while interacting with the block directly on your site. This will delete the block, making it substantially more difficult to recreate the block/view if you ever decide to re-enable it. Make sure to only select *Disable* so that the block can easily be recovered if needed.
+
+
+To add (or re-add) a block:
+
+1. In the admin menu, go to `Structure -> Block Layout` (`/admin/structure/block`)
+2. Find the region you want the block to appear in (e.g. `Content`)
+    * To preview the names and locations of each region, click  `Demonstrate block regions ([Theme Name])` near the top of the `Block Layout` page.
+3. Next to the region's header, click `Place block`.
+4. Find the block you want to place (e.g. "Recent Items") and place it.
+5. Drag the block order to position it appropriately in relation to other blocks in that region.
+6. Click the `Configure` box
+7. Under the `Visibility` menu, go to `Pages`.
+8. To include this block on the a particular page (such as the front page):
+    * In the text box, enter `<front>`
+    * Select "Show for the listed pages"
 
 ### Additional menu blocks
 
-What: Create a new menu block, such as a "helpful links" menu on the front page.
+**What:** Create a new menu block, such as a "helpful links" menu on the front page.
 
-How: Create a Menu, and place it in Block Layout.
+**How:** Create a Menu, and place it in Block Layout.
 
-Instructions: 
+**Instructions:**
 
 1. Create a new menu:
     1. In the admin menu, go to `Structure -> Menus -> Add menu` (`/admin/structure/menu/add`)
@@ -115,11 +116,11 @@ Instructions:
 
 ### Institutional Footer
 
-What: A custom block that rests at the bottom of every page, with institutional logo and links. (NOTE: The institutional footer must go above the general Arca footer.)
+**What:** A custom block that rests at the bottom of every page, with institutional logo and links. (NOTE: The institutional footer must go above the general Arca footer.)
 
-How: Create a custom block.
+**How:** Create a custom block.
 
-Instructions:
+**Instructions:**
    
 1. Create a custom block:
     1. In the admin menu, go to `Structure -> Block Layout -> Add custom block` (or, `/add/block`)
@@ -130,27 +131,27 @@ Instructions:
         * Create your footer with the WYSIWYG editor, or click the `Source` button to write raw HTML.
         * The Arca Footer HTML as an example:
         
-```
-<style>
-table, th, td {
-  border: none;
-  font-size: medium;
-  line-height:normal;
-}
-</style>
-<table class="arca-footer">
-    <tbody>
-        <tr>
-            <td>
-                This site is a member of the <a href="https://bceln.ca/services/shared-services/arca-digital-repository">Arca collaborative digital repository</a>, a service managed by the <a href="https://bceln.ca/">BC Electronic Library Network</a>, with support from the <a href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/post-secondary-education-and-future-skills">BC Ministry of Post-Secondary Education and Future Skills</a>.
-            </td>
-            <td>
-                <a href="https://arcabc.ca"><img class="arca-footer-logo" src="/sites/default/files/inline-images/Arca_Logo_web_0.png" data-entity-uuid="f5eb5d64-5dbc-427e-a347-2de9d75b9ff9" data-entity-type="file" width="83" height="59"></a>
-            </td>
-        </tr>
-    </tbody>
-</table>
-```
+    ```
+    <style>
+    table, th, td {
+    border: none;
+    font-size: medium;
+    line-height:normal;
+    }
+    </style>
+    <table class="arca-footer">
+        <tbody>
+            <tr>
+                <td>
+                    This site is a member of the <a href="https://bceln.ca/services/shared-services/arca-digital-repository">Arca collaborative digital repository</a>, a service managed by the <a href="https://bceln.ca/">BC Electronic Library Network</a>, with support from the <a href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/post-secondary-education-and-future-skills">BC Ministry of Post-Secondary Education and Future Skills</a>.
+                </td>
+                <td>
+                    <a href="https://arcabc.ca"><img class="arca-footer-logo" src="/sites/default/files/inline-images/Arca_Logo_web_0.png" data-entity-uuid="f5eb5d64-5dbc-427e-a347-2de9d75b9ff9" data-entity-type="file" width="83" height="59"></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    ```
 
 2. Place and activate your custom block:
     1. In the admin menu, go to `Structure -> Block Layout` (`/admin/structure/block`)
@@ -182,9 +183,9 @@ This section will focus on certain Arca-specific use cases; for more general inf
 
 ### Customizing the Repo Content Counts view
 
-What: Changing what kind of content gets listed and counted in the summary on the front page.
+**What:** Changing what kind of content gets listed and counted in the summary on the front page.
 
-How: Modifying the Repo Content Counts view
+**How:** Modifying the Repo Content Counts view
 
 The Repo Content Counts view produces the block on the front page saying how many collections, digital documents, etc. exist in your repository. It is built to only count specific kinds of content, but you can add entries to show even more content types, or remove them from the list.
 

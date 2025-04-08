@@ -7,7 +7,7 @@ The pages on Arca Docs are written in Markdown, a simple text processing languag
 ## Simple method (for small edits)
 
 1.  Navigate to the page you want to edit.
-2.  Click the Edit button (pencil icon) in the top right corner of the page.
+2.  Click the Edit button (:material-pencil: pencil icon) in the top right corner of the page.
     -   You will be taken to an editing screen in the Github repo, and will be required to log into Github if not already logged in.
 3.  Make your edits, then click the Commit Changes button.
 4.  Write a description of your changes
@@ -41,7 +41,7 @@ The pages on Arca Docs are written in Markdown, a simple text processing languag
 4.  Working in your new branch, the pages you want to edit are in the `docs` folder. (Leave the `site` folder alone!)
 5.  Under the `docs` folder, navigate to the pages you want to edit, or the folder you want your new page to live in.
 6.  Editing pages:
-    -   Click the Edit button (pencil icon), make your changes, and click the "Commit changes" button.
+    -   Click the Edit button (:material-pencil: pencil icon), make your changes, and click the "Commit changes" button.
     -   Since you're already in your new branch, commit directly to the current branch.
 7.  Adding new pages:
     -   Create your page:

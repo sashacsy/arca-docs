@@ -20,7 +20,7 @@ Before ingesting images, documents, and videos, you will probably want to create
 
 ## Ingesting an Islandora Object
 
-1.	In the admin toolbar, find the Content icon, Add Content, and choose “Repository Item”.
+1.	In the admin toolbar, find the :octicons-file-16: Content icon, Add Content, and choose “Repository Item”.
     * In Modern Islandora, all repository content – from images to collections to compound objects – has the type “Repository Item”.
 2.	Fill out the metadata form as appropriate.
 

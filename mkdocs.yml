@@ -56,6 +56,7 @@ nav:
       - Collection Display: how-to/display/collection-display.md
       - Metadata Display: how-to/display/metadata-display-customizations.md
       - Comments: how-to/display/comments.md
+      - Links to Socials: how-to/display/social-links.md
     - Metadata:
       - Taxonomies: how-to/metadata/taxonomies.md
     - Managing Objects:
@@ -71,6 +72,7 @@ nav:
       - Collecting statistics: how-to/statistics/statistics.md
   - Troubleshooting:
     - Troubleshooting: troubleshooting/troubleshooting.md
+    - FAQs: troubleshooting/faqs.md
     - Islandora 7 troubleshooting: troubleshooting/troubleshooting-i7.md
   - Migration:
     - Timeline: migration/migration-timeline.md
