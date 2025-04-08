@@ -4,11 +4,11 @@ There are several different ways you can set up Arca to collect usage statistics
 
 ## Matomo
 
-Matomo (formerly known as Piwik) is an open-source analytics platform. BC ELN hosts a Matomo instance at https://analytics.bceln.ca. 
+Matomo (formerly known as Piwik) is an open-source analytics platform. BC ELN hosts a Matomo instance at [https://analytics.bceln.ca](https://analytics.bceln.ca). 
 
 Each new Arca site is set up to be tracked by Matomo when launched. 
 
-Matomo reports can be accessed by logging in to https://analytics.bceln.ca. If you do not already have a login, contact the Arca Office to receive one.
+Matomo reports can be accessed by logging into the [BC ELN Matomo site](https://analytics.bceln.ca). If you do not already have a login, contact the Arca Office to receive one.
 
 The Matomo Reports module can display Matomo reports your the website itself, but cross-site-scripting security protocols currently make it unusable. Finding a way around this is in our longer-term plans.
 
