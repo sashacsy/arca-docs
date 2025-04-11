@@ -772,6 +772,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../display/social-links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links to Socials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1217,6 +1238,27 @@
   
   <span class="md-ellipsis">
     Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../troubleshooting/faqs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQs
   </span>
   
 
@@ -1756,40 +1798,33 @@
 </div>
 <h3 id="front-page-image">Front page Image<a class="headerlink" href="#front-page-image" title="Permanent link">&para;</a></h3>
 <p>The settings for changing the front page background image in i2 are much more nested than in legacy Islandora. Unlike the logo or favicon, the front page image needs to be edited from the Block settings and not the Appearance settings.</p>
-<p>Instructions:</p>
+<p><strong>Instructions:</strong></p>
 <ol>
 <li>Go to <code>Structure -&gt; Views -&gt; Frontpage (Content)</code>. Immediately under the header <strong>Displays</strong>, you will see several buttons. Go to the one labelled <code>Front page Block</code>.<ul>
 <li>You can also reach these settings by appending <code>/admin/structure/views/view/frontpage/edit/block_1</code> to your base repository URL.</li>
 </ul>
 </li>
-<li>Scroll down to the Preview section and hover over the default image there. Click on the pencil icon that appears and select <code>Edit</code>.</li>
+<li>Scroll down to the Preview section and hover over the default image there. Click on the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m7 14.94 6.06-6.06 2.06 2.06L9.06 17H7zM12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m4.7-10.65-1 1-2.05-2.05 1-1c.21-.22.56-.22.77 0l1.28 1.28c.22.21.22.56 0 .77M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2"/></svg></span> pencil icon that appears and select <code>Edit</code>.</li>
 <li>You will be brought to the Edit page for <em>Front page search content</em>. Scroll down to <em>Display Block Images</em> and remove the existing image with the button on the right. Add your new file by clicking <code>Choose Files</code>. Add a title, which will appear in a tool tip when a user hovers their mouse over the background image, and some alternative text. Click save in the top right corner when you're done.</li>
 <li>Go to your homepage to confirm that your image has been successfully uploaded.</li>
 </ol>
 <h2 id="blocks-and-menus">Blocks and Menus<a class="headerlink" href="#blocks-and-menus" title="Permanent link">&para;</a></h2>
 <p>Blocks are chunks of content that might be produced by Menus, Views, or even manually, and can be placed in different regions of your site. They can be configured to appear on certain pages, or be hidden on certain pages.</p>
 <h3 id="disabling-or-enabling-blocks-on-any-page">Disabling (or enabling) blocks on any page<a class="headerlink" href="#disabling-or-enabling-blocks-on-any-page" title="Permanent link">&para;</a></h3>
-<p>What: Remove blocks like "Recent Items" to get a cleaner front page look, or add new blocks to any page.</p>
-<p>How: Use the Block Layout menu to add and remove blocks.</p>
-<p>Instructions:</p>
-<ol>
-<li>
+<p><strong>What:</strong> Hide or add new blocks to any page.</p>
+<p><strong>How:</strong> Use the Block Layout menu to enable or hide blocks.</p>
+<p><strong>Instructions:</strong></p>
 <p>To remove a block:</p>
 <ul>
-<li>Via the block layout menu:<ol>
 <li>In the admin menu, go to <code>Structure -&gt; Block Layout</code> (<code>/admin/structure/block</code>)</li>
-<li>Find the title of the block you want to remove, click the dropdown menu on the right, and click <code>Remove</code>.</li>
-</ol>
-</li>
-<li>From the block's context menu:<ol>
-<li>On the front page, find the block you want to remove.</li>
-<li>When you mouse over the block, in the corner, click the pencil icon.</li>
-<li>Click <code>Remove block</code>.</li>
-</ol>
+<li>
+<p>Find the title of the block you want to remove, click the dropdown menu on the right, and click <code>Disable</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>DO NOT</strong> click Remove on a block while in Block Layout or while interacting with the block directly on your site. This will delete the block, making it substantially more difficult to recreate the block/view if you ever decide to re-enable it. Make sure to only select <em>Disable</em> so that the block can easily be recovered if needed.</p>
+</div>
 </li>
 </ul>
-</li>
-<li>
 <p>To add (or re-add) a block:</p>
 <ol>
 <li>In the admin menu, go to <code>Structure -&gt; Block Layout</code> (<code>/admin/structure/block</code>)</li>
@@ -1808,12 +1843,10 @@
 </ul>
 </li>
 </ol>
-</li>
-</ol>
 <h3 id="additional-menu-blocks">Additional menu blocks<a class="headerlink" href="#additional-menu-blocks" title="Permanent link">&para;</a></h3>
-<p>What: Create a new menu block, such as a "helpful links" menu on the front page.</p>
-<p>How: Create a Menu, and place it in Block Layout.</p>
-<p>Instructions: </p>
+<p><strong>What:</strong> Create a new menu block, such as a "helpful links" menu on the front page.</p>
+<p><strong>How:</strong> Create a Menu, and place it in Block Layout.</p>
+<p><strong>Instructions:</strong></p>
 <ol>
 <li>Create a new menu:<ol>
 <li>In the admin menu, go to <code>Structure -&gt; Menus -&gt; Add menu</code> (<code>/admin/structure/menu/add</code>)</li>
@@ -1831,11 +1864,13 @@
 </li>
 </ol>
 <h3 id="institutional-footer">Institutional Footer<a class="headerlink" href="#institutional-footer" title="Permanent link">&para;</a></h3>
-<p>What: A custom block that rests at the bottom of every page, with institutional logo and links. (NOTE: The institutional footer must go above the general Arca footer.)</p>
-<p>How: Create a custom block.</p>
-<p>Instructions:</p>
+<p><strong>What:</strong> A custom block that rests at the bottom of every page, with institutional logo and links. (NOTE: The institutional footer must go above the general Arca footer.)</p>
+<p><strong>How:</strong> Create a custom block.</p>
+<p><strong>Instructions:</strong></p>
 <ol>
-<li>Create a custom block:<ol>
+<li>
+<p>Create a custom block:</p>
+<ol>
 <li>In the admin menu, go to <code>Structure -&gt; Block Layout -&gt; Add custom block</code> (or, <code>/add/block</code>)</li>
 <li>In Block Description, describe your block: "Institutional footer"</li>
 <li>In Body, write the HTML for your custom block.<ul>
@@ -1846,13 +1881,11 @@
 </ul>
 </li>
 </ol>
-</li>
-</ol>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;style&gt;
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>table, th, td {
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  border: none;
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  font-size: medium;
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  line-height:normal;
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>border: none;
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>font-size: medium;
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>line-height:normal;
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>}
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>&lt;/style&gt;
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>&lt;table class=&quot;arca-footer&quot;&gt;
@@ -1868,8 +1901,10 @@
 </span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    &lt;/tbody&gt;
 </span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>&lt;/table&gt;
 </span></code></pre></div>
+</li>
+<li>
+<p>Place and activate your custom block:</p>
 <ol>
-<li>Place and activate your custom block:<ol>
 <li>In the admin menu, go to <code>Structure -&gt; Block Layout</code> (<code>/admin/structure/block</code>)</li>
 <li>In the Footer section, click <code>Place Block</code>.</li>
 <li>Find the block you created in the list, and click Place Block.</li>
@@ -1897,8 +1932,8 @@
 <p>Views are ways that content gets grouped and displayed. A View can display selected fields from selected content types, according to filters of your choice and relationships to other content. Views are very powerful.</p>
 <p>This section will focus on certain Arca-specific use cases; for more general information about using Views, a pleathora of <a href="https://drupalize.me/course/user-guide/views-chapter">courses and documentation can be found online</a>.</p>
 <h3 id="customizing-the-repo-content-counts-view">Customizing the Repo Content Counts view<a class="headerlink" href="#customizing-the-repo-content-counts-view" title="Permanent link">&para;</a></h3>
-<p>What: Changing what kind of content gets listed and counted in the summary on the front page.</p>
-<p>How: Modifying the Repo Content Counts view</p>
+<p><strong>What:</strong> Changing what kind of content gets listed and counted in the summary on the front page.</p>
+<p><strong>How:</strong> Modifying the Repo Content Counts view</p>
 <p>The Repo Content Counts view produces the block on the front page saying how many collections, digital documents, etc. exist in your repository. It is built to only count specific kinds of content, but you can add entries to show even more content types, or remove them from the list.</p>
 <p>To add a new content model to this group:</p>
 <ol>
