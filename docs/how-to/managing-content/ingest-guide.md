@@ -8,7 +8,9 @@ This guide describes how each field in the ingest form works, and what to do wit
 
 **Note**: While all Arca members will have each of these fields present in their Repository Item content type, we can suppress the visibility of fields that your institution does not use. This suppression is at the repository level, not for individual types of content. Contact the Arca Admin Centre for support.
 
-Video ingest walkthrough: [https://youtu.be/SSjbLJXc0u8](https://youtu.be/SSjbLJXc0u8)
+For a walkthrough of the ingest process, see the [recording from Basic Training](/arca-docs/training/training/#recordings).
+
+(For posterity and in case you need it, an [older walkthrough exists](https://youtu.be/SSjbLJXc0u8), but does not cover the most up-to-date version of the content type.)
 
 ## Getting started
 
