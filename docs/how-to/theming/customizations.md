@@ -50,15 +50,15 @@ To see descriptions of which parts of the site correspond to each colour, hover 
     Make sure to save your configuration by clicking the button at the bottom of the Settings page once you're finished changing any hex codes.
 
 ### Front page Image
-The settings for changing the front page background image in i2 are much more nested than in legacy Islandora. Unlike the logo or favicon, the front page image needs to be edited from the Block settings and not the Appearance settings.
+The settings for changing the front page background image in i2 are much more nested than in legacy Islandora. Unlike the logo or favicon, the front page image needs to be edited from a specific Node and not the Appearance settings.
 
 **Instructions:**
 
-1. Go to `Structure -> Views -> Frontpage (Content)`. Immediately under the header **Displays**, you will see several buttons. Go to the one labelled `Front page Block`.
-    * You can also reach these settings by appending `/admin/structure/views/view/frontpage/edit/block_1` to your base repository URL.
-2. Scroll down to the Preview section and hover over the default image there. Click on the :material-pencil-circle-outline: pencil icon that appears and select `Edit`.
-3. You will be brought to the Edit page for *Front page search content*. Scroll down to *Display Block Images* and remove the existing image with the button on the right. Add your new file by clicking `Choose Files`. Add a title, which will appear in a tool tip when a user hovers their mouse over the background image, and some alternative text. Click save in the top right corner when you're done.
-4. Go to your homepage to confirm that your image has been successfully uploaded.
+1. Open the Content menu at `admin/content`.
+2. Filter your results to the content type `Block display`.
+3. You should find one item there, titled "Front page search content". Edit that item.
+4. Scroll down to the `Display Block Images` section.
+5. Remove the existing image, and add your own. (Do not attempt to have two images at once.)
 
 ## Blocks and Menus
 
