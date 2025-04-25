@@ -21,11 +21,11 @@ To change an item's thumbnail, **do not delete the original thumbnail image**. I
 3. Under the Image section, click "Remove"
 4. Then, under Add New File, choose your new file.
 
-### Thumbnail sizes
+#### Thumbnail sizes
 
 Automatically-generated thumbnails will be 256 pixels at their largest dimension (width or height). Custom thumbnails should follow this template.
 
-## Collection Thumbnails
+### Collection Thumbnails
 
 Unlike other repository items, collection thumbnails are set by editing the Node itself. To change a collection thumbnail:
 
