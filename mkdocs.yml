@@ -58,7 +58,8 @@ nav:
       - Comments: how-to/display/comments.md
       - Links to Socials: how-to/display/social-links.md
     - Metadata:
-      - Taxonomies: how-to/metadata/taxonomies.md
+      - Taxonomies Overview: how-to/metadata/taxonomies.md
+      - Managing Taxonomies: how-to/metadata/managing-taxonomies.md
     - Managing Objects:
       - Ingest Guide: how-to/managing-content/ingest-guide.md
       - Managing Media: how-to/managing-content/media.md
