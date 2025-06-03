@@ -53,7 +53,9 @@ nav:
     - Contribute to Arca Docs: about/contributing.md
   - Training: training/training.md
   - How-To in Islandora 2:
-    - Theming Customizations: how-to/theming/customizations.md
+    - Theming Customizations: 
+        - Configure the Arca theme: how-to/theming/customizations.md
+        - CSS Customization: how-to/theming/css-injector.md
     - Display Customizations:
       - Custom URLs for repository items: how-to/display/pathauto.md
       - Download link permissions: how-to/display/download-links.md
@@ -63,7 +65,8 @@ nav:
       - Comments: how-to/display/comments.md
       - Links to Socials: how-to/display/social-links.md
     - Metadata:
-      - Taxonomies: how-to/metadata/taxonomies.md
+      - Taxonomies Overview: how-to/metadata/taxonomies.md
+      - Managing Taxonomies: how-to/metadata/managing-taxonomies.md
     - Managing Objects:
       - Ingest Guide: how-to/managing-content/ingest-guide.md
       - Managing Media: how-to/managing-content/media.md
