@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://bceln.github.io/arca-docs/how-to/search/advanced-search/">
+        <link rel="canonical" href="https://bceln.github.io/arca-docs/how-to/theming/css-injector/">
       
       
-        <link rel="prev" href="../../managing-content/3d-objects/">
+        <link rel="prev" href="../customizations/">
       
       
-        <link rel="next" href="../../access-control/embargo/">
+        <link rel="next" href="../../display/pathauto/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Advanced search - Arca Documentation</title>
+        <title>CSS Customization - Arca Documentation</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#advanced-search" class="md-skip">
+        <a href="#modifying-page-display-with-css-injector" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Advanced search
+              CSS Customization
             
           </span>
         </div>
@@ -423,18 +423,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
         
           
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
@@ -450,7 +452,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_1">
             <span class="md-nav__icon md-icon"></span>
             Theming Customizations
@@ -464,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../theming/customizations/" class="md-nav__link">
+      <a href="../customizations/" class="md-nav__link">
         
   
   
@@ -484,10 +486,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../theming/css-injector/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    CSS Customization
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -498,6 +522,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identifying-the-changes-you-want-to-make" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identifying the changes you want to make
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-css-injector-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a CSS Injector rule
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -952,20 +1023,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
         
           
           <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -981,7 +1050,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
             Search
@@ -992,19 +1061,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../search/advanced-search/" class="md-nav__link">
         
   
   
@@ -1015,7 +1075,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1652,6 +1711,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identifying-the-changes-you-want-to-make" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identifying the changes you want to make
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-css-injector-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a CSS Injector rule
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1666,7 +1760,7 @@
 
 
   
-    <a href="https://github.com/bceln/arca-docs/edit/main/docs/how-to/search/advanced-search.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/bceln/arca-docs/edit/main/docs/how-to/theming/css-injector.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
     </a>
@@ -1675,41 +1769,85 @@
     
       
     
-    <a href="https://github.com/bceln/arca-docs/raw/main/docs/how-to/search/advanced-search.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/bceln/arca-docs/raw/main/docs/how-to/theming/css-injector.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
     </a>
   
 
 
-<h1 id="advanced-search">Advanced Search<a class="headerlink" href="#advanced-search" title="Permanent link">&para;</a></h1>
-<p>Advanced Search allows a user to choose specific fields for their search terms. You can set up an Advanced Search page by following the steps below.</p>
+<h1 id="modifying-page-display-with-css-injector">Modifying page display with CSS Injector<a class="headerlink" href="#modifying-page-display-with-css-injector" title="Permanent link">&para;</a></h1>
+<p>The Arca theme provides a good baseline for page design, but you might encounter cases where you want to make certain adjustments to the spacing, colour, and layout of your pages. You can do that using CSS Injector.</p>
+<h2 id="requirements">Requirements:<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Enable the Asset Injector module</li>
+<li>Ensure you have permission to use the CSS Injector (ask the Arca Office to enable this)</li>
+<li>Know <a href="https://www.w3schools.com/css/">how to use CSS</a></li>
+</ul>
+<h2 id="identifying-the-changes-you-want-to-make">Identifying the changes you want to make<a class="headerlink" href="#identifying-the-changes-you-want-to-make" title="Permanent link">&para;</a></h2>
+<p>First, you must figure out what elements need to be edited, and how you'll do that. Your Web browser can help.</p>
 <ol>
-<li>Enable the Advanced Search module (NOT the "Islandora Advanced Search" module; this is deprecated and will be removed eventually).</li>
-<li>Configure the module at <code>/admin/config/search/advanced</code> if desired.<ul>
-<li>Configuration allows you to allow/disallow searching all fields, and to change the operator icons.</li>
+<li>Navigate to the page where you want to make changes.</li>
+<li>Enable the Inspection window:<ul>
+<li>Right click anywhere on the page, and click "Inspect" or "Inspect element" or similar (wording depends on your browser)
+<img alt="&lt;# Inspect menu in browser #&gt;" src="/arca-docs/assets/inspect.png" title="Screenshot" /></li>
 </ul>
 </li>
-<li>Create a Basic Page to hold your Advanced Search block. Give it a useful path, e.g. <code>/advanced-search</code>. <ul>
-<li>If desired, include it in a menu.</li>
+<li>The Inspect panel shows you the HTML behind the page content, as well as the CSS that styles the HTML. <ul>
+<li>If you move your mouse over the different HTML elements, the areas they govern are highlighted on the page.
+<img alt="&lt;# Highlighted HTML in the browser's Inspect pane #&gt;" src="/brandon/arca-docs/assets/inspect-panel.png" title="Screenshot" /></li>
+<li>Right clicking on a page area and clicking <code>Inspect</code> will jump to the relevant HTML.</li>
 </ul>
 </li>
-<li>Embed the block on your new page:<ol>
-<li>Go to Structure -&gt; Block layout</li>
-<li>In the Content region, click Place Block</li>
-<li>Add the block "Advanced Search for Page (Grid)"</li>
-<li>On the block's configuration screen, choose which fields are available to select, by dragging them up from the Hidden section
-    <img alt="image" src="/arca-docs/assets/advanced-search-config-1.png" /></li>
-<li>Still on the block configuration page, scroll down to the Visibility section. <ul>
-<li>Choose "Page"</li>
-<li>Select "Show for the listed pages" - this means that your block will appear only on the pages you list in the Path section</li>
-<li>In the Path section, enter the path to your Advanced Search page (e.g. <code>/advanced-search</code>)
-<img alt="image" src="/arca-docs/assets/advanced-search-config-2.png" /></li>
+<li>Click on the HTML element that you want to style. The CSS pane to the right shows the CSS rules that are active on this element.
+<img alt="&lt;# CSS Elements pane in the browser Inspect tool #&gt;" src="/arca-docs/assets/css-elements.png" title="Screenshot" /></li>
+<li>
+<p>Make changes to the CSS in the pane to preview them:</p>
+<ul>
+<li>If you want to change an existing rule (e.g. increase the font size), find the line that governs that element and make an edit.
+<img alt="&lt;# Changing font size in CSS pane #&gt;" src="/arca-docs/assets/css-font.png" title="Screenshot" /></li>
+<li>If you want to create a brand-new rule for this element, click the <code>+</code> button. It will start a new, empty rule with the HTML element selected.
+<img alt="&lt;# alt text #&gt;" src="/arca-docs/assets/css-plus-button.png" title="Screenshot" /></li>
 </ul>
+<p><img alt="&lt;# alt text #&gt;" src="/arca-docs/assets/css-new-rule.png" title="Screenshot" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Selecting appropriate elements</p>
+<p>Make sure you have selected the correct element, and that it only affects the pieces you want to change. 
+e.g. if you select an HTML element like <code>p</code>, that will affect the styling for all <code>&lt;p&gt;</code> elements on the page. 
+If you select a class like <code>.my-class</code> or an ID like <code>#this-thing</code>, your rule will only affect elements tagged with that class or ID. 
+Follow the <a href="https://www.w3schools.com/css/">CSS tutorial</a> for lessons on different elements. </p>
+</div>
 </li>
-<li>Save your block settings</li>
+<li>
+<p>Scroll up and down on your page to make sure your rule is working, and that it is only applied to the specific parts you want it applied to.</p>
+</li>
+<li>If it looks good, highlight and copy the <em>entire</em> new rule, and proceed to the next section.</li>
 </ol>
+<h2 id="creating-a-css-injector-rule">Creating a CSS Injector rule<a class="headerlink" href="#creating-a-css-injector-rule" title="Permanent link">&para;</a></h2>
+<p>CSS Injector rules are configured at <code>/admin/config/development/asset-injector/css</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Test in Sandbox first</p>
+<p>Poorly-formatted or over-scoped rules could break display on your site. Test your rules in the <a href="https://sandbox.arcabc.ca">Arca Sandbox</a> first.</p>
+</div>
+<ol>
+<li>To create a new rule, click the "Add CSS Injector" button.</li>
+<li>Under "Label", give it a title that describes what the rule accomplishes. <ul>
+<li>e.g. If your rule changes the font size for <code>&lt;p&gt;</code> elements just on the <code>About</code> page, title it "Change font size on About page paragraphs"</li>
+</ul>
 </li>
+<li>The "Enabled" toggle sets whether or not this rule is active. You can disable a rule and keep it in your system for later use.</li>
+<li>Under "Code", paste the CSS rule that you copied from your Inspector tests. <strong><em>Make sure it is properly formatted, or you will get errors that may render your site unusable.</em></strong></li>
+<li>Under "Conditions", choose how and when this rule is applied. You will want to limit your conditions to either Pages or Content Types.<ul>
+<li>For "Pages"", set the paths to the pages you want the rule to apply. e.g. if the rule affects only the front page, enter <code>&lt;front&gt;</code>. If it affects all pages under the <code>/about/</code> path, enter <code>/about/*</code>.</li>
+<li>For "Content Type", your rule will apply to all items with the selected content type. Check off the ones you want the rule to apply to (probably either Basic Page or Repository Item). </li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Limiting the scope of your changes</p>
+<p>It is <strong><em>very important</em></strong> to apply your rules <strong><em>only to specific pages or content types</em></strong>, and not universally. Otherwise you may get unexpected results.</p>
+</div>
+</li>
+<li>Save your rule</li>
+<li>Browse your site to make sure your rule is working and is correctly applied and limited.</li>
 </ol>
 
 
