@@ -74,6 +74,7 @@ nav:
       - Managing Media: how-to/managing-content/media.md
       - Remote and Embedded Media: how-to/managing-content/remote-embed.md
       - 3D Objects: how-to/managing-content/3d-objects.md
+      - Compound Objects: how-to/managing-content/compound-objects.md
     - Batch Operations:
       - Introduction: how-to/batch-operations/introduction.md
       - Getting Started: how-to/batch-operations/getting-started.md
