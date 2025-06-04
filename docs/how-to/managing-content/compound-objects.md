@@ -7,7 +7,7 @@ Compound objects are a sort of sub-collection that link several Repository Items
 To create a compound object, create the Compound Parent first. 
 
 1. Add a new Repository Item.
-2. Fill in the metadata form. Under Model, select "Compound".
+2. Fill in the metadata form. Under `Content type`, select "Compound".
 3. Save.
 
 Then, create your child items:
