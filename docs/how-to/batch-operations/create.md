@@ -10,7 +10,7 @@ To run a CREATE task, you will need:
 * a **config YAML** file that specifies your task type and all options related to that task
 * a directory of **media files** (please see [this section](!!!) if ingesting metadata records without media)
 
-The Arca Office has prepared templates for the first two items in this list. Templates are linked in the next section.
+The Arca Office has prepared templates for the first two items in this list. Visit the [Templates page](/arca-docs/how-to/batch-operations/templates) for more detail on how to download and work with them.
 
 Please note there are different templates for **single objects** (e.g., photographs, documents) and **paged content** (e.g., book pages, newspaper issues). 
 
@@ -20,46 +20,6 @@ As values in the metadata spreadsheet will need to comply with the metadata stan
     Your CSV should use UTF-8 encoding. 
     
     While the Arca metadata template is provided in `.xlsx` format to allow for data validation on controlled fields, we recommend using LibreOffice or Open Office instead of Excel when saving your final CSV to ensure that it is properly encoded and that special characters render appropriately.
-
-## Download Templates
-There are two ways to download the templates linked on Arca's GitHub repository:
-
-1. Visit the page for the relevant file linked below and click on :octicons-download-16: `Download Raw File`.
-    - PRO: This method is quick and doesn't require any familiarity with Git/GitHub.
-    - CON: You will need to periodically visit the page for each template type to check for any updates and re-download them manually.
-2. Clone the template repository with `git clone https://github.com/bceln/arca-templates.git`. Once cloned, navigate to the folder in your terminal and run `git pull` any time you want to fetch updates.
-    - PRO: This method takes minimal effort and ensures *all* templates included in the repository pull in the latest changes at once.
-    - CON: Requires basic familiarity with Git/GitHub.
-
-**Single Object Templates**
-
-Metadata Spreadsheet: [[Link]](https://github.com/bceln/arca-templates/blob/main/templates/CREATE/single%20object%20ingest/Single_Object_Ingest_Template.xlsx)
-<br>Config YAML: [[Link]](https://github.com/bceln/arca-templates/blob/main/templates/CREATE/single%20object%20ingest/single-object-template.yml)
-
-**Paged Object Templates**
-
-Metadata Spreadsheet: [[Link]](https://github.com/bceln/arca-templates/blob/main/templates/CREATE/paged%20object%20ingest/Paged_Object_Ingest_Template.xlsx)
-<br>Config YAML: [[Link]](https://github.com/bceln/arca-templates/blob/main/templates/CREATE/paged%20object%20ingest/paged-object-template.yml)
-
-## About Metadata Templates
-
-* The first row of the template contains the machine names for every possible field. You can delete any columns you are not using, but do not alter existing headers/field names, as Workbench will be unable to locate the fields in your site if you do. 
-* The second row of the template contains descriptions of most fields, including which fields are **REQUIRED** and which fields are **PARAGRAPHS**. Delete this row on the final version of your CSV, before running your task.
-    * The descriptions in the template are brief; the [Ingest Guide](/arca-docs/how-to/managing-content/ingest-guide/#filling-in-the-metadata-form) contains more detail on each field if you need it.
-* Rows 3 and 4 contain sample data. Remember to delete or overwrite these values before running your task.
-* Repeatable fields use a pipe character ` | ` as a delimiter. To enter multiple values into the **Keyword** field for example, enter into your spreadsheet cell: `commmunity planning|urban geography`
-    * See the [Paragraphs](/arca-docs/how-to/batch-ingest/create/#an-important-note-on-paragraphs) section for exceptions.
-* Some metadata fields allow for custom link text (e.g., Identifier URI, Related Item URL). To express this in your metadata spreadsheet, type the URL followed by `%%`, then end with the custom link text. Do not include blank spaces around the `%%`.
-    * ex. `https://wwww.sandbox.arcabc.ca%%Arca Sandbox Site`
-
-## About Config YAML Templates
-
-* Once downloaded, give your YAML template a distinct name for each ingest. You may make configuration setting changes that vary from ingest to ingest and precise filenaming keeps batches organized.
-* The Arca YAML templates are intended to be "grab and go", but there are *many* other configuration options that allow you to customize your ingest process or output. As you become more comfortable with Workbench, review the [official documentation](https://mjordan.github.io/islandora_workbench_docs/configuration/#the-configuration-file) for a full list of config options.
-* Any lines in the YAML template that start with `#` are null (i.e., will not be read by Workbench as part of a task). 
-* Headers and notes from the Arca Office start with `# \\`. Please pay attention to these, as they will indicate which sections should be updated and which contain settings that should not be touched.
-* **Do not make changes** to the second set of configuration options in the YAML template, under the header `# \\ REQUIRED TAXONOMY SETTINGS`. These settings are configured to allow you to add new terms to open vocabularies (like *Genre* or *Subject*), without making site-breaking changes to protected, controlled vocabularies (e.g., *Islandora Models* or *CSL Type*)
-* Settings under the header `# \\ OPTIONAL OUTPUT INFORMATION...` are related to a CREATE task's output CSV. This is a CSV generated automatically by Workbench which includes information about each new node created by the task, including node IDs. While output CSV generation is technically optional (and does add a little time to the ingest process), it is **recommended that you keep these settings turned on**. If you ever wish to make bulk changes to the objects you've just ingested, this is the easiest way to keep track of each object's node ID.
 
 ## CREATE Task Steps
 
@@ -89,7 +49,7 @@ Open your preferred **terminal** application. Navigate to your `islandora_workbe
 cd islandora_workbench
 ```
 
-Your YAML file should be saved in your root `islandora_workbench` directory. Run the check command directly from here:
+Your YAML file should be saved in your root `islandora_workbench` directory. We highly recommend you first confirm your materials are valid by running a check with:
 
 ``` bash
 ./workbench --config sunflower.yml --check
@@ -105,7 +65,21 @@ Run the CREATE task with the same command, minus `--check`:
 ./workbench --config sunflower.yml
 ```
 
-If successful, you will see messages in the terminal that the relevant nodes and media have been created.
+If the task has run successfully, messages will appear in your terminal indicating what actions have been taken.
+
+!!! example
+
+    Here is the terminal output after a successful CREATE task was run on the Arca Sandbox:
+
+    ``` bash
+    fakeuser@computer123 islandora_workbench % ./workbench --config workbench-sample-create.yml        
+    OK, connection to Drupal at https://sandbox.arcabc.ca verified. Ignoring SSL certificates.
+    "Create" task started using config file workbench-sample-create.yml.
+    Node for "BC ELN Connect – June 2024 (Vol. 22, No. 2)" (record 1) created at https://sandbox.arcabc.ca/node/52 (50%).
+    + Media for bceln_connect_summer_2024.pdf created.
+    Node for "A Sunflower on the Counter" (record 2) created at https://sandbox.arcabc.ca/node/53 (100%).
+    + Media for sunflower.jpg created.
+    ```
 
 ### 6. QC & Clean Up
 Visit your site and confirm:
@@ -135,17 +109,19 @@ Single object ingests can be run by following the steps above in order. Media fi
 
 Ingests of paged content differ in that the media files for each child item are separated into their own subdirectory. Instead of a `file` column, the metadata spreadsheet contains a `directory` column to point to the subdirectory containing all media files for that child. These subdirectories should include image files at the very least, but may optionally contain OCR/HOCR text files if available for each page.
 
-While paged content parents and children can technically be ingested in the same batch as long as they appear sequentially in the spreadsheet (parent before children), the Arca Office recommends creating parent objects as a separate, primary step. It's rare that multiple parents need be ingested at once in an uninterrupted task, and creating the parents separate from the children reduces the opportunities for human error and issues with sequencing, field or value templates, etc.
+While paged content parents and children can technically be ingested in the same batch as long as they appear sequentially in the spreadsheet (parent before children), the Arca Office recommends creating parent objects as a separate, primary step. Creating the parents (e.g. collections, books and newspapers) separately from the children reduces the opportunities for human error and issues with sequencing, field or value templates, etc.
 
 Before preparing paged content, make sure to review the [official Islandora documentation](http://mjordan.github.io/islandora_workbench_docs/paged_and_compound/#csv-and-directory-structure) on filenaming and subdirectory structure to ensure the proper sequence of pages is maintained upon ingest.
 
 ## An Important Note on Paragraphs
 
-Arca's installation of Islandora makes extensive use of **Paragraphs**, a special Drupal unit that allows for sets of repeatable fields. A list of all of the Paragraph types available by default in an Arca site can be viewed at `/admin/structure/paragraphs_type`. One of the most important Paragraph types is *Origin Information*, which includes the primary date field for all repository items.
+Arca's installation of Islandora makes extensive use of **Paragraphs**, a special Drupal unit that allows for sets of repeatable fields. A list of all of the Paragraph types available by default in an Arca site can be viewed at `/admin/structure/paragraphs_type`. One of the most important Paragraph types is *Origin Information*, which includes the primary date field for all repository items (`field_date_issued`).
 
-If the repository items being ingested have metadata in fields that are part of Paragraphs, these fields must be accounted for in the config YAML for the task. Arca's config YAML templates for both paged content and single object content include **all** possible Paragraph fields by default. 
+Because repository items being ingested may have metadata in fields that are part of Paragraphs, these fields must be accounted for in the config YAML for the task. Arca's config YAML templates for both paged content and single object content include **all** possible Paragraph fields by default.
 
-The following excerpt of the **paged content config YAML** template lists the fields for the *Origin Information* Paragraph:
+If you are ingesting a batch of items that does not make use of a particular subfield in a paragraph, the row for that subfield can be nulled out by adding a `#` to the start of the line in the config file. Any null/blank values that aren't nulled out with `#` will need to be accounted for with double delimiters in each row of the metadata. See [Paragraph Data Entry](/arca-docs/how-to/batch-operations/create/#paragraph-data-entry) for further detail.
+
+Let's take a closer look at how Paragraphs and their subfields are structured in the config YAML templates. The following excerpt of the **paged content config YAML** template lists the fields for the *Origin Information* Paragraph:
 
 ``` yaml linenums="1"
 paragraph_fields:
@@ -171,117 +147,124 @@ In this example:
 
 * `field_origin_information` is the machine name of the Paragraph's field on Repository Items. It can be found on your site here: `/admin/structure/types/manage/islandora_object/fields`. This is the field name/header that you will be adding values under in your metadata CSV.
 * `type` is the machine name of the Paragraph Type, available here: `/admin/structure/paragraphs_type`. It's usually just the field name without `field_`.
-* `field_order` is followed by a list of subfields that exist within that paragraph. If you are ingesting a batch of items that does not make use of a particular subfield in the paragraph, the row for that subfield can be nulled out with `#` in the config file. Any null/blank values that aren't nulled out with `#` will need to be accounted for with double delimiters in each row of the metadata.
+* `field_order` is followed by a list of subfields that exist within that paragraph. As noted earlier in this section, you can null out any subfields you are not using by adding a `#` to the start of the subfield's line in the config file.
 * `field_delimiter` is the chosen delimiter between each of the subfields in the paragraph.
 * `subdelimiter` is the chosen delimiter between several paragraphs on the same object (i.e., multiple Origin Information paragraphs)
 
+### Paragraph Data Entry
 
-## Tips & Tricks
-
-### Node/Term IDs > Full Names
-
-If you are referencing in your metadata a taxonomy term or an object node that already exists in your site, we recommend using **term IDs** or **node IDs** in lieu of writing out the full node title/term in text. 
-
-While the latter option will technically still work with Workbench, when a full node/term name is written out, Workbench has to cross check that name against every term in the vocabulary or against every object in the repository to find potential matches. This exponentially increases the amount of time it takes to ingest your batch.
-
-Node IDs and term IDs can be used both in your metadata CSV and in your config YAML if you are using [Field Templates](/arca-docs/how-to/batch-ingest/create/#field-templates).
-
-!!! tip "Finding Node IDs or Term IDs"
-
-    Node IDs can be found by visiting a node's page on your site and clicking **Edit**. Once you're brought to the metadata form for that item, you'll see that the URL in the browser bar has changed from the node's text-based alias to a raw URL that includes `/node/X/...`, where `X` is the node ID.
-
-    Term IDs can be found in a similar manner. Go to `/admin/structure/taxonomy` and click **List terms** next to the parent vocabulary of the term you are trying to identify. Hover over or click on the relevant term and you should see a URL that ends in `/term/Y`, where `Y` is the term ID. For example, the term ID for `photographs` in the Arca Sandbox's [Genre vocabulary](https://sandbox.arcabc.ca/admin/structure/taxonomy/manage/genre/overview) is 374. 
-
-### Field Templates
-If certain columns in your metadata spreadsheet contain the exact same value for every object (i.e., the same value appears in every row down the column), you may wish to employ **field templates** in your config YAML. While not required, templates allow you to declutter your spreadsheet and save time having to fill out repetitive data. 
-
-In both config YAML templates, you will find a section that starts with the header `# \\ OPTIONAL FIELD & VALUE TEMPLATES - Delete or null if not using.` Under this header, include the following:
-
-* a line that simply reads `csv_field_templates:`
-* on every subsequent line, the machine names of the fields you would like to create templates for in the format ` - field_name_here: template value`
-    * Include a blank space before **and** after the hyphen.
-    * Template values can be term IDs/node IDs *or* full text strings but, as noted in the [previous section](/arca-docs/how-to/batch-operations/create/#nodeterm-ids-full-names), IDs are recommended for a faster ingest.
-    * If using full text strings, include double quotations around the string (e.g., `field_genre: "newspapers"`)
-* the line `ignore_csv_columns:` followed by a space and the machine name of every field listed above in single quotations (`['field_name_1_here', 'field_name_2_here']`)
-    * This line makes it so that Workbench knows to defer to the templates in the config YAML instead of your CSV values.
-    * These columns should be empty in your CSV but if there happens to be old data in any of them, it will be ignored by Workbench.
-
-
+#### Single Paragraph
+The metadata spreadsheet templates contain columns for Paragraph fields as a whole. Subfields are not broken out into their own columns. When entering data into Paragraph fields in the spreadsheet, data for each subfield is separated by the `field_delimiter` indicated in your config YAML. 
 
 !!! example
 
-    You have a batch of 150 newspaper issues to ingest, all belonging to the same newspaper title. The parent newspaper object has already been created and has a node ID of 25663 in your repository. Rather than enter `25663` in 150 rows in the `field_member_of` column in your metadata spreadsheet, you opt to use CSV field templates in your config YAML. 
-    
-    You also decide to add templates for CSL type (`"periodical"` or the term ID of `45`), genre (`"newspaper"` or `371`), and resource type (`"Newspaper"` or `237`).
-    
-    Your config YAML now includes the following:
+    Let's look at an example for an ingest where you only want to include 3 subfields from the Origin Information Paragraph: `field_place`, `field_date_issued`, and `field_publisher`. There are two possible options moving forward.
 
-    ```yaml
-    # \\ OPTIONAL FIELD & VALUE TEMPLATES - Delete or null if not using.
-    csv_field_templates:
-     - field_csl_type: 45
-     - field_member_of: 25663
-     - field_genre: 371
-     - field_resource_type: 237
-    ignore_csv_columns: ['field_csl_type', 'field_member_of', 'field_genre', 'field_resource_type']
-    ```
+    === "Option 1 (Recommended)"
 
-### Value Templates
+        You null out the unwanted subfields in your config YAML template:
 
-Unlike the example above, you may encounter a situation where *part* of a field's value needs to vary from object to object. This is possible with **value templates**, which allow you to insert a placeholder for the dynamic component of the value.
+        ```yaml
+        paragraph_fields:
+            node:
+                field_origin_information:
+                type: origin_information
+                field_order:
+        #            - field_event_type
+                    - field_place
+                    - field_date_issued
+        #            - field_date_captured
+        #            - field_other_date
+        #            - field_copyright_date
+                    - field_publisher
+        #            - field_edition
+        #            - field_issuance
+        #            - field_frequency
+                field_delimiter: ':'
+                subdelimiter: '|'
+        ```
 
-With this method, your metadata spreadsheet should contain only the portion of the value that changes, while the fixed portion is defined in the config YAML. The variable is represented in the YAML as `$csv_value`. 
+        In your metadata spreadsheet, you enter the values in the `field_origin_information` column as follows for every relevant object:
+
+        ```yaml
+        Burnaby (B.C.):2024-06:BC Electronic Library Network
+        ```
+
+    === "Option 2"
+
+        You don't change the visibility of any subfields in your config YAML template:
+
+        ```yaml
+        paragraph_fields:
+            node:
+                field_origin_information:
+                type: origin_information
+                field_order:
+                    - field_event_type
+                    - field_place
+                    - field_date_issued
+                    - field_date_captured
+                    - field_other_date
+                    - field_copyright_date
+                    - field_publisher
+                    - field_edition
+                    - field_issuance
+                    - field_frequency
+                field_delimiter: ':'
+                subdelimiter: '|'
+        ```
+
+        In your metadata spreadsheet, you enter the values in the `field_origin_information` column with extra delimiters as placeholders for the missing data:
+
+        ```yaml
+        :Burnaby (B.C.):2024-06::::BC Electronic Library Network
+        ```
+
+        The data in this spreadsheet cell starts with a `:` to account for `field_event_type` being empty. This is followed by values for `field_place` and `field_date_issued`. The subsequent series of `:` delimiters is to account for the next 3 subfields being skipped. The cell ends with metadata for `field_publisher`.
+
+        Note that even though there are technically 3 more subfields available after `field_publisher` (`field_edition`, `field_issuance`, and `field_frequency`), no placeholder delimiters are needed after the last subfield containing data.
+
+As you'll see in the config YAML templates, the field delimiter for almost every Paragraph type is a colon `:`. The only exception is the Related Item Paragraph, which uses a caret `^` instead. This is because the Related Item Paragraph contains an entity reference field (`field_relationship_type`) that refers to two possible vocabularies: DCMI Relation Types and MODS Relation Types. 
+
+In order to indicate to Workbench which vocabulary a relationship taxonomy term is coming from, the value has to be expressed in the format `vocabulary:term`. 
+
+* Ex. 1: When describing a Related Item with the *preceding* relationship type, you would need to structure your subfield metadata as: `mods_relation_types:preceding`
+* Ex. 2: When describing a Related Item with the DCMI relation type *hasFormat*, you would enter: `dcmi_relation_types:hasFormat`. 
+
+Because the convention for referring to either vocabulary requires the use of a colon, the `field_delimiter` for the Related Item Paragraph cannot also be a colon and a caret `^` has been assigned instead in the templates.
+
+The full value of a Related Item Paragraph cell in your spreadsheet would therefore look something like:
+
+>`mods_relation_types:preceding^BC ELN Connect – April 2024^https://bceln.ca/news-events/news/2024/05/april-2024-vol-22-no-1%%BC ELN Website Link^1 page^newsletters^6393`
+
+#### Multiple Paragraphs
+
+Use **subdelimiters** when you want your object to include multiple Paragraphs. The subdelimiter for every Paragraph type is a pipe `|` character.
 
 !!! example
 
-    You have a batch of 150 newspaper issues to ingest, all belonging to the same newspaper title. In `field_extent`, you would like to indicate the total number of pages in each issue, but each row of your metadata spreadsheet includes only the number and no mention of "pages". 
-    
-    You add the following to your config YAML:
+    In this example, you are ingesting newspaper objects and want to include **2 Related Item Paragraphs** in the metadata for each object – one paragraph to describe a **preceding** title and one paragraph to describe a **succeeding** title.
+
+    You first opt to null out any unwanted subfields in the Related Item Paragraph section of your config YAML: 
 
     ```yaml
-    csv_value_templates:
-     - field_extent: $csv_value pages
+    field_related_item_paragraph:
+      type: related_item
+      field_order:
+        - field_relationship_type
+        - field_title_plain
+        - field_url
+    #    - field_related_item_extent
+        - field_related_item_genre
+    #    - field_related_item_identifier
+      field_delimiter: '^'
+      subdelimiter: '|'
     ```
 
-A particularly efficient use of value templates is with Paragraph fields. For `field_origin_information` in particular, there will likely be subfields that repeat for every object in your batch while others, like `field_date_issued`, vary. 
+    You then structure the values in the `field_related_item_paragraph` column in your metadata spreadsheet as follows:
 
-!!! example
-
-    You have opted to include metadata for only 4 of the subfields in the **Origin Information** Paragraph and have nulled the rest. The **Origin Information** section of your YAML file looks as follows: 
-
-    ```yaml
-    paragraph_fields:
-    node:
-        field_origin_information:
-        type: origin_information
-        field_order:
-            - field_event_type
-            - field_place
-            - field_date_issued
-    #        - field_date_captured
-    #        - field_other_date
-    #        - field_copyright_date
-            - field_publisher
-    #        - field_edition
-    #        - field_issuance
-    #        - field_frequency
-    ```
-    Of the 4 subfields in use, only `field_date_issued` differs for each object. This is reflected in your value templates section:
-
-    ```yaml
-    csv_value_templates:
-     - field_extent: $csv_value pages
-     - field_origin_information: publication:Vancouver (B.C.):$csv_value:Very Good Press
+    >```
+    mods_relation_types:preceding^The Semiahmoo Sun 1940-1947^https://bchdp.arcabc.ca/islandora/object/whiterock%3A1%%The Semiahmoo Sun 1940-1947^newspaper|mods_relation_types:succeeding^The White Rock Sun 1958-1972^https://bchdp.arcabc.ca/islandora/object/whiterock%3A3%%The White Rock Sun 1958-1972^newspaper
     ```
 
-    With these templates, every object in your batch will have:
-    
-    * `publication` as the event type,
-    * `Vancouver (B.C.)` as the place of publication,
-    * `Very Good Press` as the publisher.
-    
-    The only value pulled from your spreadsheet is the date. As a result, the `field_origin_information` column in your CSV only contains dates in `YYYY-MM-DD` format.
-
-    ### Breaking Up Large Batches
-
-    
+    Note that the information related to the **preceding** title, the Semiahmoo Sun, and the **succeeding** title, the White Rock Sun, is separated by a pipe `|`. 
