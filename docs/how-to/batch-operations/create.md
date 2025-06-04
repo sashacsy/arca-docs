@@ -8,7 +8,7 @@ To run a CREATE task, you will need:
 
 * a **CSV** containing your repository item metadata
 * a **config YAML** file that specifies your task type and all options related to that task
-* a directory of **media files** (please see [this section](!!!) if ingesting metadata records without media)
+* a directory of **media files** (please see [this section](/arca-docs/how-to/batch-operations/create/#ingesting-nodes-without-media) if ingesting metadata records without media)
 
 The Arca Office has prepared templates for the first two items in this list. Visit the [Templates page](/arca-docs/how-to/batch-operations/templates) for more detail on how to download and work with them.
 
@@ -46,7 +46,7 @@ Save your config YAML in your root `islandora_workbench` directory.
 Open your preferred **terminal** application. Navigate to your `islandora_workbench` directory:
 
 ``` bash
-cd islandora_workbench
+cd /path/to/islandora_workbench
 ```
 
 Your YAML file should be saved in your root `islandora_workbench` directory. We highly recommend you first confirm your materials are valid by running a check with:
@@ -90,7 +90,7 @@ Visit your site and confirm:
 
 Small issues can likely be addressed with manual fixes to the object through the browser UI. If, however, you have concerns with the ingest that cannot be addressed with simple fixes, the batch is relatively small, *and* you would like to start over:
 
-* Run `rollback.yml` to reverse the ingest (see [here](!!!))
+* Run `rollback.yml` to reverse the ingest (see [here](/arca-docs/how-to/batch-operations/create/#rolling-back-a-create-task))
 * Make the appropriate changes to the metadata or config files
 * Re-run the CREATE task with the steps outlined above
 
@@ -268,3 +268,30 @@ Use **subdelimiters** when you want your object to include multiple Paragraphs. 
     ```
 
     Note that the information related to the **preceding** title, the Semiahmoo Sun, and the **succeeding** title, the White Rock Sun, is separated by a pipe `|`. 
+
+## Ingesting Nodes without Media
+
+If you would like to create a Repository Item without any media files (essentially a metadata record), you can do so by including the following line in your config YAML:
+
+``` yaml
+nodes_only: true
+```
+
+This option tells Workbench to skip all media creation. You can then delete the `file` or `directory` column from your metadata spreadsheet template.
+
+## Rolling Back a CREATE Task
+
+When you run a CREATE Task, Workbench automatically creates `rollback.yml` and `rollback.csv` files. The default location of the rollback YAML is your root Workbench directory, while the default location for your rollback CSV file is your project directory (i.e., whatever location you specified in `input_dir:`).
+
+If you decide you would like to roll back (i.e., reverse or cancel) your most recent CREATE task, you can do so by running the same Workbench command but pointing to the rollback YAML: 
+
+```bash
+./workbench --config rollback.yml
+```
+
+This will delete any nodes AND media created in the original task. 
+
+!!! warning
+    Workbench will not automatically transfer your user password from your config YAML to the rollback YAML. You must open `rollback.yml` and manually enter your password before running the rollback. 
+
+The `rollback.yml` file in your root directory is overwritten any time you run a new create task. If you want to roll back anything other than your most recent task, make sure to change the `input_dir` and `input_csv` in the `rollback.yml` to point to the correct locations.
