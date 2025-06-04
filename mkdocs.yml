@@ -36,6 +36,13 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.tabbed:
+      alternate_style: true  
 
 extra_css:
   - stylesheets/extra.css
@@ -68,6 +75,13 @@ nav:
       - Remote and Embedded Media: how-to/managing-content/remote-embed.md
       - 3D Objects: how-to/managing-content/3d-objects.md
       - Compound Objects: how-to/managing-content/compound-objects.md
+    - Batch Operations:
+      - Introduction: how-to/batch-operations/introduction.md
+      - Getting Started: how-to/batch-operations/getting-started.md
+      - CREATE Tasks: how-to/batch-operations/create.md
+      - Templates: how-to/batch-operations/templates.md
+      - Tips & Tricks: how-to/batch-operations/tips.md
+      - Troubleshooting: how-to/batch-operations/troubleshooting.md
     - Search:
       - Advanced search: how-to/search/advanced-search.md
     - Access Controls:
