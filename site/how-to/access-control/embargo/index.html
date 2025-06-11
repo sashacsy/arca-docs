@@ -2035,6 +2035,11 @@
 </li>
 </ol>
 <p>Your object should now be restricted from unauthorized users.</p>
+<div class="admonition warning">
+<p class="admonition-title">One embargo per item</p>
+<p>It is possible to create more than one Embargo for a given item. Each Embargo <strong>acts independently from the others</strong>: that is, if Embargo 1 exempts Bob, and Embargo 2 exempts Sally, then <strong>neither Bob nor Sally can access the object</strong> because they are each blocked by one of the Embargoes. 
+Instead of creating multiple Embargoes with exempt users, add <strong>all exempt users</strong> to a single Embargo.</p>
+</div>
 <h2 id="embargo-permissions">Embargo permissions<a class="headerlink" href="#embargo-permissions" title="Permanent link">&para;</a></h2>
 <p>The Embargo module comes with three Permissions that can be granted to different Roles, set at <code>/admin/people/permissions</code>:</p>
 <ol>

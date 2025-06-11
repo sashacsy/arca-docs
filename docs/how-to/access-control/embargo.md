@@ -39,6 +39,11 @@ While specific Drupal Roles may also be given permission to bypass *all* embargo
 
 Your object should now be restricted from unauthorized users.
 
+!!! warning "One embargo per item"
+    It is possible to create more than one Embargo for a given item. Each Embargo **acts independently from the others**: that is, if Embargo 1 exempts Bob, and Embargo 2 exempts Sally, then **neither Bob nor Sally can access the object** because they are each blocked by one of the Embargoes. 
+    Instead of creating multiple Embargoes with exempt users, add **all exempt users** to a single Embargo.
+
+
 ## Embargo permissions
 
 The Embargo module comes with three Permissions that can be granted to different Roles, set at `/admin/people/permissions`:
