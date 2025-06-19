@@ -58,6 +58,7 @@ The Embed Code approach is similar to how Remote Media objects were handled in I
 This also works for local HTML content that is not remotely hosted. The content will render when viewing the Repository Item.
 
 1. Create your Repository Item as normal. Make sure "Add media" is selected.
+    - Under Content Type, choose "video" or "audio" as appropriate.
 2. At the Media screen, choose `Embed Code`.
 3. Fill out the fields:
   - Give your media an appropriate title
