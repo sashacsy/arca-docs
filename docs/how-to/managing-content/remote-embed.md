@@ -23,6 +23,7 @@ By default, any [officially-listed oEmbed providers](https://oembed.com/provider
 
 1. Copy the link to your remote media item from its host website.
 2. Create your Repository Item as normal. Make sure "Add media" is selected.
+    - Under Content Type, choose "video" or "audio" as appropriate.
 3. At the Media screen, choose `oEmbed Remote Media`.
 4. In the URL field, paste your link.
 5. Under `Media Use`, select "Service File".
