@@ -25,7 +25,7 @@ To change an item's thumbnail, **do not delete the original thumbnail image**. I
 
 Automatically-generated thumbnails will be 256 pixels at their largest dimension (width or height). Custom thumbnails should follow this template.
 
-### Collection Thumbnails
+### Collection thumbnails
 
 Unlike other repository items, collection thumbnails are set by editing the Node itself. To change a collection thumbnail:
 
@@ -34,3 +34,17 @@ Unlike other repository items, collection thumbnails are set by editing the Node
 3. The dropdown menu offers a choice, to either `Select existing media image` or `Upload a new media image`.
     * "Existing media image" means an image that already exists in your Media collection -- just check the box to use it.
     * To upload a new image, choose a file from your computer, and then click "Select image" to upload it.
+
+## Adding captions to video and audio content
+
+To add captions to your audio or video media, first ensure that you have a track in the VTT file format, then: 
+
+1. Create a new Repository Item with the Content Type "Audio" or "Video". Ensure that "Add Media" is toggled on in the metadata form.
+2. Once you finish entering the metadata and arrive at the Add Media screen, select either Audio or Video as the Media Type.
+3. Under the "Track" section, upload your transcript/caption file.
+4. Click `Save` to complete the ingest of your object. 
+
+!!! warning
+  If you are adding captions to media on a Repository Item that has already been created (i.e., a node with already-generated media derivatives), you must add the VTT to the `Service File` derivative. This is the version of your video that the system displays in the viewer, **not** the Original File.
+
+  When you create a *new* Repository Item and add a track at the time of ingest, Islandora will automatically generate the Service File derivative with the VTT attached.
