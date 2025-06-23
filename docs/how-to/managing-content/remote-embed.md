@@ -9,9 +9,9 @@ There are three ways to do this: the included-with-drupal Remote Video option (w
 Drupal includes a Remote Video media type, which supports embedded videos by linking to videos hosted on YouTube or Vimeo. Choose this option only if your media is hosted in one of those two sites.
 
 1. At the host website (YouTube or Video), find your video, and click the Share button. Copy the link it provides.
-2. Create your Repository Item as normal. Make sure "Add media" is selected.
+2. Create your Repository Item as normal. Make sure "Add media" is toggled on in the metadata form.
     - Under Content Type, choose "video" or "audio" as appropriate.
-3. At the Media screen, choose `Remote video`.
+3. At the Media screen, choose `Remote video` as the Media Type.
 4. In the `Video URL` field, paste the link provided by YouTube/Vimeo.
 5. Under `Media Use`, select "Service file".
 6. Save.

@@ -104,6 +104,9 @@ Process:
   - Find the video or audio media, and click Edit
   - Under the "Track" section, upload your transcript file.
 
+!!! warning
+  You must add the VTT to the `Service File` derivative. This is the version of your video that the system displays in the viewer, **not** the Original File. If you create **new** audio or video objects in the future and add captions to the Original File at time of ingest, the VTT will automatically carry over to the Service File that gets generated.
+
 ### Create and review users, roles, and permissions
 
 Before migration, you should already have reviewed and pruned your users list so that only users you want to migrate will appear in your new repository.
