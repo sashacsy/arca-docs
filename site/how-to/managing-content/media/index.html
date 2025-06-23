@@ -311,12 +311,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../about/support/" class="md-nav__link">
+      <a href="../../../about/arca-members/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Support
+    Arca Members
     
   </span>
   
@@ -340,6 +340,29 @@
   
   <span class="md-ellipsis">
     Contribute to Arca Docs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Support
     
   </span>
   
@@ -966,7 +989,7 @@
           <li class="md-nav__item">
   <a href="#collection-thumbnails" class="md-nav__link">
     <span class="md-ellipsis">
-      Collection Thumbnails
+      Collection thumbnails
     </span>
   </a>
   
@@ -974,6 +997,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-captions-to-video-and-audio-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding captions to video and audio content
+    </span>
+  </a>
   
 </li>
       
@@ -1982,7 +2014,7 @@
           <li class="md-nav__item">
   <a href="#collection-thumbnails" class="md-nav__link">
     <span class="md-ellipsis">
-      Collection Thumbnails
+      Collection thumbnails
     </span>
   </a>
   
@@ -1990,6 +2022,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-captions-to-video-and-audio-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding captions to video and audio content
+    </span>
+  </a>
   
 </li>
       
@@ -2047,7 +2088,7 @@
 </ol>
 <h4 id="thumbnail-sizes">Thumbnail sizes<a class="headerlink" href="#thumbnail-sizes" title="Permanent link">&para;</a></h4>
 <p>Automatically-generated thumbnails will be 256 pixels at their largest dimension (width or height). Custom thumbnails should follow this template.</p>
-<h3 id="collection-thumbnails">Collection Thumbnails<a class="headerlink" href="#collection-thumbnails" title="Permanent link">&para;</a></h3>
+<h3 id="collection-thumbnails">Collection thumbnails<a class="headerlink" href="#collection-thumbnails" title="Permanent link">&para;</a></h3>
 <p>Unlike other repository items, collection thumbnails are set by editing the Node itself. To change a collection thumbnail:</p>
 <ol>
 <li>Edit the collection node (looking at the collection, click the Edit button in the header image)</li>
@@ -2058,6 +2099,20 @@
 </ul>
 </li>
 </ol>
+<h2 id="adding-captions-to-video-and-audio-content">Adding captions to video and audio content<a class="headerlink" href="#adding-captions-to-video-and-audio-content" title="Permanent link">&para;</a></h2>
+<p>Captions are added to the same Media entity as the audio/video file they describe. To add captions to your audio or video media, first ensure that you have a track in the VTT file format, then:</p>
+<ol>
+<li>Create a new Repository Item with the Content Type "Audio" or "Video". Ensure that "Add Media" is toggled on in the metadata form.</li>
+<li>Once you finish entering metadata, save and proceed to the Add Media screen.</li>
+<li>Select Audio or Video as the Media Type.</li>
+<li>On the Media edit/upload screen, after uploading your media, scroll further down to find the Track section.</li>
+<li>Upload your transcript/caption file.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+</div>
+<p>If you are adding captions to media on a Repository Item that has already been created (i.e., a node with already-generated media derivatives), you must add the VTT to the <code>Service File</code> derivative. This is the version of your video that the system displays in the viewer, <strong>not</strong> the Original File.</p>
+<p>When you create a <em>new</em> Repository Item and add a track at the time of ingest, Islandora will automatically generate the Service File derivative with the VTT attached.</p>
 
 
 
