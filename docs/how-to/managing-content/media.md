@@ -37,12 +37,13 @@ Unlike other repository items, collection thumbnails are set by editing the Node
 
 ## Adding captions to video and audio content
 
-To add captions to your audio or video media, first ensure that you have a track in the VTT file format, then: 
+Captions are added to the same Media entity as the audio/video file they describe. To add captions to your audio or video media, first ensure that you have a track in the VTT file format, then:
 
 1. Create a new Repository Item with the Content Type "Audio" or "Video". Ensure that "Add Media" is toggled on in the metadata form.
-2. Once you finish entering the metadata and arrive at the Add Media screen, select either Audio or Video as the Media Type.
-3. Under the "Track" section, upload your transcript/caption file.
-4. Click `Save` to complete the ingest of your object. 
+2. Once you finish entering metadata, save and proceed to the Add Media screen.
+3. Select Audio or Video as the Media Type.
+4. On the Media edit/upload screen, after uploading your media, scroll further down to find the Track section.
+5. Upload your transcript/caption file.
 
 !!! warning
   If you are adding captions to media on a Repository Item that has already been created (i.e., a node with already-generated media derivatives), you must add the VTT to the `Service File` derivative. This is the version of your video that the system displays in the viewer, **not** the Original File.
