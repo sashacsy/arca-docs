@@ -191,3 +191,92 @@ Our ingest form is organized into Paragraphs - organized groups of metadata fiel
     * The “add media” toggle, if turned on, means that after you save this Repository Item, you will be sent to the Media page. That is where you will add a file that will become part of the object.
     * If you choose not to add media, you will create a metadata-only record, but you can choose to add media to the item later via the object’s Media tab. Adding media later is a bit more complex than doing it from ingest, so it is recommended to start with a file in mind.
     * After Saving the item, you will be taken to the Media interface. Follow the [detailed instructions on adding media](/arca-docs/how-to/managing-content/media/).
+
+## Ingesting Newspaper Objects
+
+!!! warning
+    This section goes over how to create newspaper objects and ingest their individual issues manually. For **batch/bulk** ingest of newspaper objects, please review the documentation in the [Batch Operations](/arca-docs/how-to/batch-operations/getting-started.md) section of this site.
+
+Like the legacy platform, newspaper objects in the new Islandora use a unique View to display its members: 
+
+![<# Accordion foldout newspaper view in browser #>](/arca-docs/assets/newspaper-view.png "Screenshot")
+
+The accordion-style foldout displays issued according to the date listed in the `Date Issued/Date Created` field of the Origin Information section of the metadata form. While the Content Types are technically "Newspaper" and "Publication Issue", this format can be used for any periodical/serial-type objects.
+
+Newspaper parent objects and their child issues operate similarly to Collections and their children. The main difference is the value in the `Content Type` field. Following is a walkthrough for creating newspaper objects manually.
+
+### Newspaper Parent
+
+Start by creating your parent Newspaper object. 
+
+1. Go to **Content > Add Content > Repository Item**. 
+2. Fill in the metadata form as you normally would. 
+3. For `Content type`, select **Newspaper**. 
+4. Make sure to include a value under `Resource Type`, likely **Newspaper** or **Periodical**.
+5. Click Save.
+
+### Publication Issue (TIFF/JP2s)
+
+If your newspaper's issues are collections of individual image files (i.e. TIFFs or JP2s), follow this workflow to ingest them:
+
+1. Go to **Content > Add Content > Repository Item**.
+2. Fill in the metadata form as you normally would.
+3. For `Content type`, select **Publication Issue**.
+4. Make sure to include a value under `Resource Type`. ==This is required in order for your issues to display properly in the View==. 
+5. Make sure to enter a date in `Date Issued/Date Created` in the Origin Information section of the metadata form. This is necessary to ensure your issue appears in the right place in the accordion foldout display. 
+6. Click **Save**, which should bring you to your newly created Publication Issue object.
+
+Next, Page objects need to be added to your Publication Issue. You can either add each page individually, or run a batch upload via the **Children** tab on the Issue object. Note that this "batch" upload is not the same as the Islandora Workbench "batch operations" process that we describe elsewhere on this site.
+
+To batch upload your Page objects (**_Recommended_**):
+
+1. On the Publication Issue node that you just created, click the **Children** tab. 
+2. To the upper right, click **Batch Upload Children**.<br>
+<br>
+    ![<# Button for batch upload of Page objects #>](/arca-docs/assets/batch-upload-pages.png "Screenshot")
+
+2. Under `Content Type`, select **Repository Item** (note that these are Drupal content types, not Islandora content types). 
+3. Under `Model`, select **Page** (*these* are Islandora content types).
+4. Under `Media Type`, select **Image**.
+5. Under `Usage`, select **Original File**.
+6. Uploaded all relevant image files (i.e. all pages) for your Issue. Enter Alt Text for each.
+7. Click **Finish**.
+8. Return to your Publication Issue object to confirm all pages are appearing in the Mirador viewer. 
+
+>With *Batch Upload Children*, you'll notice that there is no interaction with the metadata form. As it's unlikely you would need to append metadata to your Page objects that could not just be added to the parent Publication Issue object, this method is recommended for efficiency.
+
+If you need to add a Page individually:
+
+1. Go to **Content > Add Content > Repository Item**.
+2. Fill in the metadata form as you normally would.
+3. For `Content type`, select **Page**.
+4. The `Collection(s)` field change to now say `Paged Content or Publication Issue`. Enter the name or node ID of the Publication Issue you just created here.
+5. Click **Save**. 
+6. You should be brought automatically to the *Add Image* page. Upload your image file and click **Save** once it has finished uploading. 
+7. Repeat this process for any other pages in the newspaper issue as necessary.
+
+### Publication Issue (PDFs)
+
+The process for ingesting PDFs as Publication Issues requires an extra step. This is because Islandora's default behaviour is to expect individual Page objects to be nested under a Publication Issue. Because a PDF is an already-compiled series of pages, individual Page objects aren't necessary. 
+
+Follow this workflow to ingest PDF newspaper (or periodical/serial) issues:
+
+1. Go to **Content > Add Content > Repository Item**.
+2. Fill in the metadata form as you normally would.
+3. For now, under `Content type`, select **Digital Document**. We will be changing this in a later step.
+4. Make sure to include a value under `Resource Type`. ==This is required in order for your issues to display properly in the View==.
+5. Make sure to enter a date in `Date Issued/Date Created` in the Origin Information section of the metadata form. This is necessary to ensure your issue appears in the right place in the accordion foldout display. 
+6. Click **Save**, which should bring you to the *Add Document* page.
+7. Upload your PDF file. Click **Save**.
+8. You will be brought automatically to your newly-created Document. Click **Edit** on the node. 
+9. Under `Content type`, ==change the value from Digital Document to **Publication Issue**.==
+10. Return to your parent newspaper object and confirm that the issue appears in the foldout by date. 
+
+!!! info
+    The date-based newspaper View relies on its child objects having the **Publication Issue** content type to display properly. The reason we start with **Digital Document** is to ensure the document upload page appears immediately after you fill out your issue-level metadata form.  Since Publication Issue expects individual Page objects, it does not by default bring you to an *Add Media* page. 
+
+    Changing the node to Publication Issue *after* you have uploaded your PDF ensures that:
+
+    - You are brought to the *Add Document* screen right after filling out your metadata.
+    - Your PDF derivatives (thumbnail, extracted text) are generated properly.
+    - Your issue still appears as expected according to its date in the parent newspaper View.
