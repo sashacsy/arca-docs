@@ -18,7 +18,7 @@ First, you must figure out what elements need to be edited, and how you'll do th
     ![<# Inspect menu in browser #>](/arca-docs/assets/inspect.png "Screenshot")
 3. The Inspect panel shows you the HTML behind the page content, as well as the CSS that styles the HTML. 
     - If you move your mouse over the different HTML elements, the areas they govern are highlighted on the page.
-    ![<# Highlighted HTML in the browser's Inspect pane #>](/brandon/arca-docs/assets/inspect-panel.png "Screenshot")
+    ![<# Highlighted HTML in the browser's Inspect pane #>](/arca-docs/assets/inspect-panel.png "Screenshot")
     - Right clicking on a page area and clicking `Inspect` will jump to the relevant HTML.
 4. Click on the HTML element that you want to style. The CSS pane to the right shows the CSS rules that are active on this element.
 ![<# CSS Elements pane in the browser Inspect tool #>](/arca-docs/assets/css-elements.png "Screenshot")
