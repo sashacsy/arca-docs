@@ -1004,6 +1004,72 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ingesting-newspaper-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ingesting Newspaper Objects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ingesting Newspaper Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#newspaper-parent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newspaper Parent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publication-issue-tiffjp2-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publication Issue: TIFF/JP2 Pages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Publication Issue: TIFF/JP2 Pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#batch-upload-your-page-objects-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batch upload your Page objects (Recommended)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#individually-upload-your-page-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Individually upload your Page objects
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publication-issue-full-issue-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publication Issue: Full-issue PDF
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2070,6 +2136,72 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ingesting-newspaper-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ingesting Newspaper Objects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ingesting Newspaper Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#newspaper-parent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newspaper Parent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publication-issue-tiffjp2-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publication Issue: TIFF/JP2 Pages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Publication Issue: TIFF/JP2 Pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#batch-upload-your-page-objects-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batch upload your Page objects (Recommended)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#individually-upload-your-page-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Individually upload your Page objects
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publication-issue-full-issue-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publication Issue: Full-issue PDF
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2408,6 +2540,93 @@
 </ul>
 </li>
 </ul>
+<h2 id="ingesting-newspaper-objects">Ingesting Newspaper Objects<a class="headerlink" href="#ingesting-newspaper-objects" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This section goes over how to create newspaper objects and ingest their individual issues manually. For <strong>batch/bulk</strong> ingest of newspaper objects, please review the documentation in the <a href="/arca-docs/how-to/batch-operations/getting-started.md">Batch Operations</a> section of this site.</p>
+</div>
+<p>Like the legacy platform, newspaper objects in the new Islandora use a unique View to display its members: </p>
+<p><img alt="&lt;# Accordion foldout newspaper view in browser #&gt;" src="/arca-docs/assets/newspaper-view.png" title="Screenshot" /></p>
+<p>The accordion-style foldout displays issued according to the date listed in the <code>Date Issued/Date Created</code> field of the Origin Information section of the metadata form. While the Content Types are technically "Newspaper" and "Publication Issue", this format can be used for any periodical/serial-type objects.</p>
+<p>Newspaper parent objects and their child issues operate similarly to Collections and their children. The main difference is the value in the <code>Content Type</code> field. Following is a walkthrough for creating newspaper objects manually.</p>
+<h3 id="newspaper-parent">Newspaper Parent<a class="headerlink" href="#newspaper-parent" title="Permanent link">&para;</a></h3>
+<p>Start by creating your parent Newspaper object. </p>
+<ol>
+<li>Go to <strong>Content &gt; Add Content &gt; Repository Item</strong>. </li>
+<li>Fill in the metadata form as you normally would. </li>
+<li>For <code>Content type</code>, select <strong>Newspaper</strong>. </li>
+<li>Make sure to include a value under <code>Resource Type</code>, likely <strong>Newspaper</strong> or <strong>Periodical</strong>.</li>
+<li>Click Save.</li>
+</ol>
+<h3 id="publication-issue-tiffjp2-pages">Publication Issue: TIFF/JP2 Pages<a class="headerlink" href="#publication-issue-tiffjp2-pages" title="Permanent link">&para;</a></h3>
+<p>If your newspaper's issues are collections of individual image files (i.e. TIFFs or JP2s), follow this workflow to ingest them:</p>
+<ol>
+<li>Go to <strong>Content &gt; Add Content &gt; Repository Item</strong>.</li>
+<li>Fill in the metadata form as you normally would.</li>
+<li>For <code>Content type</code>, select <strong>Publication Issue</strong>.</li>
+<li>Make sure to include a value under <code>Resource Type</code>. <mark>This is required in order for your issues to display properly in the View</mark>. </li>
+<li>Make sure to enter a date in <code>Date Issued/Date Created</code> in the Origin Information section of the metadata form. This is necessary to ensure your issue appears in the right place in the accordion foldout display. </li>
+<li>Click <strong>Save</strong>, which should bring you to your newly created Publication Issue object.</li>
+</ol>
+<p>Next, Page objects need to be added to your Publication Issue. You can either add each page individually, or run a batch upload via the <strong>Children</strong> tab on the Issue object. Note that this "batch" upload is not the same as the Islandora Workbench "batch operations" process that we describe elsewhere on this site.</p>
+<h4 id="batch-upload-your-page-objects-recommended">Batch upload your Page objects (<strong><em>Recommended</em></strong>)<a class="headerlink" href="#batch-upload-your-page-objects-recommended" title="Permanent link">&para;</a></h4>
+<ol>
+<li>On the Publication Issue node that you just created, click the <strong>Children</strong> tab. </li>
+<li>
+<p>To the upper right, click <strong>Batch Upload Children</strong>.<br>
+<br>
+    <img alt="&lt;# Button for batch upload of Page objects #&gt;" src="/arca-docs/assets/batch-upload-pages.png" title="Screenshot" /></p>
+</li>
+<li>
+<p>Under <code>Content Type</code>, select <strong>Repository Item</strong> (note that these are Drupal content types, not Islandora content types). </p>
+</li>
+<li>Under <code>Model</code>, select <strong>Page</strong> (<em>these</em> are Islandora content types).</li>
+<li>Under <code>Media Type</code>, select <strong>Image</strong>.</li>
+<li>Under <code>Usage</code>, select <strong>Original File</strong>.</li>
+<li>Upload all relevant image files (i.e. all pages) for your Issue. Enter Alt Text for each.
+    <img alt="&lt;# View of upload screen for multiple Page files #&gt;" src="/arca-docs/assets/pages-upload.png" title="Screenshot" /></li>
+<li>Click <strong>Finish</strong>.</li>
+<li>Return to your Publication Issue object to confirm all pages are appearing in the Mirador viewer. </li>
+</ol>
+<blockquote>
+<p>With <em>Batch Upload Children</em>, you'll notice that there is no interaction with the metadata form. As it's unlikely you would need to append metadata to your Page objects that could not just be added to the parent Publication Issue object, this method is recommended for efficiency.</p>
+</blockquote>
+<h4 id="individually-upload-your-page-objects">Individually upload your Page objects<a class="headerlink" href="#individually-upload-your-page-objects" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Go to <strong>Content &gt; Add Content &gt; Repository Item</strong>.</li>
+<li>Fill in the metadata form as you normally would.</li>
+<li>For <code>Content type</code>, select <strong>Page</strong>.</li>
+<li>The <code>Collection(s)</code> field change to now say <code>Paged Content or Publication Issue</code>. Enter the name or node ID of the Publication Issue you just created here.</li>
+<li>Click <strong>Save</strong>. </li>
+<li>You should be brought automatically to the <em>Add Image</em> page. Upload your image file and click <strong>Save</strong> once it has finished uploading. </li>
+<li>Repeat this process for any other pages in the newspaper issue as necessary.</li>
+</ol>
+<h3 id="publication-issue-full-issue-pdf">Publication Issue: Full-issue PDF<a class="headerlink" href="#publication-issue-full-issue-pdf" title="Permanent link">&para;</a></h3>
+<p>Ingesting PDFs as Publication Issues requires an extra step. By default, Islandora expects Publication Issues to hold individual Page images. Because a PDF is already a collection of pages, individual Page objects aren't necessary.</p>
+<p>Note that Publication Issues with PDFs will display in the PDFjs viewer, <em>not</em> the Mirador viewer. </p>
+<p>Follow this workflow to ingest PDF newspaper (or periodical/serial) issues:</p>
+<ol>
+<li>Go to <strong>Content &gt; Add Content &gt; Repository Item</strong>.</li>
+<li>Fill in the metadata form as you normally would.</li>
+<li>For now, under <code>Content type</code>, select <strong>Digital Document</strong>. We will be changing this in a later step.</li>
+<li>Make sure to include a value under <code>Resource Type</code>. <mark>This is required in order for your issues to display properly in the View</mark>.</li>
+<li>Make sure to enter a date in <code>Date Issued/Date Created</code> in the Origin Information section of the metadata form. This is necessary to ensure your issue appears in the right place in the accordion foldout display. </li>
+<li>Click <strong>Save</strong>, which should bring you to the <em>Add Document</em> page.</li>
+<li>Upload your PDF file. Click <strong>Save</strong>.</li>
+<li>You will be brought automatically to your newly-created Document. Click <strong>Edit</strong> on the node. </li>
+<li>Under <code>Content type</code>, <mark>change the value from Digital Document to <strong>Publication Issue</strong>.</mark></li>
+<li>Return to your parent newspaper object and confirm that the issue appears in the foldout by date. </li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The date-based newspaper View relies on its child objects having the <strong>Publication Issue</strong> content type to display properly. The reason we start with <strong>Digital Document</strong> is to ensure the document upload page appears immediately after you fill out your issue-level metadata form.  Since Publication Issue expects individual Page objects, it does not by default bring you to an <em>Add Media</em> page. </p>
+<p>Changing the node to Publication Issue <em>after</em> you have uploaded your PDF ensures that:</p>
+<ul>
+<li>You are brought to the <em>Add Document</em> screen right after filling out your metadata.</li>
+<li>Your PDF derivatives (thumbnail, extracted text) are generated properly.</li>
+<li>Your issue still appears as expected according to its date in the parent newspaper View.</li>
+</ul>
+</div>
 
 
 
