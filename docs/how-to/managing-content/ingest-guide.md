@@ -215,7 +215,7 @@ Start by creating your parent Newspaper object.
 4. Make sure to include a value under `Resource Type`, likely **Newspaper** or **Periodical**.
 5. Click Save.
 
-### Publication Issue (TIFF/JP2s)
+### Publication Issue: TIFF/JP2 Pages
 
 If your newspaper's issues are collections of individual image files (i.e. TIFFs or JP2s), follow this workflow to ingest them:
 
@@ -228,7 +228,7 @@ If your newspaper's issues are collections of individual image files (i.e. TIFFs
 
 Next, Page objects need to be added to your Publication Issue. You can either add each page individually, or run a batch upload via the **Children** tab on the Issue object. Note that this "batch" upload is not the same as the Islandora Workbench "batch operations" process that we describe elsewhere on this site.
 
-To batch upload your Page objects (**_Recommended_**):
+#### Batch upload your Page objects (**_Recommended_**)
 
 1. On the Publication Issue node that you just created, click the **Children** tab. 
 2. To the upper right, click **Batch Upload Children**.<br>
@@ -239,13 +239,14 @@ To batch upload your Page objects (**_Recommended_**):
 3. Under `Model`, select **Page** (*these* are Islandora content types).
 4. Under `Media Type`, select **Image**.
 5. Under `Usage`, select **Original File**.
-6. Uploaded all relevant image files (i.e. all pages) for your Issue. Enter Alt Text for each.
+6. Upload all relevant image files (i.e. all pages) for your Issue. Enter Alt Text for each.
+    ![<# View of upload screen for multiple Page files #>](/arca-docs/assets/pages-upload.png "Screenshot")
 7. Click **Finish**.
 8. Return to your Publication Issue object to confirm all pages are appearing in the Mirador viewer. 
 
 >With *Batch Upload Children*, you'll notice that there is no interaction with the metadata form. As it's unlikely you would need to append metadata to your Page objects that could not just be added to the parent Publication Issue object, this method is recommended for efficiency.
 
-If you need to add a Page individually:
+#### Individually upload your Page objects
 
 1. Go to **Content > Add Content > Repository Item**.
 2. Fill in the metadata form as you normally would.
@@ -255,9 +256,11 @@ If you need to add a Page individually:
 6. You should be brought automatically to the *Add Image* page. Upload your image file and click **Save** once it has finished uploading. 
 7. Repeat this process for any other pages in the newspaper issue as necessary.
 
-### Publication Issue (PDFs)
+### Publication Issue: Full-issue PDF
 
-The process for ingesting PDFs as Publication Issues requires an extra step. This is because Islandora's default behaviour is to expect individual Page objects to be nested under a Publication Issue. Because a PDF is an already-compiled series of pages, individual Page objects aren't necessary. 
+Ingesting PDFs as Publication Issues requires an extra step. By default, Islandora expects Publication Issues to hold individual Page images. Because a PDF is already a collection of pages, individual Page objects aren't necessary.
+
+Note that Publication Issues with PDFs will display in the PDFjs viewer, *not* the Mirador viewer. 
 
 Follow this workflow to ingest PDF newspaper (or periodical/serial) issues:
 
