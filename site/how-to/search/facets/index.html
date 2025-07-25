@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://bceln.github.io/arca-docs/how-to/search/facets/">
       
       
+        <link rel="prev" href="../advanced-search/">
+      
+      
+        <link rel="next" href="../../access-control/embargo/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Adding New Facets - Arca Documentation</title>
+        <title>Facets - Arca Documentation</title>
       
     
     
@@ -70,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adding-new-facets" class="md-skip">
+        <a href="#adding-new-facets-to-search-results" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Adding New Facets
+              Facets
             
           </span>
         </div>
@@ -402,18 +406,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -429,7 +435,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             How-To in Islandora 2
@@ -1176,18 +1182,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" checked>
         
           
           <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
@@ -1203,7 +1211,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_6">
             <span class="md-nav__icon md-icon"></span>
             Search
@@ -1228,6 +1236,39 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Facets
+    
+  </span>
+  
+
+      </a>
+      
     </li>
   
 
@@ -1894,67 +1935,49 @@
   
 
 
-<h1 id="adding-new-facets">Adding New Facets<a class="headerlink" href="#adding-new-facets" title="Permanent link">&para;</a></h1>
+<h1 id="adding-new-facets-to-search-results">Adding New Facets to Search Results<a class="headerlink" href="#adding-new-facets-to-search-results" title="Permanent link">&para;</a></h1>
+<p>Most facets that you might need are pre-built, but not implemented as blocks on your search view. If you find that a facet you need is not available, contact the Arca Office for assistance.</p>
+<p>To add a facet to your search view, there are three steps:</p>
+<ol>
+<li>
+<p>Make sure the facet you need exists.</p>
 <ul>
-<li>Identify the field from the content type (usually Repository Item)</li>
-<li>Verify the field is being indexed by Solr under the Default Solr content index (Administration &gt; Configuration &gt; Search and Metadata &gt; Search Api &gt; Default Solr content index &gt; Fields)</li>
-<li>If it is not present, use the "Add fields" button to search and add a new field.</li>
-<li>As of this writing, there is a UI bug preventing the expansion of entities in the Add fields modal</li>
-<li>Click 'Done' at the bottom of the pop up window, and save changes at the bottom of the page by clicking 'Save changes'.</li>
-<li>Create the new facet in the facet Configuration menu (Administration &gt; Configuration &gt; Search and Metadata &gt; Facets) by clicking "Add facet"</li>
-<li>Facet Source: Select the appropriate view for the facet<ul>
-<li>View Solr search content, display Page (Grid/List) - Is used for top-level search results</li>
-<li>View Solr search content, display Collection (Grid/List) - Is Collection search results</li>
+<li>At <code>admin/config/search/facets</code>, check that facets exist for the Repository Item field you need to facet on.</li>
+<li>You will need a separate facet for each search display mode (Grid, List, Card). <ul>
+<li>If only one or two of these modes exist, you can click the "Clone facet" option and set your clone to use the other display modes.</li>
 </ul>
 </li>
-<li>Field: Find and select the appropriate field</li>
-<li>Name: A label for the facet. Note the "Machine name", it may be worthwhile to change this to a more recognizable name as it will be easier to identify later.<ul>
-<li>This would be useful if adding the same facet to search list/grid, and collection list/grid pages, since this process will need to be repeated for each display the facet should appear under. EX: for the field “_Alternative Title”_(alternative_title), a machine name of “alternative_title_list” and “alternative_title_grid” would work well for search results pages, and on collection pages “alternative_title_col_list” and “alternative_title_col_grid” could identify these two facets to operate on the Collection ('col') pages (list/grid, respectively).</li>
-<li>Facet Naming Tip: You can also give the facet block a more unique name, so it is easier to find in a future step when placing the facet block via 'Place Block' into the appropriate 'Block Group' configuration. Just remember to change the facet title back later after it is placed.</li>
+<li>Contact the Arca Office for help creating facets.</li>
 </ul>
 </li>
-<li>Save</li>
-<li>You will be taken to the facet settings where you can make changes to the defaults, such as the Widget to be used for the facet<ul>
-<li>“List of checkboxes” is the recommended widget type used in the base theme.</li>
-<li>Allow the ajax spinner indicating loading to finish before continuing on configuration to not lose configured settings in case of the form being refreshed.</li>
-<li>Show the amount of results enabled</li>
-<li>If using a date field, you can use the "Date item processor" which can be used to format and apply granularity to the date accordingly.</li>
-<li>Show title of facet?</li>
-<li>Showing the title of the facet in the facet config (and disabling the facet block title later), allows the facet to take advantage of DGI's expand/collapse formatted title in facet blocks, provided by the base theme.</li>
-<li>Use "Hard limit" when there will be a large number of options.</li>
-<li>If you'd like a facet to display the same in both the grid and list views of the search url, set the "URL alias" of both the List and Grid views of the facet to be identical (IE. `media_of_grid` and `media_of_list` might both be `media_of`)</li>
-</ul>
-</li>
-<li>Once saved you will have access to a Facet block</li>
-<li>Repeat this process for each facet you'd like created (Page Grid/Page List/Collection Grid/Collection List).</li>
-<li>Navigate to Block layout (Administration &gt; Structure &gt; Block Layout)</li>
-<li>Find the appropriate Block group (usually "Search facet header") and "Place block"</li>
-<li>While placing the block in the Block Group ‘Search Facet Header’, it will give the block a machine ID, which is necessary for the following steps. If placing the facet block in another region (such as ‘Content’), simply placing the block in the region will be sufficient, and you can skip the following section including ‘Navigate to the Solr Search content view’, listed below. By default, the DGI Base theme configuration renders the blocks in a view using the block id.</li>
-<li>If there are multiple facet blocks with the same name, as a hint, hover over the "Place block" button and investigate the link - it will contain the machine name you gave the facet in an earlier step.</li>
-<li>Facet Naming Tip: This is the point where, mentioned earlier, naming the Facet Block something unique/readily identifiable will make it easier to identify.</li>
-<li>Place the block</li>
-<li>Disable "Display title"</li>
-<li>Note the Machine name again. This can be edited to get a more recognizable name. This name will be used as the block id. Copy this (or remember it), as it will be used when configuring the solr view below to show the new block (rendered entity)</li>
-<li>Click "Save block"</li>
-<li>Navigate to the Solr Search content view and the appropriate page.</li>
-<li>When creating the new facet, it was attached to a View as a facet source. By default, DGI’s base theme implements the Collection (List), Collection (Grid), Page (List) and Page (Grid) displays.</li>
-<li>Navigate to one of these view displays now, by going to Structure &gt; Views, and selecting ‘Edit’ to the right of the view the facet was attached to. If using one of DGI’s ‘search’ or ‘collection’ views (as mentioned above), the view is called ‘Solr search content’.</li>
-<li>Select the view display the new facet was attached to, should be either Collection (List), Collection (Grid), Page (List) or Page (Grid).</li>
-<li>Add a new Rendered Entity - Block to the ‘Footer’ section of the view</li>
-<li>Click ‘Add’ to the right of the ‘Footer’ section</li>
-<li>Search for and select ‘Rendered Entity - Block’ in the pop up window, and click ‘Apply (this display)’</li>
-<li>Enter the machine name of the facet block in Block ID under ‘Block ID’ section of the pop up</li>
-<li>(Optional) It is recommended to create an Administrative title for easy recognition.</li>
-<li>click ‘Apply (this display)’ once again.</li>
-<li>Save the view and your facet will be added.</li>
-<li>The display order of facets is determined by the order of the "rendered entity" elements in that Footer section of each view, so re-ordering those will change the order the facets appear--this is one area where is it helpful to have Administrative titles for each "rendered entity" so the order of the facets is clearly visible by looking at the view configuration page.</li>
-<li>If the new facet field is not visible at this point, try re-indexing solr on the search api page. This will typically happen if you needed to add the field to solr, prior to creating the facet block.<ul>
-<li>To re-index, navigate to: (Administration &gt; Configuration &gt; Search and Metadata &gt; Search API)</li>
-<li>Find the "Index" on the displayed table and click the Name of the Index.</li>
-<li>Click the "Index now" button that displays in the "Start indexing now" form section.</li>
+<li>
+<p>Place the facet blocks.</p>
+<ul>
+<li>At <code>/admin/structure/block</code>, scroll down to the "Search Facet Header" section, and click Place Block.</li>
+<li>Find the blocks for the facets you want to use - they will have the Category "Facets". Click "Place block" for each facet block you want to add. Remember, you need blocks for each of the different display modes (Grid, List, Card).</li>
+<li>Give the block a title that will help you identify it, including the name of the facet. Edit the machine name to include the display mode it represents, as you will need this later. <ul>
+<li>For example, Facet "Degree Name Card" might have the machine name <code>degreename_card</code>.</li>
 </ul>
 </li>
 </ul>
+</li>
+<li>
+<p>Add your facet blocks to the search content view.</p>
+<ul>
+<li>Find the Solr Search Content view under <code>Structure -&gt; Views</code>, or <code>/admin/structure/views/view/solr_search_content</code>.</li>
+<li>Click to the display mode you want to add facets to.<ul>
+<li>For Search results, that will be one of "Page (card)," "Page (list)", or "Page (Grid)". </li>
+<li>You can also add facet blocks to collection displays (untested) with the same pattern.</li>
+</ul>
+</li>
+<li>Under the "Footer" section, click "Add", and select "Rendered Entity - Block".<ul>
+<li>On the configuration screen for your new block, scroll down to the "Block ID" field, and paste in the machine name of the block you placed. <strong>Make sure the block you're adding matches the display mode you're working on.</strong></li>
+</ul>
+</li>
+<li>Go to the next display mode, and follow the above steps to add the next block to the footer, until you've covered Card, List, and Grid.</li>
+</ul>
+</li>
+</ol>
 
 
 
