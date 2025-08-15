@@ -92,6 +92,8 @@ nav:
       - Self-submission: how-to/processes/self-submission.md
     - Usage Statistics:
       - Collecting statistics: how-to/statistics/statistics.md
+    - Exposing your content:
+      - OAI-PMH harvesting: how-to/exposure/oai-pmh.md
   - Troubleshooting:
     - Troubleshooting: troubleshooting/troubleshooting.md
     - FAQs: troubleshooting/faqs.md
