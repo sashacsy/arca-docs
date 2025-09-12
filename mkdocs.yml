@@ -99,6 +99,7 @@ nav:
     - FAQs: troubleshooting/faqs.md
     - Islandora 7 troubleshooting: troubleshooting/troubleshooting-i7.md
   - Migration:
+    - Improvements: migration/improvements.md
     - Timeline: migration/migration-timeline.md
     - Schedule: migration/migration-schedule.md
     - Metadata Mapping: migration/metadata-mapping.md
