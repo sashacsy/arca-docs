@@ -67,6 +67,8 @@ nav:
       - Metadata Display: how-to/display/metadata-display-customizations.md
       - Comments: how-to/display/comments.md
       - Links to Socials: how-to/display/social-links.md
+    - Other Customizations:
+      - Customizations by Arca partners: how-to/customizations/special-custom.md
     - Metadata:
       - Taxonomies Overview: how-to/metadata/taxonomies.md
       - Managing Taxonomies: how-to/metadata/managing-taxonomies.md
