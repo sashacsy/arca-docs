@@ -2166,9 +2166,14 @@
 </ul>
 <p>Process:</p>
 <ol>
+<li>Add a CSS class to the "Collection: Representative Object" view so you can style it:<ul>
+<li>Edit the Representative Object view at <code>/admin/structure/views/view/collection_representative_object/edit/block_1</code></li>
+<li>In the "Advanced" section on the right, under "Other", find the "CSS Class" option and add a new class name: <code>rep-obj-display</code></li>
+</ul>
+</li>
 <li>Create a CSS Injector rule to add a solid background colour to Collection header:<ul>
 <li>Go to <code>/admin/config/development/asset-injector/css</code> and create a new Rule with a title like "Collection Header Background"</li>
-<li>Add the following rule:
+<li>Add the following rule that styles the CSS class you just created:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>.rep-obj-display{
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    background-color: #8CCDB0;
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>}
