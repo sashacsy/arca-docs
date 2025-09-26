@@ -2101,7 +2101,12 @@
 <p>In order to properly enable OAI-PMH harvesting, you will need to configure your OAI module at <code>/admin/config/services/rest/oai-pmh</code>.</p>
 <p>Some basic settings:</p>
 <ul>
+<li>What to expose:<ul>
+<li>Check all boxes except Entity Reference</li>
+</ul>
+</li>
 <li>Metadata mappings:<ul>
+<li>mdRecord: DPLAVA</li>
 <li>oai_qdc: DGI Standard Qualified Dublin Core</li>
 <li>oai_raw: None</li>
 <li>oai_dc: OAI Dublin Core (RDF Mapping)</li>
@@ -2111,7 +2116,8 @@
 <li>Set your repository name and admin email</li>
 <li>Leave other settings as-is</li>
 </ul>
-<p>For the fullest set of metadata, use <code>oai_qdc</code> for your mappings. A request will look something like this: <code>https://yoursite.arcabc.ca/oai/request?verb=ListSets&amp;metadataPrefix=oai_qdc</code></p>
+<p>The fullest sets of metadata are either <code>mdRecord</code> or <code>oai_qdc</code>. <code>mdRecord</code> is recommended, as it includes a link to the media, in the field <code>edm:preview</code>. </p>
+<p>A request will look something like this: <code>https://yoursite.arcabc.ca/oai/request?verb=ListSets&amp;metadataPrefix=mdrecord</code></p>
 <p>If you have provided harvesting information to an outside organization for your Islandora 7 site, you will need to give them the new request path and metadata schema.</p>
 
 
