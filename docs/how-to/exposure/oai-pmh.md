@@ -19,6 +19,6 @@ Some basic settings:
 
 The fullest sets of metadata are either `mdRecord` or `oai_qdc`. `mdRecord` is recommended, as it includes a link to the media, in the field `edm:preview`. 
 
-A request will look something like this: `https://yoursite.arcabc.ca/oai/request?verb=ListSets&metadataPrefix=mdrecord`
+A request will look something like this: `https://yoursite.arcabc.ca/oai/request?verb=ListSets&metadataPrefix=mdRecord`
 
 If you have provided harvesting information to an outside organization for your Islandora 7 site, you will need to give them the new request path and metadata schema.
