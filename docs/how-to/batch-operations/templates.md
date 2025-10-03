@@ -39,8 +39,14 @@ Metadata Spreadsheet: [[Link]](https://github.com/bceln/arca-templates/blob/main
 ## About Config YAML Templates
 
 * Once downloaded, give your YAML template a distinct name for each ingest. You may make configuration setting changes that vary from ingest to ingest and precise filenaming keeps batches organized.
-* The Arca YAML templates are intended to be "grab and go", but there are *many* other configuration options that allow you to customize your ingest process or output. As you become more comfortable with Workbench, review the [official documentation](https://mjordan.github.io/islandora_workbench_docs/configuration/#the-configuration-file) for a full list of config options.
+* For day-to-day operations, you *only* ever need to change the following lines in the YAML template:
+    * Host (your site URL)
+    * Username (your Islandora Workbench user account)
+    * Password (password for that account)
+    * input_dir (name of the directory containing your files)
+    * input_csv (filename for your CSV)
 * Any lines in the YAML template that start with `#` are null (i.e., will not be read by Workbench as part of a task). 
 * Headers and notes from the Arca Office start with `# \\`. Please pay attention to these, as they will indicate which sections should be updated and which contain settings that should not be touched.
 * **Do not make changes** to the second set of configuration options in the YAML template, under the header `# \\ REQUIRED TAXONOMY SETTINGS`. These settings are configured to allow you to add new terms to open vocabularies (like *Genre* or *Subject*), without making site-breaking changes to protected, controlled vocabularies (e.g., *Islandora Models* or *CSL Type*)
 * Settings under the header `# \\ OPTIONAL OUTPUT INFORMATION...` are related to a CREATE task's output CSV. This is a CSV generated automatically by Workbench which includes information about each new node created by the task, including node IDs. While output CSV generation is technically optional (and does add a little time to the ingest process), it is **recommended that you keep these settings turned on**. If you ever wish to make bulk changes to the objects you've just ingested, this is the easiest way to keep track of each object's node ID.
+* For more advanced configurations, you can find more information in the [official documentation](https://mjordan.github.io/islandora_workbench_docs/configuration/#the-configuration-file) for a full list of config options.
