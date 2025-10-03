@@ -12,6 +12,8 @@ Islandora Workbench is a command-line tool. While prior experience working on th
 
 ## Considerations
 
+** Pro tip: If your local IT department is able to, have them install Islandora Workbench for you. **
+
 Though Islandora Workbench has been installed and used on Linux, Mac, and Windows systems, Arca Office staff primarily use MacOS. While commands for Workbench tasks are the same across systems, please be aware that screenshots and support from the Arca Office will be from the perspective of MacOS users.
 
 ## Installation & Setup
