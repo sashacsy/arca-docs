@@ -1,6 +1,7 @@
 # Getting Started
 
-** Pro tip: If your local IT department is able to, have them install Islandora Workbench for you. **
+!!! warning "Pro Tip"
+    If your local IT department is able to, have them install Islandora Workbench for you.
 
 Islandora Workbench is a command-line tool. While prior experience working on the command-line would be helpful, the commands and workflow for using Workbench are not prohibitively complicated; the documentation and templates provided by the Arca Office should be sufficient to support you in completing basic tasks.
 
