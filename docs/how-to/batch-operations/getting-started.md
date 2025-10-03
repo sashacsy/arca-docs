@@ -19,7 +19,7 @@ Though Islandora Workbench has been installed and used on Linux, Mac, and Window
 
 ## Installation & Setup
 
-Review Workbench's [Requirements](https://mjordan.github.io/islandora_workbench_docs/installation/#requirements) page, then follow the steps for installation according to your operating system.
+Follow the [installation instructions](/arca-docs/how-to/batch-operations/workbench-install) to get set up. Further instructions are available on the Workbench [Requirements](https://mjordan.github.io/islandora_workbench_docs/installation/#requirements) page, with steps for different operating systems.
 
 If you are using Workbench for the first time, please notify the Arca Office. Arca Office staff will ensure all the appropriate modules and permissions settings are in place in your repository for use with Workbench.
 

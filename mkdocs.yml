@@ -80,6 +80,7 @@ nav:
       - Compound Objects: how-to/managing-content/compound-objects.md
     - Batch Operations:
       - Introduction: how-to/batch-operations/introduction.md
+      - Installation: how-to/batch-operations/workbench-install.md
       - Getting Started: how-to/batch-operations/getting-started.md
       - CREATE Tasks: how-to/batch-operations/create.md
       - Templates: how-to/batch-operations/templates.md
