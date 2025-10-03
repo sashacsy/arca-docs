@@ -195,7 +195,7 @@ Our ingest form is organized into Paragraphs - organized groups of metadata fiel
 ## Ingesting Newspaper Objects
 
 !!! warning
-    This section goes over how to create newspaper objects and ingest their individual issues manually. For **batch/bulk** ingest of newspaper objects, please review the documentation in the [Batch Operations](/arca-docs/how-to/batch-operations/getting-started.md) section of this site.
+    This section goes over how to create newspaper objects and ingest their individual issues manually. For **batch/bulk** ingest of newspaper objects, please review the documentation in the [Batch Operations](/arca-docs/how-to/batch-operations/getting-started/) section of this site.
 
 Like the legacy platform, newspaper objects in the new Islandora use a unique View to display its members: 
 

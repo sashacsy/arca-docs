@@ -44,7 +44,8 @@ Metadata Spreadsheet: [[Link]](https://github.com/bceln/arca-templates/blob/main
     * Username (your Islandora Workbench user account)
     * Password (password for that account)
     * input_dir (name of the directory containing your files)
-    * input_csv (filename for your CSV)
+    * input_csv (filename for your input CSV)
+    * output_csv (desired filename for your output CSV)
 * Any lines in the YAML template that start with `#` are null (i.e., will not be read by Workbench as part of a task). 
 * Headers and notes from the Arca Office start with `# \\`. Please pay attention to these, as they will indicate which sections should be updated and which contain settings that should not be touched.
 * **Do not make changes** to the second set of configuration options in the YAML template, under the header `# \\ REQUIRED TAXONOMY SETTINGS`. These settings are configured to allow you to add new terms to open vocabularies (like *Genre* or *Subject*), without making site-breaking changes to protected, controlled vocabularies (e.g., *Islandora Models* or *CSL Type*)

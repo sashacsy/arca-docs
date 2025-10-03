@@ -19,14 +19,14 @@ Life on a Mac is easier if you have Homebrew. Check if you have it installed: `b
     - `git clone https://github.com/mjordan/islandora_workbench.git`
 4. Navigate into the Islandora Workbench directory:
     - `cd islandora_workbench`
-5. Create a [Python virtual envrionment]9https://stackoverflow.com/questions/78297215/pip-is-installed-but-can-not-add-python-packages-like-django/78297842#78297842)
+5. Create a [Python virtual environment](https://stackoverflow.com/questions/78297215/pip-is-installed-but-can-not-add-python-packages-like-django/78297842#78297842).
     - Make sure you're in the Islandora Workbench directory: `cd ~/islandora_workbench`
     - Create the virtual environment: `python3 -m venv venv`
 6. Activate the virtual environment, from within your `islandora_workbench` directory:
     -  `source venv/bin/activate`
     - You will see `(venv)` in your command prompt now, letting you know that you're currently in a Python virtual environment.
     - You will need to do this every time you want to work in Workbench, so that you have access to the various required libraries and plugins.
-7. Install the required Python libraries (see the list at https://mjordan.github.io/islandora_workbench_docs/installation/)
+7. Install the required Python libraries (see the full list at [https://mjordan.github.io/islandora_workbench_docs/installation/](https://mjordan.github.io/islandora_workbench_docs/installation/))
     - For each of the libraries, enter `pip install [library-name]`. 
     - This is case-sensitive, so copy and paste or enter carefully.
 8. Start using Workbench.
